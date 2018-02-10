@@ -1,0 +1,4 @@
+---
+path: /work
+title: Work
+---

@@ -1,0 +1,33 @@
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.about-picture {
+  background-color: gray;
+  width: 45%;
+}
+
+.about-text {
+  align-self: center;
+  padding: 3%;
+  width: 50%;
+
+  p {
+    margin-top: 3%;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    margin-top: 6%;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  li p {
+    font-weight: 500;
+  }
+}

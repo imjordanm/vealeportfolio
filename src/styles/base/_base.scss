@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+*:before {
+  box-sizing: inherit;
+}
+
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $system-fonts;
+
+  @include extrasmall {
+    font-size: 1.4rem;
+  }
+  @include small {
+    font-size: 1.6rem;
+  }
+  @include medium {
+    font-size: 1.8rem;
+  }
+  @include large {
+    font-size: 1.8rem;
+  }
+  @include extralarge {
+    font-size: 1.8rem;
+  }
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+h1 {
+  @include extrasmall {
+    font-size: 4rem;
+  }
+  @include small {
+    font-size: 6rem;
+  }
+  @include medium {
+    font-size: 10rem;
+  }
+  @include large {
+    font-size: 10rem;
+  }
+  @include extralarge {
+    font-size: 10rem;
+  }
+}
+
+h2 {
+  font-size: 3.2em;
+
+  @include extrasmall {
+    font-size: 2.2em;
+  }
+
+  @include small {
+    font-size: 2.8em;
+  }
+}
+
+h3 {
+  color: #1f1f1f;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+p {
+  color: #292929;
+  line-height: 1.4;
+  margin-bottom: 1.4rem;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}

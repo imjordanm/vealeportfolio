@@ -1,0 +1,32 @@
+.inputForm {
+  border: none;
+  border-bottom: 1px #bbb solid;
+  outline: 0;
+  width: 100%;
+}
+
+::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+input,
+textarea {
+  resize: none;
+}
+
+.submitButton {
+  background-color: rgb(255, 255, 255);
+  border: 1px #bbb solid;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 1.4rem;
+  outline: 0;
+  padding: 10px;
+  transition: box-shadow 0.1s ease;
+  width: 100%;
+}
+
+.submitButton:hover {
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}

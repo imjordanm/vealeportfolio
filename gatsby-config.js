@@ -17,6 +17,15 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'img',
+        path: `${__dirname}/src/resources/images`,
+      },
+    },
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    {
       resolve: 'gatsby-plugin-postcss-sass',
       options: {
         postCssPlugins: [autoprefixer({ browsers: ['last 2 versions'] }), cssnano()],

@@ -4,10 +4,10 @@
 .section {
   align-items: center;
   display: flex;
-  height: 100vh;
-  justify-content: center;
+  height: 80vh;
+  justify-content: space-between;
   margin: 0 auto;
-  width: 70%;
+  width: 90vw;
 
   @include extrasmall {
     min-height: inherit;

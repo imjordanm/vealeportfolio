@@ -1,0 +1,32 @@
+.work {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.work-picture {
+  background-color: gray;
+  width: 45%;
+}
+
+.work-text {
+  width: 55%;
+}
+
+.work-list {
+  color: #292929;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 3%;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -10,10 +10,8 @@ const ListLink = props => (
 const Navigation = () => (
   <nav className="navigation">
     <ul className="nav-list">
-      <ListLink to="/">Intro</ListLink>
-      <ListLink to="/about">About</ListLink>
-      <ListLink to="/work">Work</ListLink>
-      <ListLink to="/contact">Contact</ListLink>
+      <ListLink to="/">Nick Veale</ListLink>
+      <ListLink to="/">Menu</ListLink>
     </ul>
   </nav>
 );

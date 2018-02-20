@@ -1,0 +1,1 @@
+thumbnails button on works page that changes view to grid of covers (next to/beside filters or at bottom?)

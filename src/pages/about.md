@@ -20,6 +20,5 @@ of Victoria with a Master’s degree in Music.
 * Curriculum Vitae
 * Awards and Mentions
 
-      </div>
-
-  </div>
+</div>
+</div>

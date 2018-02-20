@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 
 export default class IndexPage extends React.Component {
   componentDidMount() {
@@ -19,10 +21,27 @@ export default class IndexPage extends React.Component {
 
     return (
       <section className="section">
-        <div>
-          <h2 className="heading">Nick Veale</h2>
-          <h3 className="subheading">musician and composer</h3>
+        <ul className="side-text">{/* <li className="left">Scroll down</li> */}</ul>
+        <div className="landing-text">
+          <h2 className="subheading">Musician and composer</h2>
+          <h1 className="heading">Nick Veale.</h1>
+          <p className="paragraph">
+            For those with the courage, I compose for films and write and perform music at a
+            dazzlingly high level.
+          </p>
         </div>
+        <div className="landing-picture">
+          <Img
+            style={{
+              width: '100%',
+              height: '100%',
+            }}
+            title="Nick Veale portrait"
+            alt="Nick Veale portrait"
+            sizes={data.portrait.sizes}
+          />
+        </div>
+        <div className="background-name">Nick Veale</div>
       </section>
     );
   }
@@ -39,6 +58,11 @@ export const pageQuery = graphql`
           }
           html
         }
+      }
+    }
+    portrait: imageSharp(id: { regex: "/nickveale/" }) {
+      sizes(maxWidth: 2440) {
+        ...GatsbyImageSharpSizes
       }
     }
   }

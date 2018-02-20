@@ -11,7 +11,7 @@ if (typeof window !== 'undefined') {
   WebFont = require('webfontloader');
   WebFont.load({
     google: {
-      families: ['Work+Sans:400,500,700'],
+      families: ['Poppins:400,600,700,800'],
     },
     timeout: 2000,
   });
@@ -29,12 +29,6 @@ const TemplateWrapper = ({ children }) => (
 
     <main className="container">
       <Header />
-      <ul className="side-text">
-        <li className="left">Introduction</li>
-        <li className="right">
-          <Link to="/">Nick Veale</Link>
-        </li>
-      </ul>
       {children()}
     </main>
   </div>

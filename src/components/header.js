@@ -10,7 +10,6 @@ const ListLink = props => (
 const Navigation = () => (
   <nav className="navigation">
     <ul className="nav-list">
-      <ListLink to="/">Nick Veale</ListLink>
       <ListLink to="/">Menu</ListLink>
     </ul>
   </nav>
@@ -18,6 +17,9 @@ const Navigation = () => (
 
 const Header = () => (
   <header className="header">
+    <div className="logo">
+      <Link to="/">Nick Veale</Link>
+    </div>
     <Navigation />
   </header>
 );

@@ -1,1 +1,16 @@
-thumbnails button on works page that changes view to grid of covers (next to/beside filters or at bottom?)
+- grid view /list view for works
+- change scrollbar?
+- landing image needs correction to look like figma version - exposure, contrast etc.
+- add menu
+
+
+find a way to make the . of NICK VEALE stay in the same position relative to the image - maybe wrap them in the same div and choose the absolute positioning or margin/padding between them? This will make the spacing the same
+no matter the screen size and on resize.
+
+do same thing for the paragraph - so it's in line with the . in NICK VEALE.
+
+
+graphql query for picture on certain page { path: { eq: $path } } ? so each page doesnt have to perform query that isnt for that page
+
+find out how to get midpoint of div then rotate off that - (x or y - midpoint pixel) * a number
+make it so hovering over text on landing doesnt interfere with picture hover

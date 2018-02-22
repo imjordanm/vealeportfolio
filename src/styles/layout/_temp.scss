@@ -1,31 +1,45 @@
 .landing-text {
   left: 20%;
   position: fixed;
+  user-select: none;
   z-index: 1;
 }
 
 .heading {
   color: #212121;
-  font-size: 5.2em;
   font-weight: 800;
 }
 
 .subheading {
   color: #666;
-  font-size: 2.6em;
   font-weight: 600;
   letter-spacing: 0.05em;
 }
 
 .paragraph {
   color: #6e6e6e;
-  font-size: 20px;
   left: 20%;
   letter-spacing: 0.05em;
-  line-height: 40px;
   margin-top: 11em;
   position: fixed;
+  user-select: none;
   width: 27%;
+
+  @include extrasmall {
+    font-size: 1.2rem;
+  }
+  @include small {
+    font-size: 1.3rem;
+  }
+  @include medium {
+    font-size: 1.4rem;
+  }
+  @include large {
+    font-size: 1.6rem;
+  }
+  @include extralarge {
+    font-size: 2rem;
+  }
 }
 
 .landing-picture {
@@ -34,12 +48,11 @@
   line-height: 100%;
   max-height: 100%;
   overflow: hidden;
-  perspective: 35vw;
   width: 50%;
 }
 
 .background-name {
-  color: rgba(0, 0, 0, 0.04);
+  color: rgba(0, 0, 0, 0.03);
   font-size: 320px;
   font-weight: bold;
   position: fixed;

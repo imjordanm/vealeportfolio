@@ -9,30 +9,17 @@ const onSubmit = ev => {
 };
 
 const ContactForm = () => (
-  <form className="contactForm" onSubmit={onSubmit}>
-    <p>
-      <label htmlFor="name">Name</label>
-      <input className="inputForm" name="name" type="text" id="name" placeholder="name goes here" />
-    </p>
-    <p>
+  <form className="contact-form" onSubmit={onSubmit}>
+    <label htmlFor="name">Name</label>
+    <input className="input-form" name="name" type="text" id="name" placeholder="your name" />
+    {/* <p>
       <label htmlFor="email">Email</label>
-      <input
-        className="inputForm"
-        name="email"
-        id="email"
-        type="email"
-        placeholder="email@example.com"
-      />
+      <input className="input-form" name="email" id="email" type="email" placeholder="your email" />
     </p>
     <p>
       <label htmlFor="message">Message</label>
-      <textarea
-        className="inputForm"
-        name="message"
-        id="message"
-        placeholder="enter your message here"
-      />
-    </p>
+      <textarea className="input-form" name="message" id="message" placeholder="your message" />
+    </p> */}
     <button type="submit" className="submitButton">
       Send message
     </button>

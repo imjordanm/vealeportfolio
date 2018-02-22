@@ -32,7 +32,7 @@ body {
     font-size: 1.8rem;
   }
   @include extralarge {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -56,43 +56,59 @@ h4 {
 
 h1 {
   @include extrasmall {
-    font-size: 4rem;
+    font-size: 5rem;
   }
   @include small {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
   @include medium {
-    font-size: 10rem;
+    font-size: 6rem;
   }
   @include large {
-    font-size: 10rem;
+    font-size: 7rem;
   }
   @include extralarge {
-    font-size: 10rem;
+    font-size: 9rem;
   }
 }
 
 h2 {
-  font-size: 3.2em;
-
   @include extrasmall {
-    font-size: 2.2em;
+    font-size: 2.7rem;
   }
-
   @include small {
-    font-size: 2.8em;
+    font-size: 2.9rem;
+  }
+  @include medium {
+    font-size: 3.2rem;
+  }
+  @include large {
+    font-size: 3.8rem;
+  }
+  @include extralarge {
+    font-size: 5rem;
   }
 }
 
 h3 {
-  color: #1f1f1f;
-  font-size: 2.6rem;
-  font-weight: 500;
-  line-height: normal;
+  @include extrasmall {
+    font-size: 2.1rem;
+  }
+  @include small {
+    font-size: 2.4rem;
+  }
+  @include medium {
+    font-size: 2.7rem;
+  }
+  @include large {
+    font-size: 2.7rem;
+  }
+  @include extralarge {
+    font-size: 3rem;
+  }
 }
 
 p {
   color: #292929;
-  line-height: 1.4;
-  margin-bottom: 1.4rem;
+  line-height: 2;
 }

@@ -10,8 +10,7 @@
 
 .logo {
   color: #6e6e6e;
-  font-size: 1.6em;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
 
   a {
@@ -33,5 +32,9 @@
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  a {
+    text-decoration: none;
   }
 }

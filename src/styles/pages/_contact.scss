@@ -1,6 +1,65 @@
 .contact {
-  h3 {
-    font-size: 3rem;
-    font-weight: 500;
+  align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+
+  label {
+    font-size: 0.7em;
+  }
+
+  input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #303030;
+    outline: 0;
+
+    ::placeholder {
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+.contact-text {
+  padding-left: 2em;
+  width: 40%;
+
+  p {
+    color: #292929;
+    font-weight: 600;
+    margin-top: 1em;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  li {
+    color: #303030;
   }
 }

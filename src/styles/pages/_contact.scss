@@ -1,58 +1,62 @@
 .contact {
   align-items: center;
   display: flex;
-  height: inherit;
-  justify-content: center;
-  width: 100%;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  height: 90vh;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+
+  @include extrasmall {
+    flex-direction: column;
+  }
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .contact-box {
   display: flex;
   flex-direction: column;
+  user-select: none;
   width: 40%;
-}
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  margin-top: 2em;
-
-  label {
-    font-size: 0.7em;
-  }
-
-  input {
-    background: none;
-    border: none;
-    border-bottom: 1px solid #303030;
-    outline: 0;
-
-    ::placeholder {
-    }
-  }
-
-  textarea {
-    resize: none;
-  }
-
-  button {
-    display: none;
+  @include extrasmall {
+    width: 100%;
   }
 }
 
 .contact-text {
-  padding-left: 2em;
-  width: 40%;
+  width: 20%;
+
+  @include extrasmall {
+    padding: 0;
+    width: 100%;
+  }
+
+  h3 {
+    font-size: calc(var(--base-em) * var(--step-zero));
+    margin: 2em 0 0.5em;
+
+    &:first-of-type {
+      margin: 0 0 0.5em;
+    }
+  }
 
   p {
-    color: #292929;
-    font-weight: 600;
-    margin-top: 1em;
+    color: $body-colour;
+
+    &:first-of-type {
+      margin: 0;
+    }
   }
 
   ul {
-    display: flex;
-    justify-content: space-between;
+    //display: flex;
+    //justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -60,6 +64,6 @@
   }
 
   li {
-    color: #303030;
+    color: $body-colour;
   }
 }

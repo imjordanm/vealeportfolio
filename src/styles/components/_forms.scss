@@ -1,1 +1,49 @@
+.contact-form {
+  margin-top: 1em;
 
+  div {
+    margin: 1em 0;
+  }
+
+  .small-input {
+    display: inline-block;
+    width: calc(50% - 1em);
+
+    &.email {
+      margin-left: 2em;
+    }
+  }
+
+  label {
+    font-size: 0.7em;
+    margin-bottom: 1em;
+  }
+
+  input,
+  textarea {
+    background: #f0f0f0;
+    border: 0;
+    border-radius: 4px;
+    margin-top: 0.5em;
+    outline: 0;
+    padding: 2vh 1vw;
+    width: 100%;
+  }
+
+  textarea {
+    height: 20vh;
+    resize: none;
+  }
+
+  button {
+    //display: none;
+    background: none;
+    border: 1px solid #171717;
+    border-radius: 4px;
+    padding: 1vh 1vw;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

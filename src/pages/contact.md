@@ -3,14 +3,18 @@ path: /contact
 title: Contact
 ---
 
-Email
+### Reach out
+
+I am currently taking on new projects. You can find me around Wellington but I
+also offer my services to clients globally.
+
+### Contact
 
 * nickveale@gmail.com
-
-Phone
-
 * +64 027 2104 5422
 
-Social
+### Social
 
-* Facebook Linkedin
+* Facebook
+* Linkedin
+* Bandcamp

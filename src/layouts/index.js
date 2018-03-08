@@ -11,7 +11,7 @@ if (typeof window !== 'undefined') {
   WebFont = require('webfontloader');
   WebFont.load({
     google: {
-      families: ['Poppins:400,600,700,800'],
+      families: ['Poppins:400,700'],
     },
     timeout: 2000,
   });

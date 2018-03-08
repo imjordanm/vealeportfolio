@@ -1,60 +1,69 @@
+.side-text {
+  align-self: flex-end;
+  transform: rotate(-90deg) translateY(-160%) translateX(40%);
+}
+
 .landing-text {
-  left: 20%;
-  position: fixed;
+  flex: 0 0 30%;
+  margin: 0;
+  margin-left: -3em;
+  position: relative;
   user-select: none;
-  z-index: 1;
+  width: 30%;
+  z-index: 2;
 }
 
 .heading {
-  color: #212121;
-  font-weight: 800;
-}
-
-.subheading {
-  color: #666;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  color: $black;
+  font-weight: 700;
+  letter-spacing: -0.03em;
 }
 
 .paragraph {
-  color: #6e6e6e;
-  left: 20%;
-  letter-spacing: 0.05em;
-  margin-top: 11em;
-  position: fixed;
+  color: $body-colour;
+  margin-left: 5em;
+  margin-top: 2em;
   user-select: none;
-  width: 27%;
-
-  @include extrasmall {
-    font-size: 1.2rem;
-  }
-  @include small {
-    font-size: 1.3rem;
-  }
-  @include medium {
-    font-size: 1.4rem;
-  }
-  @include large {
-    font-size: 1.6rem;
-  }
-  @include extralarge {
-    font-size: 2rem;
-  }
 }
 
 .landing-picture {
   background-color: rgba(245, 245, 245, 0.8);
-  box-shadow: -20px 20px 0 0 #cbedf5;
-  line-height: 100%;
-  max-height: 100%;
+  border-radius: 4px;
+  //bottom: 0;
+  flex: 0 0 40%;
+  height: 80%;
   overflow: hidden;
-  width: 50%;
+  //position: absolute;
+  //right: 0;
+  //top: 0;
+  width: 40%;
+  z-index: 1;
 }
 
-.background-name {
-  color: rgba(0, 0, 0, 0.03);
-  font-size: 320px;
-  font-weight: bold;
-  position: fixed;
-  z-index: -1;
+.landing-wrap {
+  align-items: center;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  height: 90vh;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+}
+
+.landing-section {
+  margin: 0 5vw;
+}
+
+.gatsby-image-wrapper {
+  @include extralarge {
+    transform: translateY(-10%);
+  }
+  @include large {
+    transform: translateY(-10%);
+  }
+  @include medium {
+    transform: translateY(-10%);
+  }
 }

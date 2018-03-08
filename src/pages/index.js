@@ -15,47 +15,33 @@ export default class IndexPage extends React.Component {
     }
   }
 
-  mouseMove = e => {
-    const x = (e.pageX - e.target.offsetLeft) / e.target.offsetWidth;
-    const y = (e.pageY - e.target.offsetTop) / e.target.offsetHeight;
-    const move = `rotateY(${x}deg) rotateX(${y}deg) translateZ(-1000px)`;
-    const css = {
-      move,
-    };
-
-    document.getElementsByClassName('landing-picture')[0].style.transform = move;
-    e.preventDefault();
-  };
-
   render() {
     const { data } = this.props;
     const { edges: pages } = data.allMarkdownRemark;
 
     return (
-      <section className="section">
-        <ul className="side-text">{/* <li className="left">Scroll down</li> */}</ul>
-        <div className="landing-text">
-          <h2 className="subheading">Musician and film composer</h2>
-          <h1 className="heading">Nick Veale.</h1>
+      <section className="landing-section">
+        <div className="landing-wrap">
+          <div className="landing-picture">
+            <Img
+              style={{
+                width: '100%',
+                height: '100%',
+              }}
+              title="Nick Veale portrait"
+              alt="Nick Veale portrait"
+              sizes={data.portrait.sizes}
+            />
+          </div>
+          <div className="landing-text">
+            <h1 className="heading">I am Nick Veale, musician and film composer.</h1>
+            <p className="paragraph">
+              For those with the cheddar, I compose for films and write and perform music at a
+              dazzlingly high level. Reach me here for astounding collaborative adventures or die
+              unhappy.
+            </p>
+          </div>
         </div>
-        <p className="paragraph">
-          For those with the courage, I compose for films and write and perform music at a
-          dazzlingly high level.
-        </p>
-        <div className="landing-picture" onMouseMove={this.mouseMove} style={this.mouse}>
-          <Img
-            style={{
-              width: '100%',
-              height: '100%',
-              position: 'relative',
-              transform: 'translate(0, -20%)',
-            }}
-            title="Nick Veale portrait"
-            alt="Nick Veale portrait"
-            sizes={data.portrait.sizes}
-          />
-        </div>
-        <div className="background-name">Nick Veale</div>
       </section>
     );
   }

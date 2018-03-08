@@ -2,15 +2,16 @@
 }
 
 .section {
-  align-items: center;
-  display: flex;
-  height: 80vh;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 90vw;
+  margin: 0 5vw;
 
   @include extrasmall {
-    min-height: inherit;
+    height: inherit;
+    min-height: 80vh;
+  }
+
+  @include small {
+    height: inherit;
+    min-height: 80vh;
   }
 }
 

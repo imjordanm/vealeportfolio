@@ -10,6 +10,7 @@ export default function Template({ data }) {
       <section className="section">
         {page.frontmatter.path === '/about' ? (
           <div className="about">
+            <div className="about-text" dangerouslySetInnerHTML={{ __html: page.html }} />
             <div className="about-picture">
               <Img
                 style={{
@@ -22,22 +23,22 @@ export default function Template({ data }) {
                 sizes={data.about.sizes}
               />
             </div>
-            <div className="about-text" dangerouslySetInnerHTML={{ __html: page.html }} />
           </div>
         ) : null}
 
         {page.frontmatter.path === '/contact' ? (
           <div className="contact">
-            <div className="contact-box">
-              <h2>Ready to jam, lads?</h2>
-              <p>Leave a message and we can talk about your next project.</p>
-              <ContactForm />
+            <div className="contact-container">
+              <div className="contact-box">
+                <h2>
+                  Looking to work together <br />or just want to say hello?
+                </h2>
+                <ContactForm />
+              </div>
+              <div className="contact-text" dangerouslySetInnerHTML={{ __html: page.html }} />
             </div>
-            <div className="contact-text" dangerouslySetInnerHTML={{ __html: page.html }} />
           </div>
         ) : null}
-
-        <div className="background-name">Nick Veale</div>
       </section>
     </div>
   );

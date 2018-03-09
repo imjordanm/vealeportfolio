@@ -1,32 +1,55 @@
 .work {
+  align-items: center;
   display: flex;
+  flex-wrap: nowrap;
+  height: 100vh;
   justify-content: center;
-  width: 100%;
-}
+  margin: 0 auto;
 
-.work-picture {
-  background-color: gray;
-  width: 45%;
-}
-
-.work-text {
-  width: 55%;
+  @include extrasmall {
+    flex-direction: column;
+  }
 }
 
 .work-list {
-  color: $body-colour;
+  height: 100vw;
+  //smooth ios momentum scrolling
+  -webkit-overflow-scrolling: touch;
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  /* Make an auto-hiding scroller for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10vw 0;
+
+  transform: rotate(-90deg);
+
+  user-select: none;
+  width: inherit;
+
+  &::-webkit-scrollbar {
+    height: 1px;
+    width: 1px;
   }
 
-  li {
-    margin-bottom: 3%;
+  &::-webkit-scrollbar-button {
+    height: 1px;
+    width: 1px;
+  }
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+  .item {
+    height: 20vw;
+    transform: rotate(90deg);
+    width: 20vw;
+  }
+
+  .cover {
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.25);
+    height: 20vw;
+    margin: 5em 0;
+    transform: rotate(90deg);
+    width: 20vw;
   }
 }

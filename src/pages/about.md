@@ -3,7 +3,7 @@ path: /about
 title: About
 ---
 
-<span>I bring dreams to life with sound and a bit of magic.</span>
+## I bring dreams to life with<br />sound and a bit of magic.
 
 <div class="about-body">
 

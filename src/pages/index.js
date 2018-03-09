@@ -20,29 +20,27 @@ export default class IndexPage extends React.Component {
     const { edges: pages } = data.allMarkdownRemark;
 
     return (
-      <section className="landing-section">
-        <div className="landing-wrap">
-          <div className="landing-picture">
-            <Img
-              style={{
-                width: '100%',
-                height: '100%',
-              }}
-              title="Nick Veale portrait"
-              alt="Nick Veale portrait"
-              sizes={data.portrait.sizes}
-            />
-          </div>
-          <div className="landing-text">
-            <h1 className="heading">I am Nick Veale, musician and film composer.</h1>
-            <p className="paragraph">
-              For those with the cheddar, I compose for films and write and perform music at a
-              dazzlingly high level. Reach me here for astounding collaborative adventures or die
-              unhappy.
-            </p>
-          </div>
+      <div className="landing-wrap">
+        <div className="landing-picture">
+          <Img
+            style={{
+              width: '100%',
+              height: '100%',
+            }}
+            title="Nick Veale portrait"
+            alt="Nick Veale portrait"
+            sizes={data.portrait.sizes}
+          />
         </div>
-      </section>
+        <div className="landing-text">
+          <h1 className="heading">I am Nick Veale, musician and film composer.</h1>
+          <p className="paragraph">
+            For those with the cheddar, I compose for films and write and perform music at a
+            dazzlingly high level. Reach me here for astounding collaborative adventures or die
+            unhappy.
+          </p>
+        </div>
+      </div>
     );
   }
 }

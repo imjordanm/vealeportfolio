@@ -1,7 +1,8 @@
 .container {
-}
-
-.section {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
   margin: 0 5vw;
 
   @include extrasmall {
@@ -13,6 +14,21 @@
     height: inherit;
     min-height: 80vh;
   }
+}
+
+.section {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .social-links {

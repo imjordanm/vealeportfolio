@@ -6,7 +6,7 @@
 .landing-text {
   flex: 0 0 30%;
   margin: 0;
-  margin-left: -3em;
+  margin-left: -2.5em;
   user-select: none;
   width: 30%;
   z-index: 2;
@@ -16,6 +16,7 @@
   color: $black;
   font-weight: 700;
   letter-spacing: -0.03em;
+  line-height: 1.1em;
 }
 
 .paragraph {
@@ -26,7 +27,7 @@
 }
 
 .landing-picture {
-  background-color: rgba(245, 245, 245, 0.8);
+  background-color: rgba(238, 238, 238, 0.8);
   border-radius: 4px;
   //bottom: 0;
   flex: 0 0 40%;

@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   height: 100%;
-  justify-content: space-around;
+  justify-content: flex-end;
 
   @include extrasmall {
     flex-direction: column;
@@ -25,6 +25,7 @@
 }
 
 .about-text {
+  margin-right: 4em;
   width: 50%;
 
   @include extrasmall {
@@ -42,7 +43,7 @@
 
 .about-body {
   column-count: 2;
-  column-gap: 1em;
+  column-gap: 2em;
   margin-top: 2em;
 
   p {

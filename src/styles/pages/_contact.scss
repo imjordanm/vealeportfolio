@@ -1,11 +1,7 @@
 .contact {
-  align-items: center;
+  align-items: flex-end;
   display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
   height: 90vh;
-  margin: 0 auto;
-  max-width: 1200px;
 
   @include extrasmall {
     flex-direction: column;

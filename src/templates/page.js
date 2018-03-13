@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import ContactForm from '../components/contact-form';
 import WorkList from '../components/WorkList';
+import WorkBar from '../components/WorkBar';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
@@ -29,6 +30,7 @@ export default function Template({ data }) {
       {page.frontmatter.path === '/work' ? (
         <div className="work">
           <WorkList />
+          <WorkBar />
         </div>
       ) : null}
 

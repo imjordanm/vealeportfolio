@@ -25,7 +25,7 @@
   transform: rotate(-90deg);
 
   user-select: none;
-  width: inherit;
+  width: 100vh;
 
   &::-webkit-scrollbar {
     height: 1px;
@@ -48,8 +48,59 @@
     border-radius: 4px;
     box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.25);
     height: 20vw;
-    margin: 5em 0;
+    margin: 5em 0 1em;
     transform: rotate(90deg);
     width: 20vw;
+  }
+}
+
+.work-bar {
+  align-items: flex-end;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  margin: 2.5vw auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  position: absolute;
+  right: 0;
+  user-select: none;
+  width: 90vw;
+  z-index: 1;
+
+  .work-filter {
+    line-height: 0;
+  }
+
+  .work-progress {
+    background: rgba(0, 0, 0, 0.5);
+    height: 1px;
+    margin: 0 auto;
+    position: relative;
+    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1),
+      opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 30%;
+
+    .progress-bar {
+      background: rgb(0, 0, 0);
+      border-radius: 12.5%;
+
+      cursor: move;
+      cursor: grab;
+      display: block;
+      height: 1px;
+      height: 5px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%) scaleY(0.7);
+      transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      width: 10%;
+
+      &:active {
+        cursor: grabbing;
+      }
+    }
   }
 }

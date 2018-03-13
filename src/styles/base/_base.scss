@@ -16,28 +16,24 @@ html {
 }
 
 body {
-  background: #fafafa;
+  background: $background-colour;
   font-family: $system-fonts;
   font-size: calc(var(--base-em) * var(--step-zero));
-  line-height: calc(var(--base) * var(--step-three));
+  line-height: 1.5;
 }
 
 h1 {
   font-size: calc(var(--base-em) * var(--step-five));
+  line-height: 1.125;
 }
 
 h2 {
   font-size: calc(var(--base-em) * var(--step-four));
+  line-height: 1.25;
 }
 
-h3 {
-  font-size: calc(var(--base-em) * var(--step-one));
-}
-
-h4 {
-  font-size: calc(var(--base-em) * var(--step-one));
-}
-
+h3,
+h4,
 h5 {
   font-size: calc(var(--base-em) * var(--step-one));
 }
@@ -46,21 +42,20 @@ h6 {
   font-size: calc(var(--base-em) * var(--step-zero));
 }
 
+h6,
+h5,
+h4,
 h3,
 h2,
 h1 {
-  line-height: calc(var(--base) * var(--step-one));
-}
-
-@include large {
-  html {
-    font-size: 18px;
-  }
+  color: $heading-colour;
+  margin: 0;
+  margin-bottom: $vertical-rhythm;
 }
 
 @include extralarge {
-  html {
-    font-size: 20px;
+  body {
+    font-size: 18px;
   }
 }
 
@@ -86,10 +81,7 @@ a:hover {
   outline-width: 0;
 }
 
-p,
-h1,
-h2,
-h3,
-h4 {
+p {
   margin: 0;
+  margin-bottom: $vertical-rhythm;
 }

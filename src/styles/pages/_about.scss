@@ -36,7 +36,6 @@
   }
 
   h2 {
-    color: $black;
     text-align: right;
   }
 }
@@ -44,11 +43,9 @@
 .about-body {
   column-count: 2;
   column-gap: 2em;
-  margin-top: 2em;
 
   p {
     color: $body-colour;
-    margin-bottom: 2em;
   }
 
   ul {

@@ -33,11 +33,12 @@ export default class IndexPage extends React.Component {
           />
         </div>
         <div className="landing-text">
-          <h1 className="heading">I am Nick Veale, musician and film composer.</h1>
+          <h1 className="heading">
+            I am Nick Veale, musician and <br />film composer.
+          </h1>
           <p className="paragraph">
             For those with the cheddar, I compose for films and write and perform music at a
-            dazzlingly high level. Reach me here for astounding collaborative adventures or die
-            unhappy.
+            dazzlingly high level.
           </p>
         </div>
       </div>
@@ -58,7 +59,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    portrait: imageSharp(id: { regex: "/nickveale/" }) {
+    portrait: imageSharp(id: { regex: "/landingnick/" }) {
       sizes(maxWidth: 2440) {
         ...GatsbyImageSharpSizes
       }

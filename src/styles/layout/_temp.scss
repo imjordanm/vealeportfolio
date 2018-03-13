@@ -6,14 +6,13 @@
 .landing-text {
   flex: 0 0 30%;
   margin: 0;
-  margin-left: -2.5em;
+  margin-left: -2.25em;
   user-select: none;
   width: 30%;
   z-index: 2;
 }
 
 .heading {
-  color: $black;
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.1em;
@@ -21,8 +20,7 @@
 
 .paragraph {
   color: $body-colour;
-  margin-left: 5em;
-  margin-top: 2em;
+  margin: 2.25em 1.75em 0 4.5em;
   user-select: none;
 }
 
@@ -31,7 +29,7 @@
   border-radius: 4px;
   //bottom: 0;
   flex: 0 0 40%;
-  height: 80%;
+  height: 70%;
   overflow: hidden;
   //position: absolute;
   //right: 0;
@@ -45,11 +43,9 @@
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
-  height: 90vh;
+  height: 100vh;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 1200px;
-  position: relative;
+  width: inherit;
 }
 
 .landing-section {

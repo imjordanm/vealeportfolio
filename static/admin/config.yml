@@ -13,4 +13,5 @@ collections:
     fields:
       - {label: "Path", name: "path", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Cover", name: "cover", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: false}

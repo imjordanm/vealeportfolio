@@ -29,7 +29,7 @@ export default function Template({ data }) {
 
       {page.frontmatter.path === '/work' ? (
         <div className="work">
-          <WorkList />
+          <WorkList items={page.frontmatter.items} />
           <WorkBar />
         </div>
       ) : null}
@@ -57,6 +57,15 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
+        items {
+          item {
+            title
+            artist
+            cover
+            category
+            description
+          }
+        }
       }
       html
     }

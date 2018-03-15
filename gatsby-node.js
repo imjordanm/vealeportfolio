@@ -13,6 +13,15 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               path
               title
+              items {
+                item {
+                  title
+                  artist
+                  cover
+                  category
+                  description
+                }
+              }
             }
             html
           }

@@ -34,7 +34,7 @@ export default class IndexPage extends React.Component {
         </div>
         <div className="landing-text">
           <h1 className="heading">
-            I am Nick Veale, musician and <br />film composer.
+            I am Nick Veale,<br />a musician and<br />film composer.
           </h1>
           <p className="paragraph">
             For those with the cheddar, I compose for films and write and perform music at a
@@ -54,6 +54,15 @@ export const pageQuery = graphql`
           frontmatter {
             path
             title
+            items {
+              item {
+                title
+                artist
+                cover
+                category
+                description
+              }
+            }
           }
           html
         }

@@ -23,19 +23,18 @@ items:
       cover: a2821453544_10
       description: A blue album cover
       title: Drench the world in Honey
-    - artist: Slymouse Supreme
-      category: release
+    - artist: Schweppes
+      category: commercial
       cover: a2821453544_10
-      description: A blue album cover
-      title: Journey of Tanguine
-    - artist: Slymouse Supreme
-      category: release
+      description: Wow
+      title: Drink the Stuff Ad
+    - artist: Return of the Man
+      category: film
       cover: a2821453544_10
-      description: A blue album cover
-      title: Journey of Tanguine
+      description: Star Wars movie
+      title: Star Wars
     - artist: Kendrick Lamar
       category: release
       description: Good stuff
       title: To Pimp a Butterfly
 ---
-

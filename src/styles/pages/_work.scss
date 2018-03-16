@@ -38,7 +38,13 @@
     border-radius: 4px;
     box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.25);
     height: 15em;
+    transition: 0.3s;
     width: 20em;
+
+    &:hover {
+      height: 16em;
+      transition: 0.3s;
+    }
   }
 }
 
@@ -59,7 +65,26 @@
   z-index: 1;
 
   .work-filter {
-    line-height: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      //display: none;
+      display: block;
+
+      &:hover {
+        background-color: rgba(109, 161, 206, 0.15);
+        cursor: pointer;
+      }
+
+      &.active {
+        background-color: rgb(40, 96, 144);
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        display: block;
+      }
+    }
   }
 
   .work-progress {

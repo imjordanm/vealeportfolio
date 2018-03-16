@@ -4,11 +4,11 @@
 }
 
 .landing-text {
-  flex: 0 0 30%;
+  flex: 0 0 35%;
   margin: 0;
   margin-left: -2.25em;
   user-select: none;
-  width: 30%;
+  width: 35%;
   z-index: 2;
 }
 
@@ -25,11 +25,11 @@
 }
 
 .landing-picture {
-  background-color: rgba(238, 238, 238, 0.8);
+  background-color: rgba(235, 235, 235, 0.8);
   border-radius: 4px;
   //bottom: 0;
   flex: 0 0 40%;
-  height: 70%;
+  height: 60%;
   overflow: hidden;
   //position: absolute;
   //right: 0;
@@ -54,12 +54,12 @@
 
 .gatsby-image-wrapper {
   @include extralarge {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
   }
   @include large {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
   }
   @include medium {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
   }
 }

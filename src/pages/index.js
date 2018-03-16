@@ -38,7 +38,8 @@ export default class IndexPage extends React.Component {
           </h1>
           <p className="paragraph">
             For those with the cheddar, I compose for films and write and perform music at a
-            dazzlingly high level.
+            dazzlingly high level. Reach me here for astounding collaborative adventures or die
+            unhappy.
           </p>
         </div>
       </div>
@@ -69,7 +70,7 @@ export const pageQuery = graphql`
       }
     }
     portrait: imageSharp(id: { regex: "/landingnick/" }) {
-      sizes(maxWidth: 2440) {
+      sizes(maxWidth: 1200) {
         ...GatsbyImageSharpSizes
       }
     }

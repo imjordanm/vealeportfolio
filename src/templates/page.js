@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import ContactForm from '../components/contact-form';
 import WorkList from '../components/WorkList';
-import WorkBar from '../components/WorkBar';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
@@ -27,12 +26,7 @@ export default function Template({ data }) {
         </div>
       ) : null}
 
-      {page.frontmatter.path === '/work' ? (
-        <div className="work">
-          <WorkList items={page.frontmatter.items} />
-          <WorkBar />
-        </div>
-      ) : null}
+      {page.frontmatter.path === '/work' ? <WorkList items={page.frontmatter.items} /> : null}
 
       {page.frontmatter.path === '/contact' ? (
         <div className="contact">
@@ -71,7 +65,7 @@ export const pageQuery = graphql`
     }
 
     about: imageSharp(id: { regex: "/aboutnick2/" }) {
-      sizes(maxWidth: 2440) {
+      sizes(maxWidth: 1200) {
         ...GatsbyImageSharpSizes
       }
     }

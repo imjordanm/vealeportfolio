@@ -29,18 +29,24 @@ h1 {
 }
 
 h2 {
+  font-size: calc(var(--base-em) * var(--step-five));
+  line-height: 1.125;
+}
+
+h3 {
   font-size: calc(var(--base-em) * var(--step-four));
   line-height: 1.25;
 }
 
-h3,
 h4,
 h5 {
-  font-size: calc(var(--base-em) * var(--step-one));
+  font-size: calc(var(--base-em) * var(--step-three));
+  line-height: 1.25;
 }
 
 h6 {
-  font-size: calc(var(--base-em) * var(--step-zero));
+  font-size: calc(var(--base-em) * var(--step-two));
+  line-height: 1.25;
 }
 
 h6,
@@ -50,13 +56,20 @@ h3,
 h2,
 h1 {
   color: $heading-colour;
+  letter-spacing: -0.03em;
   margin: 0;
   margin-bottom: $vertical-rhythm;
 }
 
-@include extralarge {
+@include extrasmall {
   body {
-    font-size: 18px;
+    font-size: 14px;
+  }
+}
+
+@include small {
+  body {
+    font-size: 14px;
   }
 }
 

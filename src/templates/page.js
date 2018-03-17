@@ -33,7 +33,7 @@ export default function Template({ data }) {
           <div className="section-container">
             <div className="contact-box">
               <h2>
-                Looking to work together <br />or just want to say hello?
+                Looking to work together<br />or just want to say hello?
               </h2>
               <ContactForm />
             </div>

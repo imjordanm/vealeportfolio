@@ -12,9 +12,9 @@
 .about-picture {
   background-color: gray;
   border-radius: 4px;
-  height: 70%;
+  height: 60%;
   overflow: hidden;
-  width: 35%;
+  width: 40%;
 
   @include extrasmall {
     width: 100%;
@@ -25,7 +25,7 @@
 }
 
 .about-text {
-  margin-right: 4em;
+  margin-right: 3em;
   width: 50%;
 
   @include extrasmall {

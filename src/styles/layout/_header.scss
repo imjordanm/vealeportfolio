@@ -1,17 +1,15 @@
 .header {
   align-items: flex-end;
   display: flex;
+  height: 3vw;
   justify-content: space-between;
   left: 0;
-  margin: 2.5vw auto;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
+  padding: 0 3vw;
   position: absolute;
   right: 0;
   top: 0;
   user-select: none;
-  width: 90vw;
+  width: 100vw;
   z-index: 1;
 }
 
@@ -35,14 +33,16 @@
 
 .nav-list {
   display: flex;
-  font-size: 0.8em;
-  font-weight: 700;
+  font-size: 0.9em;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   list-style: none;
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
 
   li {
-    margin-right: 2.5vw;
+    margin-right: 1.6vw;
 
     &:last-of-type {
       margin-right: 0;

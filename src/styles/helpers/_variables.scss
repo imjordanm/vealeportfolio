@@ -1,5 +1,4 @@
 $system-fonts: (
-  'Poppins',
   'system-ui',
   'Segoe UI',
   'Roboto',
@@ -11,11 +10,12 @@ $system-fonts: (
 );
 
 //colours
-$background-colour: #fff;
-//#15161E
+$background-colour: rgb(23, 23, 23);
+//#fff
 
-$heading-colour: #1e1e1e;
-$body-colour: #1e1e1e;
+$heading-colour: #fff; //#1e1e1e
+$subheading-colour: gray;
+$body-colour: #efeae9;
 
 $vertical-rhythm: 1rem * 1.5;
 

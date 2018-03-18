@@ -6,7 +6,7 @@
 .landing-text {
   flex: 0 0 35%;
   margin: 0;
-  margin-left: -2.25em;
+  margin-left: -4em;
   user-select: none;
   width: 35%;
   z-index: 2;
@@ -14,21 +14,21 @@
 
 .paragraph {
   color: $body-colour;
-  margin: 2.25em 1.75em 0 4.5em;
+  margin: 2.25em 1.75em 0 6em;
   user-select: none;
 }
 
 .landing-picture {
-  background-color: rgba(235, 235, 235, 0.8);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
   //bottom: 0;
-  flex: 0 0 40%;
-  height: 60%;
+  flex: 0 0 50%;
+  height: 70%;
   overflow: hidden;
   //position: absolute;
   //right: 0;
   //top: 0;
-  width: 40%;
+  width: 50%;
   z-index: 1;
 }
 
@@ -38,7 +38,6 @@
   flex-flow: row;
   flex-wrap: nowrap;
   height: 100vh;
-  justify-content: center;
   width: inherit;
 }
 

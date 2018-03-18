@@ -15,6 +15,7 @@ export default class WorkList extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.displayFilters = this.displayFilters.bind(this);
   }
 
   componentWillMount() {
@@ -41,7 +42,7 @@ export default class WorkList extends React.Component {
     const workList = document.getElementsByClassName('work-list')[0];
     const listWidth = workList.getBoundingClientRect().width;
 
-    document.getElementsByClassName('react-draggable')[0].style.transform = 'translate(0, 0)';
+    document.getElementsByClassName('react-draggable')[0].style.transform = 'none';
 
     const width = contWidth - listWidth;
 
@@ -55,12 +56,18 @@ export default class WorkList extends React.Component {
   }
 
   handleClick(event) {
+    document.getElementsByClassName('filter-list')[0].style.display = 'none';
     const barCategory = event.target.id;
     if (event.target.id === this.state.selectedCategory) {
       return;
     }
+
     this.setState({ selectedCategory: barCategory });
     this.renderCategory(barCategory);
+  }
+
+  displayFilters() {
+    document.getElementsByClassName('filter-list')[0].style.display = 'block';
   }
 
   renderCategory(selected) {
@@ -101,6 +108,7 @@ export default class WorkList extends React.Component {
           categories={this.state.categories}
           selectedCategory={this.state.selectedCategory}
           handleClick={this.handleClick}
+          displayFilters={this.displayFilters}
         />
       </div>
     );

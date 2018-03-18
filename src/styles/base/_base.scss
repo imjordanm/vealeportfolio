@@ -18,35 +18,34 @@ html {
 
 body {
   background: $background-colour;
-  font-family: $system-fonts;
+  color: $body-colour;
+  font-family: 'Nunito Sans', $system-fonts;
   font-size: calc(var(--base-em) * var(--step-zero));
   line-height: 1.5;
 }
 
 h1 {
   font-size: calc(var(--base-em) * var(--step-six));
+  letter-spacing: 0.03em;
   line-height: 1.125;
 }
 
 h2 {
   font-size: calc(var(--base-em) * var(--step-five));
-  line-height: 1.125;
+  letter-spacing: 0.015em;
 }
 
 h3 {
   font-size: calc(var(--base-em) * var(--step-four));
-  line-height: 1.25;
 }
 
 h4,
 h5 {
   font-size: calc(var(--base-em) * var(--step-three));
-  line-height: 1.25;
 }
 
 h6 {
   font-size: calc(var(--base-em) * var(--step-two));
-  line-height: 1.25;
 }
 
 h6,
@@ -56,7 +55,8 @@ h3,
 h2,
 h1 {
   color: $heading-colour;
-  letter-spacing: -0.03em;
+  font-family: 'League Spartan', $system-fonts;
+  line-height: 1.25;
   margin: 0;
   margin-bottom: $vertical-rhythm;
 }
@@ -96,6 +96,11 @@ a:hover {
 }
 
 p {
+  color: $body-colour;
   margin: 0;
   margin-bottom: $vertical-rhythm;
+}
+
+img {
+  -webkit-user-drag: none;
 }

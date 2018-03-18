@@ -36,7 +36,6 @@
   }
 
   h2 {
-    text-align: right;
   }
 }
 
@@ -44,11 +43,8 @@
   column-count: 2;
   column-gap: 2em;
 
-  p {
-    color: $body-colour;
-  }
-
   ul {
+    color: inherit;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -58,5 +54,6 @@
   }
 
   li {
+    color: $body-colour;
   }
 }

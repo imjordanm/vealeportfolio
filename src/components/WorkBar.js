@@ -17,7 +17,12 @@ const WorkBar = props => (
             </li>
             ))
           : null}
-        <li id="All" title="All" className={props.selectedCategory == 'All' ? 'active' : ''}>
+        <li
+          key="All"
+          id="All"
+          title="All"
+          className={props.selectedCategory == 'All' ? 'active' : ''}
+        >
           All
         </li>
       </ul>

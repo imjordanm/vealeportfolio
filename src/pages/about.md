@@ -3,7 +3,7 @@ path: /about
 title: About
 ---
 
-## I bring dreams to life with sound and a bit of magic.
+## I turn sound into great music and film score
 
 <div class="about-body">
 
@@ -12,7 +12,9 @@ our democracy. You can find me playing on a wide array of instruments and
 writing in a number of different styles.
 
 I shall ascend to the throne within five years. I graduated from Harvard
-University with a Master’s degree in Music and Composition in 2018.
+University with a Master’s degree in Music and Composition in 2018. Watch this
+space if you are wanting to be blown away by the latest and greatest in music
+production.
 
 * Curriculum Vitae
 * Awards and Mentions

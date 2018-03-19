@@ -56,7 +56,10 @@ export default class WorkList extends React.Component {
   }
 
   handleClick(event) {
-    document.getElementsByClassName('filter-list')[0].style.display = 'none';
+    if (document.getElementsByClassName('filter-active toggled')[0]) {
+      document.getElementsByClassName('filter-list')[0].style.display = 'none';
+      document.getElementsByClassName('filter-active toggled')[0].className = 'filter-active';
+    }
     const barCategory = event.target.id;
     if (event.target.id === this.state.selectedCategory) {
       return;
@@ -66,8 +69,14 @@ export default class WorkList extends React.Component {
     this.renderCategory(barCategory);
   }
 
-  displayFilters() {
-    document.getElementsByClassName('filter-list')[0].style.display = 'block';
+  displayFilters(event) {
+    if (event.target.className === 'filter-active') {
+      document.getElementsByClassName('filter-list')[0].style.display = 'block';
+      event.target.className = 'filter-active toggled';
+    } else {
+      document.getElementsByClassName('filter-list')[0].style.display = 'none';
+      event.target.className = 'filter-active';
+    }
   }
 
   renderCategory(selected) {

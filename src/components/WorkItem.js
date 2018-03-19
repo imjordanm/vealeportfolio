@@ -8,7 +8,11 @@ const WorkItem = props => (
             (
               <div className="work-item" key={item.title} id={item.title} title={item.title}>
                 <div className="work-cover">
-                  <img alt={item.title} src={item.cover} draggable="false" />
+                  <img
+                    alt={item.title}
+                    src={require(`../resources${item.cover}`)}
+                    draggable="false"
+                  />
                 </div>
                 <span>{item.artist}</span>
                 <p>{item.title}</p>

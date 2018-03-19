@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
+import Tilt from 'react-tilt';
 
 export default class IndexPage extends React.Component {
   componentDidMount() {
@@ -20,29 +21,34 @@ export default class IndexPage extends React.Component {
     const { edges: pages } = data.allMarkdownRemark;
 
     return (
-      <div className="landing-wrap">
-        <div className="landing-picture">
-          <Img
-            style={{
-              width: '100%',
-              height: '100%',
-            }}
-            title="Nick Veale portrait"
-            alt="Nick Veale portrait"
-            sizes={data.portrait.sizes}
-          />
+      <Tilt
+        className="Tilt"
+        options={{
+          reverse: false,
+          reset: true,
+          max: 20,
+          scale: 0.95,
+        }}
+      >
+        <div className="landing-wrap">
+          <div className="landing-text">
+            <h1 className="heading">
+              I am Nick Veale,<br />a musician and<br />film composer.
+            </h1>
+          </div>
+          <div className="landing-picture">
+            <Img
+              style={{
+                width: '100%',
+                height: '100%',
+              }}
+              title="Nick Veale portrait"
+              alt="Nick Veale portrait"
+              sizes={data.portrait.sizes}
+            />
+          </div>
         </div>
-        <div className="landing-text">
-          <h1 className="heading">
-            I am Nick Veale,<br />a musician and<br />film composer.
-          </h1>
-          <p className="paragraph">
-            For those with the cheddar, I compose for films and write and perform music at a
-            dazzlingly high level. Reach me here for astounding collaborative adventures or die
-            unhappy.
-          </p>
-        </div>
-      </div>
+      </Tilt>
     );
   }
 }

@@ -5,7 +5,7 @@ items:
   item:
     - artist: Nick Veale
       category: release
-      cover: ./a0037606868_10.jpg
+      cover: /images/a0037606868_10.jpg
       description: My first self-titled release
       title: Nick Veale
     - artist: Slymouse Supreme
@@ -20,21 +20,22 @@ items:
       title: Djenny
     - artist: Slymouse Supreme
       category: release
-      cover: a2821453544_10
+      cover: /images/a3527470909_10.jpg
       description: A blue album cover
       title: Drench the world in Honey
     - artist: Schweppes
       category: commercial
-      cover: a2821453544_10
+      cover: /images/a0092728998_10.jpg
       description: Wow
       title: Drink the Stuff Ad
     - artist: Return of the Man
       category: film
-      cover: a2821453544_10
+      cover: /images/a0092728998_10.jpg
       description: Star Wars movie
       title: Star Wars
     - artist: Kendrick Lamar
       category: release
       description: Good stuff
       title: To Pimp a Butterfly
+      cover: /images/a0092728998_10.jpg
 ---

@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-wrap: nowrap;
-  height: 100vh;
+  height: inherit;
   margin: 0 auto;
   position: relative;
   width: inherit;
@@ -21,6 +21,10 @@
 
   &:active {
     cursor: grabbing;
+  }
+
+  img {
+    height: 100%;
   }
 
   .work-item {

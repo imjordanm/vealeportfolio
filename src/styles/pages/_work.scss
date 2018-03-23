@@ -12,46 +12,81 @@
   }
 }
 
-.work-list {
-  cursor: move;
-  cursor: grab;
-  display: flex;
+.react-draggable {
+  //transform: translateZ(0);
+  //transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 
+  //will-change: transform;
+}
+
+.work-list {
+  cursor: pointer;
+  display: flex;
   user-select: none;
 
   &:active {
     cursor: grabbing;
+
+    .work-item {
+      //transform: scale(0.9);
+      //transition: all 0.45s ease-in-out;
+    }
   }
 
   img {
     height: 100%;
   }
+}
 
-  .work-item {
-    height: 25em;
-    margin-right: 4em;
-    transition: 0.3s;
-    width: 20em;
+.work-item {
+  height: 25em;
+  margin-right: 4em;
+  //transition: all 0.3s ease-in-out;
+  width: 20em;
 
-    &:last-of-type {
-      margin-right: 0;
-    }
-
-    &:hover {
-      transform: translate3d(0, 10px, 0);
-      transition: 0.3s;
-    }
+  &:last-of-type {
+    margin-right: 0;
   }
 
-  .work-cover {
-    border: 1px solid black;
-    border-radius: 4px;
-    box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.25);
-    height: 20em;
-    width: 20em;
+  &:hover {
+    //transform: scale(1.1);
+
+    .item-more {
+      margin-top: 2em;
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
+.work-cover {
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.25);
+  height: 20em;
+  width: 20em;
+}
+
+.item-text {
+  margin-top: 1em;
+}
+
+.item-artist {
+  font-weight: 700;
+}
+
+.item-title {
+  font-style: italic;
+}
+
+.item-more {
+  //margin-top: 6em;
+  opacity: 0;
+  //transition: margin-top 0.4s, visibility 0.35s, opacity 0.35s;
+  visibility: hidden;
+}
+
+//Work Bar CSS
 .work-bar {
   align-items: flex-end;
   bottom: 0;
@@ -67,67 +102,82 @@
   user-select: none;
   width: 100vw;
   z-index: 1;
+}
 
-  .work-filter {
-    .filter-list {
-      display: none;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
+.filter-list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-    li,
-    .filter-active {
-      background: none;
-      border: none;
-      color: inherit;
-      outline: none;
-      padding: 0;
-      text-align: left;
-      text-transform: capitalize;
-      width: 100%;
+.filter-list li,
+.filter-active {
+  background: none;
+  border: none;
+  color: inherit;
+  outline: none;
+  padding: 0;
+  text-align: left;
+  text-transform: capitalize;
+  width: 100%;
 
-      &:hover {
-        color: #fff;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      &.active {
-        color: rgb(255, 255, 255);
-        cursor: pointer;
-        display: none;
-      }
-    }
+  &:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
   }
 
-  .work-progress {
-    background: rgba(255, 255, 255, 0.15);
-    height: 1px;
-    margin: 0 auto;
-    position: relative;
-    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1),
-      opacity 1s cubic-bezier(0.19, 1, 0.22, 1);
-    width: 30%;
+  &.active {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: none;
+  }
+}
 
-    .progress-bar {
-      background: $subheading-colour;
-      border-radius: 12.5%;
+.work-progress {
+  background: rgba(255, 255, 255, 0.15);
+  height: 1px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 30%;
+}
 
-      cursor: move;
-      cursor: grab;
-      display: block;
-      height: 1px;
+.progress-bar {
+  bottom: 0;
+  cursor: grab;
+  left: 0;
+  padding: 15px 0;
+  position: absolute;
+  top: -16px;
+  //transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 10%;
+
+  &:hover {
+    top: -17px;
+
+    .progress-bar-line {
+      background: lightgray;
       height: 5px;
-      position: relative;
-      top: -200%;
-      transform: translateY(-50%) scaleY(0.7);
-      transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-      width: 10%;
-
-      &:active {
-        cursor: grabbing;
-      }
     }
   }
+
+  &:active {
+    cursor: grabbing;
+    top: -17px;
+
+    .progress-bar-line {
+      background: lightgray;
+      height: 5px;
+    }
+  }
+}
+
+.progress-bar-line {
+  background: $subheading-colour;
+  border-radius: 10px;
+  display: block;
+  height: 3px;
 }

@@ -6,7 +6,7 @@ items:
     - artist: Nick Veale
       category: release
       cover: /images/a0037606868_10.jpg
-      description: My first self-titled release
+      description: My first self-titled release that is in the post-rock genre of music. I made a million dollars off of this one.
       title: Nick Veale
     - artist: Slymouse Supreme
       category: release
@@ -22,7 +22,7 @@ items:
       category: release
       cover: /images/a3527470909_10.jpg
       description: A blue album cover
-      title: Drench the world in Honey
+      title: Drench the World in Honey
     - artist: Schweppes
       category: commercial
       cover: /images/a0092728998_10.jpg

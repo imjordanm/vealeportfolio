@@ -7,14 +7,14 @@ title: About
 
 <div class="about-body">
 
-I have vast experience with composing film scores and I soon plan to overthrow
-our democracy. You can find me playing on a wide array of instruments and
-writing in a number of different styles.
+I am a working composer based in Wellington, New Zealand. I completed a Master's
+degree in Film Scoring at the New Zealand School of Music. During my years
+studying I have become experienced in composing high quality music in a rapid
+time frame for advertising, short films, feature films, and artistic projects.
 
-I shall ascend to the throne within five years. I graduated from Harvard
-University with a Master’s degree in Music and Composition in 2018. Watch this
-space if you are wanting to be blown away by the latest and greatest in music
-production.
+My sharp work flow and passionate work ethic allows for an incredibly short turn
+around, giving you more options, more time, and a stress free experience without
+sacrificing quality.
 
 * Curriculum Vitae
 * Awards and Mentions

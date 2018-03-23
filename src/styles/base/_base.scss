@@ -17,7 +17,8 @@ html {
 }
 
 body {
-  background: $background-colour;
+  //background: $background-colour;
+  background: linear-gradient(141.95deg, #353535, $background-colour);
   color: $body-colour;
   font-family: 'Nunito Sans', $system-fonts;
   font-size: calc(var(--base-em) * var(--step-zero));

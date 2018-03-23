@@ -2,6 +2,7 @@ import React from 'react';
 import Draggable from 'react-draggable';
 import WorkItem from './WorkItem';
 import WorkBar from '../components/WorkBar';
+import WorkFilter from '../components/WorkFilter';
 
 export default class WorkList extends React.Component {
   constructor(props) {
@@ -12,10 +13,13 @@ export default class WorkList extends React.Component {
       categories: new Set([]),
       selectedCategory: 'All',
       cachedFilters: {},
+      x: 0,
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.displayFilters = this.displayFilters.bind(this);
+    this.listDrag = this.listDrag.bind(this);
+    this.scrollDrag = this.scrollDrag.bind(this);
   }
 
   componentWillMount() {
@@ -79,6 +83,24 @@ export default class WorkList extends React.Component {
     }
   }
 
+  listDrag(e, position) {
+    if (
+      (this.state.x !== position.x && Math.abs(this.state.x - position.x) >= 5) ||
+      position.x === 0
+    ) {
+      this.setState({ x: position.x }, () => {});
+    }
+  }
+
+  scrollDrag(e, position) {
+    if (
+      (this.state.x !== position.x && Math.abs(this.state.x - position.x) >= 5) ||
+      position.x === 0
+    ) {
+      this.setState({ x: (position.x - position.x * 2) * 2.749 }, () => {});
+    }
+  }
+
   renderCategory(selected) {
     if (this.state.cachedFilters.hasOwnProperty(selected)) {
       this.setState({ items: this.state.cachedFilters[selected] });
@@ -107,18 +129,23 @@ export default class WorkList extends React.Component {
         <Draggable
           axis="x"
           defaultPosition={{ x: 0, y: 0 }}
+          position={{ x: this.state.x, y: 0 }}
+          onDrag={this.listDrag}
           bounds={{ left: this.state.width, right: 0 }}
         >
           <div>
             <WorkItem items={this.state.items} categories={this.state.categories} />
           </div>
         </Draggable>
-        <WorkBar
-          categories={this.state.categories}
-          selectedCategory={this.state.selectedCategory}
-          handleClick={this.handleClick}
-          displayFilters={this.displayFilters}
-        />
+        <div className="work-bar">
+          <WorkFilter
+            categories={this.state.categories}
+            selectedCategory={this.state.selectedCategory}
+            handleClick={this.handleClick}
+            displayFilters={this.displayFilters}
+          />
+          <WorkBar position={this.state.x} drag={this.scrollDrag} />
+        </div>
       </div>
     );
   }

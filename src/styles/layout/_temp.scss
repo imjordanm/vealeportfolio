@@ -69,8 +69,10 @@
 }
 
 .landing-wrap {
+  backface-visibility: hidden;
   pointer-events: none;
   transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .heading {
@@ -84,5 +86,7 @@
 }
 
 .Tilt {
+  backface-visibility: hidden;
   transform-style: preserve-3d;
+  will-change: transform;
 }

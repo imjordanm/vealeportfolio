@@ -3,7 +3,9 @@ import Link from 'gatsby-link';
 
 const ListLink = props => (
   <li>
-    <Link to={props.to}>{props.children}</Link>
+    <Link activeClassName="active" to={props.to}>
+      {props.children}
+    </Link>
   </li>
 );
 
@@ -14,6 +16,7 @@ const Navigation = () => (
       <ListLink to="/work">Work</ListLink>
       <ListLink to="/contact">Contact</ListLink>
     </ul>
+    <div className="menu">Menu</div>
   </nav>
 );
 

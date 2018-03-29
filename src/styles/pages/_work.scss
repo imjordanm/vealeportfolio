@@ -1,11 +1,8 @@
 .work {
-  align-items: center;
   display: flex;
-  flex-wrap: nowrap;
-  height: inherit;
+  height: 25em;
   margin: 0 auto;
   position: relative;
-  width: inherit;
 
   @include extrasmall {
     flex-direction: column;
@@ -22,9 +19,11 @@
 .work-list {
   cursor: pointer;
   display: flex;
+  position: absolute;
   user-select: none;
+  //will-change: transform;
 
-  &:active {
+  /*&:active {
     cursor: grabbing;
 
     .work-item {
@@ -35,7 +34,29 @@
 
   img {
     height: 100%;
-  }
+  }*/
+}
+
+.test {
+  cursor: move;
+  display: flex;
+  height: inherit;
+  overflow-x: auto;
+  overflow-y: hidden;
+  touch-action: pan-y;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  user-select: none;
+  width: 100vw;
+}
+
+.sf {
+  display: block;
+  overflow: visible;
+  padding-right: 0;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+  vertical-align: top;
+  width: 100%;
 }
 
 .work-item {
@@ -44,8 +65,12 @@
   //transition: all 0.3s ease-in-out;
   width: 20em;
 
+  &:first-of-type {
+    margin-left: 22em;
+  }
+
   &:last-of-type {
-    margin-right: 0;
+    margin-right: 22em;
   }
 
   &:hover {
@@ -60,11 +85,15 @@
 }
 
 .work-cover {
-  border: 1px solid black;
+  background: $body-colour;
   border-radius: 4px;
   box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.25);
   height: 20em;
   width: 20em;
+
+  img {
+    height: 100%;
+  }
 }
 
 .item-text {
@@ -88,15 +117,15 @@
 
 //Work Bar CSS
 .work-bar {
-  align-items: flex-end;
+  align-items: center;
   bottom: 0;
   color: gray;
   display: flex;
   font-family: 'League Spartan', $system-fonts;
+  height: 10vh;
   justify-content: space-between;
   left: 0;
-  margin: 0 0 3vw;
-  padding: 0 3vw;
+  padding: 0 5vh;
   position: fixed;
   right: 0;
   user-select: none;

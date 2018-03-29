@@ -2,42 +2,21 @@
   align-items: center;
   display: flex;
   height: 80vh;
-  justify-content: space-evenly;
-
-  @include extrasmall {
-    flex-direction: column;
-  }
+  justify-content: space-between;
 }
 
 .about-picture {
   background-color: gray;
   border-radius: 4px;
   height: 70%;
-  margin-left: -5%;
   overflow: hidden;
   width: 40%;
-
-  @include extrasmall {
-    width: 100%;
-  }
-  @include small {
-    width: 100%;
-  }
 }
 
 .about-text {
+  min-width: 30em;
   width: 40%;
   z-index: 2;
-
-  @include extrasmall {
-    width: 100%;
-  }
-  @include small {
-    width: 100%;
-  }
-
-  h2 {
-  }
 }
 
 .about-body {
@@ -57,5 +36,34 @@
 
   li {
     color: $body-colour;
+  }
+}
+
+@include extrasmall {
+  .about {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .about-text {
+    width: 30em;
+  }
+
+  .about-picture {
+    display: none;
+  }
+}
+@include small {
+  .about {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .about-text {
+    width: 30em;
+  }
+
+  .about-picture {
+    display: none;
   }
 }

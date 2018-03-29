@@ -4,7 +4,6 @@
 }
 
 .landing-text {
-  flex: 0 0 30%;
   margin: 0;
   user-select: none;
   z-index: 2;
@@ -42,10 +41,10 @@
 
 .gatsby-image-wrapper {
   @include extralarge {
-    transform: translateY(-15%);
+    transform: translateY(-20%);
   }
   @include large {
-    transform: translateY(-15%);
+    transform: translateY(-20%);
   }
   @include medium {
     transform: translateY(-5%);
@@ -58,35 +57,35 @@
   transform-style: preserve-3d;
 }
 
-.about-text {
-  h2 {
-    transform: translateZ(60px);
-  }
-
-  .about-body {
-    transform: translateZ(60px);
-  }
+.about-picture {
+  transform: translateZ(-60px);
 }
 
 .landing-wrap {
   backface-visibility: hidden;
   pointer-events: none;
   transform-style: preserve-3d;
-  will-change: transform;
+  //will-change: transform;
 }
 
-.heading {
-  transform: translateZ(60px);
-  transform-style: preserve-3d;
-}
-
-.paragraph {
-  transform: translateZ(60px);
-  transform-style: preserve-3d;
+.landing-picture {
+  transform: translateZ(-60px);
 }
 
 .Tilt {
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  will-change: transform;
+  //will-change: transform;
+}
+
+@include extrasmall {
+  .landing-wrap {
+    flex-direction: column;
+  }
+}
+
+@include small {
+  .landing-wrap {
+    flex-direction: column;
+  }
 }

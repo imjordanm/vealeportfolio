@@ -6,16 +6,6 @@
   margin: 0 auto;
   max-width: 1200px;
   width: 90vw;
-
-  @include extrasmall {
-    height: inherit;
-    min-height: 80vh;
-  }
-
-  @include small {
-    height: inherit;
-    min-height: 80vh;
-  }
 }
 
 .section {
@@ -25,11 +15,6 @@
   height: 80vh;
   justify-content: center;
   width: 100%;
-}
-
-.section-container {
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .social-links {

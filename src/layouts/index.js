@@ -17,6 +17,11 @@ if (typeof window !== 'undefined') {
   });
 }
 
+if (process.env.NODE_ENV !== 'production') {
+  const { whyDidYouUpdate } = require('why-did-you-update');
+  whyDidYouUpdate(React);
+}
+
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet

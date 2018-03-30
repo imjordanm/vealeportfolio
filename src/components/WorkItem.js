@@ -3,7 +3,7 @@ import React from 'react';
 class WorkItem extends React.PureComponent {
   render() {
     return (
-      <div className="work-list">
+      <div className="sf">
         {this.props.items
           ? this.props.items.map(
               item => (
@@ -12,8 +12,9 @@ class WorkItem extends React.PureComponent {
                   <div className="work-item" key={item.title} id={item.title} title={item.title}>
                     <div className="work-cover">
                       <img
+                        className="work-image"
                         alt={item.title}
-                        src={require(`../resources${item.cover}`)}
+                        data-flickity-lazyload-srcset={require(`../resources${item.cover}`)}
                         draggable="false"
                       />
                     </div>

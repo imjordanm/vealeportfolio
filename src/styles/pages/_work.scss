@@ -1,19 +1,11 @@
 .work {
   display: flex;
-  height: 25em;
   margin: 0 auto;
   position: relative;
 
   @include extrasmall {
     flex-direction: column;
   }
-}
-
-.react-draggable {
-  //transform: translateZ(0);
-  //transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-
-  //will-change: transform;
 }
 
 .work-list {
@@ -38,40 +30,25 @@
 }
 
 .test {
-  cursor: move;
+  cursor: grab;
   display: flex;
-  height: inherit;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
   touch-action: pan-y;
-  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+
   user-select: none;
   width: 100vw;
 }
 
 .sf {
-  display: block;
-  overflow: visible;
-  padding-right: 0;
-  position: relative;
-  transform: translate3d(0, 0, 0);
-  vertical-align: top;
+  outline: 0;
   width: 100%;
 }
 
 .work-item {
-  height: 25em;
+  height: 30em;
   margin-right: 4em;
   //transition: all 0.3s ease-in-out;
-  width: 20em;
-
-  &:first-of-type {
-    margin-left: 22em;
-  }
-
-  &:last-of-type {
-    margin-right: 22em;
-  }
+  width: 25em;
 
   &:hover {
     //transform: scale(1.1);
@@ -86,14 +63,14 @@
 
 .work-cover {
   background: $body-colour;
-  border-radius: 4px;
-  box-shadow: 3px -3px 6px rgba(0, 0, 0, 0.25);
-  height: 20em;
-  width: 20em;
+  border-radius: 8px;
+  height: 25em;
+  width: 25em;
+}
 
-  img {
-    height: 100%;
-  }
+.work-image {
+  border-radius: 8px;
+  height: 100%;
 }
 
 .item-text {

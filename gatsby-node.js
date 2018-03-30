@@ -42,3 +42,12 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     });
   });
 };
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  if (stage === 'build-html') {
+    config.loader('null', {
+      test: /flickity/,
+      loader: 'null-loader',
+    });
+  }
+};

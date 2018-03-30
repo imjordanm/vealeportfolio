@@ -2,6 +2,7 @@ import React from 'react';
 import WorkItem from './WorkItem';
 import WorkBar from '../components/WorkBar';
 import WorkFilter from '../components/WorkFilter';
+import Flickity from 'flickity';
 
 export default class WorkList extends React.Component {
   constructor(props) {
@@ -19,6 +20,26 @@ export default class WorkList extends React.Component {
 
   componentWillMount() {
     this.setState({ items: this.props.items.item });
+  }
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      const carousel = document.getElementsByClassName('sf')[0];
+
+      this.flkty = new Flickity(carousel, options);
+      // this.flkty.on('cellSelect', this.updateSelected);
+    }
+  }
+
+  componentDidUpdate() {
+    const carousel = document.getElementsByClassName('sf')[0];
+    this.flkty = new Flickity(carousel, options);
+  }
+
+  componentWillUnmount() {
+    if (this.flkty) {
+      this.flkty.destroy();
+    }
   }
 
   handleClick(event) {
@@ -46,6 +67,8 @@ export default class WorkList extends React.Component {
   }
 
   renderCategory(selected) {
+    this.flkty.destroy();
+
     if (this.state.cachedFilters.hasOwnProperty(selected)) {
       this.setState({ items: this.state.cachedFilters[selected] });
       return;
@@ -71,9 +94,7 @@ export default class WorkList extends React.Component {
     return (
       <div className="work">
         <div className="test">
-          <div className="sf">
-            <WorkItem items={this.state.items} categories={this.state.categories} />
-          </div>
+          <WorkItem items={this.state.items} categories={this.state.categories} />
         </div>
         <div className="work-bar">
           <WorkFilter
@@ -82,9 +103,18 @@ export default class WorkList extends React.Component {
             handleClick={this.handleClick}
             displayFilters={this.displayFilters}
           />
-          {/* <WorkBar position={this.state.x} drag={this.scrollDrag} /> */}
+          <WorkBar position={this.state.x} drag={this.scrollDrag} />
         </div>
       </div>
     );
   }
 }
+
+const options = {
+  cellSelector: '.work-item',
+  accessibility: true,
+  freeScroll: true,
+  dragThreshold: 5,
+  lazyLoad: 3,
+  freeScrollFriction: 0.075,
+};

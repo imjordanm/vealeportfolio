@@ -17,7 +17,7 @@
 .landing-picture {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
-  flex: 0 0 60%;
+  flex: 0 0 50%;
   height: 70%;
   margin-left: -15%;
   overflow: hidden;
@@ -31,12 +31,7 @@
   flex-wrap: nowrap;
   height: 80vh;
   justify-content: center;
-  max-width: 1400px;
-  width: 90vw;
-}
-
-.landing-section {
-  margin: 0 5vw;
+  width: 85vw;
 }
 
 .gatsby-image-wrapper {
@@ -49,16 +44,6 @@
   @include medium {
     transform: translateY(-5%);
   }
-}
-
-.about {
-  perspective: 100vw;
-  pointer-events: none;
-  transform-style: preserve-3d;
-}
-
-.about-picture {
-  transform: translateZ(-60px);
 }
 
 .landing-wrap {

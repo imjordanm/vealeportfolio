@@ -27,8 +27,8 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Nick Veale"
       meta={[
-        { name: 'description', content: 'musician and composer nick veale' },
-        { name: 'keywords', content: 'musician, composer, artist, nick veale' },
+        { name: 'description', content: 'Film composer and musician Nick Veale' },
+        { name: 'keywords', content: 'Film composer and musician Nick Veale' },
       ]}
     />
 

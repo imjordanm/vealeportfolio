@@ -12,9 +12,3 @@ also offer my services to clients globally.
 
 * nickveale@gmail.com
 * +64 027 2104 5422
-
-### Social
-
-* Facebook
-* Linkedin
-* Bandcamp

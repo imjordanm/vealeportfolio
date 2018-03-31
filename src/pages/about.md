@@ -16,7 +16,7 @@ My sharp work flow and passionate work ethic allows for an incredibly short turn
 around, giving you more options, more time, and a stress free experience without
 sacrificing quality.
 
-* Curriculum Vitae
-* Awards and Mentions
+<span><a href="./work">Check out my work</a> or <a href="./contact">get in
+touch</a></span>
 
 </div>

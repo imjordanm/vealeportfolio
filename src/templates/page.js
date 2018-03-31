@@ -3,23 +3,14 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import ContactForm from '../components/contact-form';
 import WorkList from '../components/WorkList';
-import Tilt from 'react-tilt';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
   return (
-    <section className="section">
+    <React.Fragment>
       {page.frontmatter.path === '/about' ? (
-        <Tilt
-          className="Tilt"
-          options={{
-            reverse: false,
-            reset: true,
-            max: 20,
-            scale: 0.95,
-          }}
-        >
-          <div className="about">
+        <section className="about">
+          <div className="about-box">
             <div className="about-text" dangerouslySetInnerHTML={{ __html: page.html }} />
             <div className="about-picture">
               <Img
@@ -34,33 +25,27 @@ export default function Template({ data }) {
               />
             </div>
           </div>
-        </Tilt>
+        </section>
       ) : null}
 
       {page.frontmatter.path === '/work' ? <WorkList items={page.frontmatter.items} /> : null}
 
       {page.frontmatter.path === '/contact' ? (
-        <Tilt
-          className="Tilt"
-          options={{
-            reverse: false,
-            reset: true,
-            max: 20,
-            scale: 0.95,
-          }}
-        >
-          <div className="contact">
-            <div className="contact-container">
-              <div className="contact-box">
-                <h2>Looking to work together or just want to say hello?</h2>
-                <ContactForm />
-              </div>
-              <div className="contact-text" dangerouslySetInnerHTML={{ __html: page.html }} />
+        <section className="contact">
+          <div className="contact-box">
+            <h1>Let's collaborate!</h1>
+            <div>
+              <p>
+                To find out more about what I can do for your next project you can get in touch by
+                <a href="mailto:nickveale@gmail.com">email</a> me or fill out the form below.
+              </p>
             </div>
+            <ContactForm />
           </div>
-        </Tilt>
+          {/* <div className="contact-text" dangerouslySetInnerHTML={{ __html: page.html }} /> */}
+        </section>
       ) : null}
-    </section>
+    </React.Fragment>
   );
 }
 

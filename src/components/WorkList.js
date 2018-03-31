@@ -1,8 +1,18 @@
 import React from 'react';
+import Flickity from 'flickity';
 import WorkItem from './WorkItem';
 import WorkBar from '../components/WorkBar';
 import WorkFilter from '../components/WorkFilter';
-import Flickity from 'flickity';
+
+const options = {
+  cellSelector: '.work-item',
+  accessibility: true,
+  freeScroll: true,
+  dragThreshold: 5,
+  lazyLoad: 3,
+  freeScrollFriction: 0.075,
+  contain: true,
+};
 
 export default class WorkList extends React.Component {
   constructor(props) {
@@ -25,15 +35,16 @@ export default class WorkList extends React.Component {
   componentDidMount() {
     if (typeof window !== 'undefined') {
       const carousel = document.getElementsByClassName('sf')[0];
-
       this.flkty = new Flickity(carousel, options);
       // this.flkty.on('cellSelect', this.updateSelected);
     }
   }
 
   componentDidUpdate() {
-    const carousel = document.getElementsByClassName('sf')[0];
-    this.flkty = new Flickity(carousel, options);
+    if (typeof window !== 'undefined') {
+      const carousel = document.getElementsByClassName('sf')[0];
+      this.flkty = new Flickity(carousel, options);
+    }
   }
 
   componentWillUnmount() {
@@ -92,9 +103,11 @@ export default class WorkList extends React.Component {
 
   render() {
     return (
-      <div className="work">
+      <section className="work">
         <div className="test">
-          <WorkItem items={this.state.items} categories={this.state.categories} />
+          <div className="sf">
+            <WorkItem items={this.state.items} categories={this.state.categories} />
+          </div>
         </div>
         <div className="work-bar">
           <WorkFilter
@@ -105,16 +118,7 @@ export default class WorkList extends React.Component {
           />
           <WorkBar position={this.state.x} drag={this.scrollDrag} />
         </div>
-      </div>
+      </section>
     );
   }
 }
-
-const options = {
-  cellSelector: '.work-item',
-  accessibility: true,
-  freeScroll: true,
-  dragThreshold: 5,
-  lazyLoad: 3,
-  freeScrollFriction: 0.075,
-};

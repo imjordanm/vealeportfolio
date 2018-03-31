@@ -3,15 +3,15 @@
   color: $subheading-colour;
   display: flex;
   font-family: 'League Spartan', $system-fonts;
-  height: 10vh;
+  height: 20vh;
   justify-content: space-between;
   left: 0;
-  padding: 0 5vh;
+  margin: 0 auto;
   position: absolute;
   right: 0;
   top: 0;
   user-select: none;
-  width: 100vw;
+  width: 85vw;
   z-index: 1;
 }
 

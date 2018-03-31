@@ -2,20 +2,28 @@
   align-items: center;
   display: flex;
   height: 80vh;
+  width: inherit;
+}
+
+.about-box {
+  align-items: center;
+  display: flex;
   justify-content: space-between;
+  width: inherit;
 }
 
 .about-picture {
   background-color: gray;
   border-radius: 4px;
-  height: 70%;
+  height: 60vh;
   overflow: hidden;
-  width: 40%;
+  width: 35vw;
 }
 
 .about-text {
+  // margin-right: 5em;
   min-width: 30em;
-  width: 40%;
+  width: 30em;
   z-index: 2;
 }
 

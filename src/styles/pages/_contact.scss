@@ -1,17 +1,13 @@
 .contact {
-  align-items: center;
   display: flex;
-  height: inherit;
-}
-
-.contact-container {
-  display: flex;
-  justify-content: space-between;
+  height: 80vh;
+  width: inherit;
 }
 
 .contact-box {
   display: flex;
   flex-direction: column;
+  margin-top: 10vw;
   user-select: none;
   width: 50%;
 }

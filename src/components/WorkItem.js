@@ -3,40 +3,39 @@ import React from 'react';
 class WorkItem extends React.PureComponent {
   render() {
     return (
-      <div className="sf">
+      <React.Fragment>
         {this.props.items
-          ? this.props.items.map(
-              item => (
+          ? this.props.items.map(item => (
                 this.props ? this.props.categories.add(item.category) : null,
                 (
                   <div className="work-item" key={item.title} id={item.title} title={item.title}>
-                    <div className="work-cover">
-                      <img
-                        className="work-image"
-                        alt={item.title}
-                        data-flickity-lazyload-srcset={require(`../resources${item.cover}`)}
-                        draggable="false"
-                      />
-                    </div>
-                    <div className="item-text">
-                      <div className="item-artist">{item.artist}</div>
-                      <div className="item-title">{item.title}</div>
-                      <div className="item-more">
-                        <div className="item-description">{item.description}</div>
-                        <div className="item-year" />
-                        <div className="item-genre" />
-                        <div className="item-link" />
+                    <div className="item-box">
+                      <div className="item-cover">
+                        <img
+                          className="item-image"
+                          alt={item.title}
+                          data-flickity-lazyload-srcset={require(`../resources${item.cover}`)}
+                          draggable="false"
+                        />
+                      </div>
+                      <div className="item-text">
+                        <div className="item-artist">{item.artist}</div>
+                        <div className="item-title">{item.title}</div>
+                        <div className="item-more">
+                          <div className="item-description">{item.description}</div>
+                          <div className="item-year" />
+                          <div className="item-genre" />
+                          <div className="item-link" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 )
-              ),
-            )
+              ))
           : null}
-      </div>
+      </React.Fragment>
     );
   }
-  shouldComponentUpdate: false;
 }
 
 export default WorkItem;

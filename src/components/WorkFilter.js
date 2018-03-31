@@ -7,14 +7,14 @@ class WorkFilter extends React.PureComponent {
         <ul className="filter-list" onClick={this.props.handleClick}>
           {this.props
             ? Array.from(this.props.categories).map(category => (
-                <li
-                  key={category}
-                  id={category}
-                  title={category}
-                  className={this.props.selectedCategory == category ? 'active' : ''}
-                >
-                  {category}
-                </li>
+              <li
+                key={category}
+                id={category}
+                title={category}
+                className={this.props.selectedCategory == category ? 'active' : ''}
+              >
+                {category}
+              </li>
               ))
             : null}
           <li
@@ -32,7 +32,6 @@ class WorkFilter extends React.PureComponent {
       </div>
     );
   }
-  shouldComponentUpdate: false;
 }
 
 export default WorkFilter;

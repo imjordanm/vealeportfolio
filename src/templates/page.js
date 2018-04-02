@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
-import ContactForm from '../components/contact-form';
+import ContactForm from '../components/ContactForm';
 import WorkList from '../components/WorkList';
 
 export default function Template({ data }) {
@@ -10,20 +10,18 @@ export default function Template({ data }) {
     <React.Fragment>
       {page.frontmatter.path === '/about' ? (
         <section className="about">
-          <div className="about-box">
-            <div className="about-text" dangerouslySetInnerHTML={{ __html: page.html }} />
-            <div className="about-picture">
-              <Img
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  transform: 'translate(0, -5%)',
-                }}
-                title="About Nick Veale"
-                alt="About Nick Veale"
-                sizes={data.about.sizes}
-              />
-            </div>
+          <div className="about-text" dangerouslySetInnerHTML={{ __html: page.html }} />
+          <div className="about-picture">
+            <Img
+              style={{
+                width: '100%',
+                height: '100%',
+                transform: 'translate(0, -5%)',
+              }}
+              title="About Nick Veale"
+              alt="About Nick Veale"
+              sizes={data.about.sizes}
+            />
           </div>
         </section>
       ) : null}
@@ -34,15 +32,14 @@ export default function Template({ data }) {
         <section className="contact">
           <div className="contact-box">
             <h1>Let's collaborate!</h1>
-            <div>
+            <div className="contact-text">
               <p>
-                To find out more about what I can do for your next project you can get in touch by
-                <a href="mailto:nickveale@gmail.com">email</a> me or fill out the form below.
+                Find out what I can do for your next project by getting in touch via&nbsp;
+                <a href="mailto:nickveale@gmail.com">email</a> or by filling out the form below.
               </p>
             </div>
             <ContactForm />
           </div>
-          {/* <div className="contact-text" dangerouslySetInnerHTML={{ __html: page.html }} /> */}
         </section>
       ) : null}
     </React.Fragment>

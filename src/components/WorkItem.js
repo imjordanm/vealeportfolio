@@ -8,7 +8,13 @@ class WorkItem extends React.PureComponent {
           ? this.props.items.map(item => (
                 this.props ? this.props.categories.add(item.category) : null,
                 (
-                  <div className="work-item" key={item.title} id={item.title} title={item.title}>
+                  <div
+                    className="work-item"
+                    key={item.title}
+                    id={item.title}
+                    title={item.title}
+                    onClick={this.props.itemClick}
+                  >
                     <div className="item-box">
                       <div className="item-cover">
                         <img

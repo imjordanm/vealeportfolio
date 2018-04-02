@@ -9,7 +9,7 @@ const options = {
   accessibility: true,
   freeScroll: true,
   dragThreshold: 5,
-  lazyLoad: 3,
+  lazyLoad: 2,
   freeScrollFriction: 0.075,
   contain: true,
 };
@@ -24,7 +24,8 @@ export default class WorkList extends React.Component {
       cachedFilters: {},
     };
 
-    this.handleClick = this.handleClick.bind(this);
+    this.itemClick = this.itemClick.bind(this);
+    this.filterClick = this.filterClick.bind(this);
     this.displayFilters = this.displayFilters.bind(this);
   }
 
@@ -37,6 +38,11 @@ export default class WorkList extends React.Component {
       const carousel = document.getElementsByClassName('sf')[0];
       this.flkty = new Flickity(carousel, options);
       // this.flkty.on('cellSelect', this.updateSelected);
+      this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
+        if (typeof cellIndex === 'number') {
+          this.flkty.select(cellIndex);
+        }
+      });
     }
   }
 
@@ -44,6 +50,11 @@ export default class WorkList extends React.Component {
     if (typeof window !== 'undefined') {
       const carousel = document.getElementsByClassName('sf')[0];
       this.flkty = new Flickity(carousel, options);
+      this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
+        if (typeof cellIndex === 'number') {
+          this.flkty.select(cellIndex);
+        }
+      });
     }
   }
 
@@ -53,7 +64,14 @@ export default class WorkList extends React.Component {
     }
   }
 
-  handleClick(event) {
+  itemClick(event) {
+    console.log(event.currentTarget);
+    // event.currentTarget.className = 'work-item clicked';
+    // change opacity of everything except selected item to 0, item to 1. display item-more and change css
+    // of item to make it appear as drawing
+  }
+
+  filterClick(event) {
     if (document.getElementsByClassName('filter-active toggled')[0]) {
       document.getElementsByClassName('filter-list')[0].style.display = 'none';
       document.getElementsByClassName('filter-active toggled')[0].className = 'filter-active';
@@ -106,14 +124,18 @@ export default class WorkList extends React.Component {
       <section className="work">
         <div className="test">
           <div className="sf">
-            <WorkItem items={this.state.items} categories={this.state.categories} />
+            <WorkItem
+              items={this.state.items}
+              categories={this.state.categories}
+              itemClick={this.itemClick}
+            />
           </div>
         </div>
         <div className="work-bar">
           <WorkFilter
             categories={this.state.categories}
             selectedCategory={this.state.selectedCategory}
-            handleClick={this.handleClick}
+            filterClick={this.filterClick}
             displayFilters={this.displayFilters}
           />
           <WorkBar position={this.state.x} drag={this.scrollDrag} />

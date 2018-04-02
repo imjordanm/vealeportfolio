@@ -1,12 +1,7 @@
 .work {
-  align-items: center;
   display: flex;
   height: 80vh;
-  margin: 0 auto;
   position: relative;
-  @include extrasmall {
-    flex-direction: column;
-  }
 }
 
 .work-list {
@@ -51,10 +46,8 @@
 }
 
 .work-item {
-  height: 30em;
   margin: 0 4em;
-  //transition: all 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+  //transition: transform 0.4s cubic-bezier();
 
   &:first-of-type {
     padding-left: 7.5vw;
@@ -74,6 +67,11 @@
       visibility: visible;
     }
   }
+}
+
+.work-item.clicked {
+  opacity: 1;
+  transform: scale(1.2);
 }
 
 .item-box {
@@ -121,7 +119,7 @@
 .work-bar {
   align-items: center;
   bottom: 0;
-  color: gray;
+  color: rgb(128, 128, 128);
   display: flex;
   font-family: 'League Spartan', $system-fonts;
   justify-content: space-between;
@@ -190,7 +188,7 @@
     top: -17px;
 
     .progress-bar-line {
-      background: lightgray;
+      background: rgb(211, 211, 211);
       height: 5px;
     }
   }
@@ -200,7 +198,7 @@
     top: -17px;
 
     .progress-bar-line {
-      background: lightgray;
+      background: rgb(211, 211, 211);
       height: 5px;
     }
   }
@@ -240,27 +238,17 @@ https://flickity.metafizzy.co
 /* draggable */
 
 .flickity-enabled.is-draggable {
-  -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport {
   cursor: move;
-  cursor: -webkit-grab;
   cursor: grab;
 }
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-  cursor: -webkit-grabbing;
   cursor: grabbing;
-
-  .work-item {
-    transform: scale(0.9);
-  }
 }
 
 /* ---- flickity-button ---- */
@@ -273,7 +261,7 @@ https://flickity.metafizzy.co
 }
 
 .flickity-button:hover {
-  background: white;
+  background: #fff;
   cursor: pointer;
 }
 
@@ -367,7 +355,19 @@ https://flickity.metafizzy.co
 }
 
 @include extrasmall {
+  .work {
+    flex-direction: column;
+  }
+
   .work-item {
     margin: 0 5vw;
+  }
+
+  .item-box {
+    width: 85vw;
+  }
+
+  .item-cover {
+    height: 85vw;
   }
 }

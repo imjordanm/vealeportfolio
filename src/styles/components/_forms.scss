@@ -1,5 +1,6 @@
 .contact-form {
-  margin: 1em 0;
+  margin: 5vw 0;
+  width: 100%;
 
   div {
     margin: 0.5em 0;
@@ -15,6 +16,7 @@
   }
 
   label {
+    display: none;
     font-size: 0.75em;
     font-weight: 700;
   }
@@ -43,14 +45,34 @@
   }
 
   button {
-    background: #fff;
-    border: 1px solid #fff;
+    background: linear-gradient(140deg, #313131, #252525);
+    border: none;
     border-radius: 4px;
-    font-weight: bold;
+    box-shadow: 1px 4px 10px #252525;
+    color: #cecece;
+    font-weight: 700;
     padding: 1em 1.5em;
 
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+@include extrasmall {
+  .contact-form {
+    width: inherit;
+  }
+}
+
+@include small {
+  .contact-form {
+    width: inherit;
+  }
+}
+
+@include medium {
+  .contact-form {
+    width: 100%;
   }
 }

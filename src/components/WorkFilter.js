@@ -4,7 +4,7 @@ class WorkFilter extends React.PureComponent {
   render() {
     return (
       <div className="work-filter">
-        <ul className="filter-list" onClick={this.props.handleClick}>
+        <ul className="filter-list" onClick={this.props.filterClick}>
           {this.props
             ? Array.from(this.props.categories).map(category => (
               <li

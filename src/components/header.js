@@ -1,31 +1,48 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const ListLink = props => (
-  <li>
-    <Link activeClassName="active" to={props.to}>
-      {props.children}
-    </Link>
-  </li>
-);
+const menuToggle = e => {
+  if (document.getElementById('menu-toggle').checked) {
+    document.getElementById('menu-toggle').checked = false;
+  } else {
+    document.getElementById('menu-toggle').checked = true;
+  }
+};
 
-const Navigation = () => (
+const hideMenu = e => {
+  document.getElementById('menu-toggle').checked = false;
+};
+
+const Navigation = props => (
   <nav className="navigation">
-    <ul className="nav-list">
-      <ListLink to="/about">About</ListLink>
-      <ListLink to="/work">Work</ListLink>
-      <ListLink to="/contact">Contact</ListLink>
-    </ul>
-    <div className="menu">Menu</div>
+    <input type="checkbox" className="menu-toggle" id="menu-toggle" />
+    <div className="hamburger" onClick={menuToggle}>
+      <div />
+      <div />
+      <div />
+    </div>
+    <div className="pages">
+      <div className="pages-container">
+        <ul className="nav-list">
+          {props.pages.map(({ node }) => (
+            <li key={node.frontmatter.title}>
+              <Link activeClassName="active" to={node.frontmatter.path} onClick={menuToggle}>
+                {node.frontmatter.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   </nav>
 );
 
-const Header = () => (
+const Header = props => (
   <header className="header">
-    <div className="logo">
+    <div className="logo" onClick={hideMenu}>
       <Link to="/">Nick Veale</Link>
     </div>
-    <Navigation />
+    <Navigation pages={props.pages} />
   </header>
 );
 

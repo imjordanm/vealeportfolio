@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WorkBar = props => (
+const WorkBar = () => (
   <div className="work-progress">
     <div className="progress-bar">
       <span className="progress-bar-line" />

@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Header from '../components/header';
-import Link from 'gatsby-link';
+import Header from '../components/Header';
 
 import '../styles/main.scss';
 
@@ -22,7 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
   whyDidYouUpdate(React);
 }
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
       title="Nick Veale"
@@ -33,7 +32,7 @@ const TemplateWrapper = ({ children }) => (
     />
 
     <main className="container">
-      <Header />
+      <Header pages={data.allMarkdownRemark.edges} />
       {children()}
     </main>
   </div>
@@ -44,3 +43,18 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
+
+export const pageQuery = graphql`
+  query pagesQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`;

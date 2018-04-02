@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 * {
@@ -71,6 +71,18 @@ h1 {
 @include small {
   body {
     font-size: 14px;
+  }
+}
+
+@include medium {
+  body {
+    font-size: 16px;
+  }
+}
+
+@include extralarge {
+  body {
+    font-size: 1vw;
   }
 }
 

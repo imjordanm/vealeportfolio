@@ -6,31 +6,31 @@
 .landing-text {
   margin: 0;
   user-select: none;
-  z-index: 2;
 }
 
-.paragraph {
-  color: $body-colour;
-  user-select: none;
+.heading {
+  margin: 0;
 }
 
 .landing-picture {
   background-color: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
   flex: 0 0 50%;
-  height: 70%;
+  height: 90%;
   margin-left: -15%;
   overflow: hidden;
-  z-index: 1;
 }
 
 .landing-wrap {
   align-items: center;
+  backface-visibility: hidden;
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
-  height: 80vh;
+  height: 60vh;
   justify-content: center;
+  pointer-events: none;
+  transform-style: preserve-3d;
   width: 85vw;
 }
 
@@ -46,13 +46,6 @@
   }
 }
 
-.landing-wrap {
-  backface-visibility: hidden;
-  pointer-events: none;
-  transform-style: preserve-3d;
-  //will-change: transform;
-}
-
 .landing-picture {
   transform: translateZ(-60px);
 }
@@ -66,11 +59,13 @@
 @include extrasmall {
   .landing-wrap {
     flex-direction: column;
+    margin-top: 10vw;
   }
 }
 
 @include small {
   .landing-wrap {
     flex-direction: column;
+    margin-top: 10vw;
   }
 }

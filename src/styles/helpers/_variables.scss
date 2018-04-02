@@ -22,9 +22,9 @@ $vertical-rhythm: 1rem * 1.5;
 //typographic scale
 
 :root {
-  --size: 16px;
+  --size: 18px;
   --ratio: 1.2;
-  --base: 1;
+  --base: 1.125;
   --base-em: calc(var(--base) * 1em);
   --base-rem: calc(var(--base) * 1rem);
   --base-px: calc(var(--base) * var(--size));

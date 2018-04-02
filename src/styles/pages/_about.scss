@@ -1,19 +1,21 @@
 .about {
-  align-items: center;
   display: flex;
-  height: 80vh;
+  flex-direction: column;
+  margin-top: 10vw;
+  min-height: 80vh;
   width: inherit;
 }
 
 .about-box {
-  align-items: center;
   display: flex;
   justify-content: space-between;
+  margin-top: 10vw;
   width: inherit;
 }
 
 .about-picture {
-  background-color: gray;
+  align-self: flex-end;
+  background-color: rgb(128, 128, 128);
   border-radius: 4px;
   height: 60vh;
   overflow: hidden;
@@ -22,29 +24,17 @@
 
 .about-text {
   // margin-right: 5em;
-  min-width: 30em;
-  width: 30em;
-  z-index: 2;
+
+  margin-bottom: 5vw;
+  width: 65%;
 }
 
 .about-body {
+  line-height: 2;
+  margin: 0;
   //column-count: 2;
   //column-gap: 2em;
-
-  ul {
-    color: inherit;
-    display: none;
-    //display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-  }
-
-  li {
-    color: $body-colour;
-  }
+  max-width: 40em;
 }
 
 @include extrasmall {

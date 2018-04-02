@@ -5,7 +5,6 @@ const onSubmit = ev => {
   const name = ev.target.elements.name.value;
   const email = ev.target.elements.email.value;
   const message = ev.target.elements.message.value;
-  alert(`You submitted name=${name} email=${email} message=${message}`);
 };
 
 const ContactForm = () => (

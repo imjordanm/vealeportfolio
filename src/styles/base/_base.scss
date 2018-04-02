@@ -40,13 +40,16 @@ h3 {
   font-size: calc(var(--base-em) * var(--step-four));
 }
 
-h4,
-h5 {
+h4 {
   font-size: calc(var(--base-em) * var(--step-three));
 }
 
-h6 {
+h5 {
   font-size: calc(var(--base-em) * var(--step-two));
+}
+
+h6 {
+  font-size: calc(var(--base-em) * var(--step-one));
 }
 
 h6,

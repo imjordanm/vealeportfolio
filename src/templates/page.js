@@ -59,6 +59,8 @@ export const pageQuery = graphql`
             cover
             category
             description
+            year
+            genre
           }
         }
       }

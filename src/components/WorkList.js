@@ -1,8 +1,9 @@
 import React from 'react';
 import Flickity from 'flickity';
 import WorkItem from './WorkItem';
-import WorkBar from '../components/WorkBar';
-import WorkFilter from '../components/WorkFilter';
+import WorkBar from './WorkBar';
+import WorkFilter from './WorkFilter';
+import ClickedItem from './ClickedItem';
 
 const options = {
   cellSelector: '.work-item',
@@ -22,6 +23,7 @@ export default class WorkList extends React.Component {
       categories: new Set([]),
       selectedCategory: 'All',
       cachedFilters: {},
+      clickedItem: '',
     };
 
     this.itemClick = this.itemClick.bind(this);
@@ -41,6 +43,7 @@ export default class WorkList extends React.Component {
       this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
         if (typeof cellIndex === 'number') {
           this.flkty.select(cellIndex);
+          this.itemClick(this.flkty.selectedElement);
         }
       });
     }
@@ -65,10 +68,10 @@ export default class WorkList extends React.Component {
   }
 
   itemClick(event) {
-    console.log(event.currentTarget);
-    // event.currentTarget.className = 'work-item clicked';
-    // change opacity of everything except selected item to 0, item to 1. display item-more and change css
-    // of item to make it appear as drawing
+    console.log(event);
+    this.setState({ clickedItem: this.state.items[event.dataset.index] });
+    console.log(this.state.clickedItem);
+    console.log(this.state.items[event.dataset.index]);
   }
 
   filterClick(event) {
@@ -122,12 +125,14 @@ export default class WorkList extends React.Component {
   render() {
     return (
       <section className="work">
+        {this.state.clickedItem ? <ClickedItem item={this.state.clickedItem} /> : null}
         <div className="test">
           <div className="sf">
             <WorkItem
               items={this.state.items}
               categories={this.state.categories}
               itemClick={this.itemClick}
+              clickedItem={this.state.clickedItem}
             />
           </div>
         </div>

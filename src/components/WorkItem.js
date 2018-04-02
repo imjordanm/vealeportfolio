@@ -5,7 +5,7 @@ class WorkItem extends React.PureComponent {
     return (
       <React.Fragment>
         {this.props.items
-          ? this.props.items.map(item => (
+          ? this.props.items.map((item, index) => (
                 this.props ? this.props.categories.add(item.category) : null,
                 (
                   <div
@@ -13,7 +13,7 @@ class WorkItem extends React.PureComponent {
                     key={item.title}
                     id={item.title}
                     title={item.title}
-                    onClick={this.props.itemClick}
+                    data-index={index}
                   >
                     <div className="item-box">
                       <div className="item-cover">

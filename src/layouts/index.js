@@ -21,7 +21,7 @@ if (process.env.NODE_ENV !== 'production') {
   whyDidYouUpdate(React);
 }
 
-const TemplateWrapper = ({ children, data }) => (
+export default ({ children, data }) => (
   <div>
     <Helmet
       title="Nick Veale"
@@ -37,12 +37,6 @@ const TemplateWrapper = ({ children, data }) => (
     </main>
   </div>
 );
-
-TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-};
-
-export default TemplateWrapper;
 
 export const pageQuery = graphql`
   query pagesQuery {

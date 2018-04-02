@@ -20,6 +20,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                   cover
                   category
                   description
+                  year
+                  genre
                 }
               }
             }

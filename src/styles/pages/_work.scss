@@ -4,32 +4,11 @@
   position: relative;
 }
 
-.work-list {
-  cursor: pointer;
-  display: flex;
-  position: absolute;
-  user-select: none;
-  //will-change: transform;
-
-  /*&:active {
-    cursor: grabbing;
-
-    .work-item {
-      //transform: scale(0.9);
-      //transition: all 0.45s ease-in-out;
-    }
-  }
-
-  img {
-    height: 100%;
-  }*/
-}
-
 .test {
+  align-items: center;
   display: flex;
   overflow: hidden;
   touch-action: pan-y;
-
   user-select: none;
   width: 100vw;
 }
@@ -46,7 +25,7 @@
 }
 
 .work-item {
-  margin: 0 4em;
+  margin: 0 1.5em;
   //transition: transform 0.4s cubic-bezier();
 
   &:first-of-type {
@@ -60,23 +39,30 @@
   &:hover {
     //transform: scale(1.1);
     cursor: pointer;
+
+    .item-more {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 
 .item-box {
-  width: 25em;
+  width: 20em;
 }
 
 .item-cover {
   background: rgb(48, 48, 48);
   border-radius: 8px;
-  height: 25em;
+  height: 16em;
+  overflow: hidden;
 }
 
 .item-image {
   border-radius: 8px;
-  height: 100%;
   opacity: 0;
+  transform: translateY(-10%);
+  width: 100%;
 }
 
 .item-description {
@@ -93,6 +79,11 @@
 
 .item-title {
   font-style: italic;
+}
+
+.item-more {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .work-item.clicked {
@@ -115,6 +106,13 @@
   width: 35vw;
 }
 
+.item-image.clicked {
+  height: 100%;
+  opacity: 1;
+  transform: unset;
+  width: unset;
+}
+
 .item-text.clicked {
   margin: 0 7.5vw 0 2.5vw;
   width: 50vw;
@@ -124,6 +122,11 @@
   h3 {
     margin: 0;
   }
+}
+
+.item-more.clicked {
+  opacity: 1;
+  visibility: visible;
 }
 
 //What do about this?

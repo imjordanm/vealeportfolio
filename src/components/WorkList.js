@@ -10,8 +10,8 @@ const options = {
   accessibility: true,
   freeScroll: true,
   dragThreshold: 5,
-  lazyLoad: 2,
-  freeScrollFriction: 0.075,
+  lazyLoad: 4,
+  freeScrollFriction: 0.05,
   contain: true,
 };
 

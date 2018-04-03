@@ -18,7 +18,6 @@ export default function Template({ data }) {
                 height: '100%',
                 transform: 'translate(0, -5%)',
               }}
-              title="About Nick Veale"
               alt="About Nick Veale"
               sizes={data.about.sizes}
             />

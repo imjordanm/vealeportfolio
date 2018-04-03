@@ -1,12 +1,7 @@
 import React from 'react';
 
 const ClickedItem = props => (
-  <div
-    className="work-item clicked"
-    key={props.item.title}
-    id={props.item.title}
-    title={props.item.title}
-  >
+  <div className="work-item clicked" key={props.item.title} id={props.item.title}>
     <div className="item-cover clicked">
       <img
         className="item-image clicked"
@@ -27,6 +22,9 @@ const ClickedItem = props => (
         <div className="item-link" />
         <div className="item-description">{props.item.description}</div>
       </div>
+    </div>
+    <div className="item-close" onClick={props.itemClick}>
+      Go back
     </div>
   </div>
 );

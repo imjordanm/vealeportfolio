@@ -59,13 +59,35 @@
 @include extrasmall {
   .landing-wrap {
     flex-direction: column;
-    margin-top: 10vw;
+    justify-content: unset;
+    min-height: 90vh;
+  }
+
+  .landing-text {
+    margin-top: 10vh;
+  }
+
+  .landing-picture {
+    margin: 0;
+    margin-top: -10vh;
+    width: 100%;
   }
 }
 
 @include small {
   .landing-wrap {
     flex-direction: column;
-    margin-top: 10vw;
+    justify-content: unset;
+    min-height: 90vh;
+  }
+
+  .landing-text {
+    margin-top: 10vh;
+  }
+
+  .landing-picture {
+    margin: 0;
+    margin-top: -10vh;
+    width: 100%;
   }
 }

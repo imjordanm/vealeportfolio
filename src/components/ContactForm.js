@@ -1,14 +1,13 @@
 import React from 'react';
 
-const onSubmit = ev => {
-  ev.preventDefault();
-  const name = ev.target.elements.name.value;
-  const email = ev.target.elements.email.value;
-  const message = ev.target.elements.message.value;
-};
-
 const ContactForm = () => (
-  <form className="contact-form" onSubmit={onSubmit}>
+  <form
+    name="Contact Form"
+    className="contact-form"
+    method="post"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
     <div className="small-input name">
       <label htmlFor="name">Name</label>
       <input

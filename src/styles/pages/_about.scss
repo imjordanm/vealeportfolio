@@ -41,27 +41,29 @@
   .about {
     flex-direction: column;
     height: unset;
+    min-height: 90vh;
   }
 
   .about-text {
-    width: 30em;
+    width: 100%;
   }
 
   .about-picture {
-    display: none;
+    width: 100%;
   }
 }
 @include small {
   .about {
     flex-direction: column;
     height: unset;
+    min-height: 90vh;
   }
 
   .about-text {
-    width: 30em;
+    width: 100%;
   }
 
   .about-picture {
-    display: none;
+    width: 100%;
   }
 }

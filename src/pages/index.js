@@ -42,7 +42,6 @@ export default class IndexPage extends React.Component {
                 width: '100%',
                 height: '100%',
               }}
-              title="Nick Veale portrait"
               alt="Nick Veale portrait"
               sizes={data.portrait.sizes}
             />

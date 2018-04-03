@@ -9,11 +9,11 @@
   flex-direction: column;
   margin-top: 10vw;
   user-select: none;
-  width: 65%;
+  width: 60%;
 }
 
 .contact-text {
-  width: 65%;
+  max-width: 35em;
 
   p {
     line-height: 2;
@@ -22,6 +22,10 @@
 }
 
 @include extrasmall {
+  .contact {
+    min-height: 90vh;
+  }
+
   .contact-container {
     flex-direction: column-reverse;
   }
@@ -37,6 +41,10 @@
 }
 
 @include small {
+  .contact {
+    min-height: 90vh;
+  }
+
   .contact-container {
     flex-direction: column-reverse;
   }

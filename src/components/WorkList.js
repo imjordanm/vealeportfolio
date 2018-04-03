@@ -24,11 +24,11 @@ export default class WorkList extends React.Component {
       selectedCategory: 'All',
       cachedFilters: {},
       clickedItem: '',
+      toggledFilter: false,
     };
 
     this.itemClick = this.itemClick.bind(this);
     this.filterClick = this.filterClick.bind(this);
-    this.displayFilters = this.displayFilters.bind(this);
   }
 
   componentWillMount() {
@@ -37,9 +37,14 @@ export default class WorkList extends React.Component {
 
   componentDidMount() {
     if (typeof window !== 'undefined') {
+      if (matchMedia('screen and (max-width: 900px)').matches) {
+        options.lazyLoad = 2;
+        options.freeScroll = false;
+      }
+
       const carousel = document.getElementsByClassName('sf')[0];
       this.flkty = new Flickity(carousel, options);
-      // this.flkty.on('cellSelect', this.updateSelected);
+      this.flkty.focus();
       this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
         if (typeof cellIndex === 'number') {
           this.flkty.select(cellIndex);
@@ -51,11 +56,18 @@ export default class WorkList extends React.Component {
 
   componentDidUpdate() {
     if (typeof window !== 'undefined') {
+      if (matchMedia('screen and (max-width: 900px)').matches) {
+        options.lazyLoad = 2;
+        options.freeScroll = false;
+      }
+
       const carousel = document.getElementsByClassName('sf')[0];
       this.flkty = new Flickity(carousel, options);
+      this.flkty.focus();
       this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
         if (typeof cellIndex === 'number') {
           this.flkty.select(cellIndex);
+          this.itemClick(this.flkty.selectedElement);
         }
       });
     }
@@ -68,33 +80,24 @@ export default class WorkList extends React.Component {
   }
 
   itemClick(event) {
-    console.log(event);
-    this.setState({ clickedItem: this.state.items[event.dataset.index] });
-    console.log(this.state.clickedItem);
-    console.log(this.state.items[event.dataset.index]);
+    if (this.state.clickedItem) {
+      this.setState({ clickedItem: null });
+    } else {
+      this.setState({ clickedItem: this.state.items[event.dataset.index] });
+    }
   }
 
   filterClick(event) {
-    if (document.getElementsByClassName('filter-active toggled')[0]) {
-      document.getElementsByClassName('filter-list')[0].style.display = 'none';
-      document.getElementsByClassName('filter-active toggled')[0].className = 'filter-active';
-    }
-    const barCategory = event.target.id;
-    if (event.target.id === this.state.selectedCategory) {
-      return;
-    }
-
-    this.setState({ selectedCategory: barCategory });
-    this.renderCategory(barCategory);
-  }
-
-  displayFilters(event) {
-    if (event.target.className === 'filter-active') {
-      document.getElementsByClassName('filter-list')[0].style.display = 'block';
-      event.target.className = 'filter-active toggled';
+    if (this.state.toggledFilter) {
+      this.setState({ toggledFilter: false });
     } else {
-      document.getElementsByClassName('filter-list')[0].style.display = 'none';
-      event.target.className = 'filter-active';
+      this.setState({ toggledFilter: true });
+    }
+
+    const barCategory = event.target.id;
+    if (barCategory && barCategory !== this.state.selectedCategory) {
+      this.setState({ selectedCategory: barCategory });
+      this.renderCategory(barCategory);
     }
   }
 
@@ -125,7 +128,9 @@ export default class WorkList extends React.Component {
   render() {
     return (
       <section className="work">
-        {this.state.clickedItem ? <ClickedItem item={this.state.clickedItem} /> : null}
+        {this.state.clickedItem ? (
+          <ClickedItem item={this.state.clickedItem} itemClick={this.itemClick} />
+        ) : null}
         <div className="test">
           <div className="sf">
             <WorkItem
@@ -142,6 +147,7 @@ export default class WorkList extends React.Component {
             selectedCategory={this.state.selectedCategory}
             filterClick={this.filterClick}
             displayFilters={this.displayFilters}
+            toggledFilter={this.state.toggledFilter}
           />
           <WorkBar position={this.state.x} drag={this.scrollDrag} />
         </div>

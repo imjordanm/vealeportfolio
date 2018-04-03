@@ -8,19 +8,14 @@ class WorkItem extends React.PureComponent {
           ? this.props.items.map((item, index) => (
                 this.props ? this.props.categories.add(item.category) : null,
                 (
-                  <div
-                    className="work-item"
-                    key={item.title}
-                    id={item.title}
-                    title={item.title}
-                    data-index={index}
-                  >
+                  <div className="work-item" key={item.title} id={item.title} data-index={index}>
                     <div className="item-box">
                       <div className="item-cover">
                         <img
                           className="item-image"
                           alt={item.title}
                           data-flickity-lazyload-srcset={require(`../resources${item.cover}`)}
+                          data-flickity-lazyload-src={require(`../resources${item.cover}`)}
                           draggable="false"
                         />
                       </div>

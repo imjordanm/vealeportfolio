@@ -27,13 +27,11 @@ body {
 
 h1 {
   font-size: calc(var(--base-em) * var(--step-six));
-  letter-spacing: 0.03em;
   line-height: 1.125;
 }
 
 h2 {
   font-size: calc(var(--base-em) * var(--step-five));
-  letter-spacing: 0.015em;
 }
 
 h3 {
@@ -59,9 +57,16 @@ h3,
 h2,
 h1 {
   color: $heading-colour;
-  line-height: 1.25;
   margin: 0;
   margin-bottom: $vertical-rhythm;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2 {
+  line-height: 1.25;
 }
 
 @include extrasmall {
@@ -86,18 +91,6 @@ h1 {
   body {
     font-size: 1vw;
   }
-}
-
-.wf-loading p {
-  /* styles for fallback fonts */
-}
-
-.wf-active p {
-  /* styles for custom fonts */
-}
-
-.wf-inactive p {
-  /* use fallback fonts */
 }
 
 a {

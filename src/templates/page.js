@@ -32,7 +32,8 @@ export default function Template({ data }) {
             <h1>Let's collaborate!</h1>
             <div className="contact-text">
               <p>
-                Find out what I can do for your next project by getting in touch via&nbsp;
+                Find out more about what I can do for your next project by getting in touch
+                via&nbsp;
                 <a href="mailto:nickveale@gmail.com">email</a> or by filling out the form below.
               </p>
             </div>

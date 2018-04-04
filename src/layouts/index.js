@@ -5,26 +5,28 @@ import Header from '../components/header';
 
 import '../styles/main.scss';
 
-if ('fonts' in document) {
-  // Optimization for Repeat Views
-  if (sessionStorage.fontsLoadedCriticalFoftDataUri) {
-    // only stage 2 needed here, the subset isn’t needed anymore
-    document.documentElement.className += ' fonts-loaded-2';
-    // return;
-  } else {
-    document.fonts.load('1em ObjectiveSubset').then(() => {
-      console.log('test');
-      document.documentElement.className += ' fonts-loaded-1';
-      Promise.all([
-        document.fonts.load('400 1em Objective'),
-        document.fonts.load('700 1em Objective'),
-        document.fonts.load('italic 1em Objective'),
-      ]).then(() => {
-        document.documentElement.className += ' fonts-loaded-2';
-        // Optimization for Repeat Views
-        sessionStorage.fontsLoadedCriticalFoftDataUri = true;
+if (typeof window !== 'undefined') {
+  if ('fonts' in document) {
+    // Optimization for Repeat Views
+    if (sessionStorage.fontsLoadedCriticalFoftDataUri) {
+      // only stage 2 needed here, the subset isn’t needed anymore
+      document.documentElement.className += ' fonts-loaded-2';
+      // return;
+    } else {
+      document.fonts.load('1em ObjectiveSubset').then(() => {
+        console.log('test');
+        document.documentElement.className += ' fonts-loaded-1';
+        Promise.all([
+          document.fonts.load('400 1em Objective'),
+          document.fonts.load('700 1em Objective'),
+          document.fonts.load('italic 1em Objective'),
+        ]).then(() => {
+          document.documentElement.className += ' fonts-loaded-2';
+          // Optimization for Repeat Views
+          sessionStorage.fontsLoadedCriticalFoftDataUri = true;
+        });
       });
-    });
+    }
   }
 }
 

@@ -78,6 +78,7 @@
 
 .item-title {
   font-style: italic;
+  opacity: 0.8;
 }
 
 .item-more {
@@ -151,6 +152,10 @@
   user-select: none;
   width: 85vw;
   z-index: 1;
+}
+
+.work-filter {
+  font-weight: 700;
 }
 
 .filter-list {

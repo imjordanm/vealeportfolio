@@ -9,34 +9,44 @@ export default class IndexPage extends React.Component {
     const { edges: pages } = data.allMarkdownRemark;
 
     return (
-      <Tilt
-        className="Tilt"
-        options={{
-          reverse: false,
-          reset: true,
-          max: 20,
-          scale: 0.95,
-        }}
-      >
-        <div className="landing-wrap">
-          <div className="landing-text">
-            <h1 className="heading">I am Nick Veale, a musician and film composer.</h1>
-          </div>
-          <div className="landing-picture">
-            <Img
-              style={{
-                width: '100%',
-                height: '100%',
-              }}
-              alt="Nick Veale portrait"
-              sizes={data.portrait.sizes}
-            />
-          </div>
-        </div>
-      </Tilt>
+      <React.Fragment>
+        {matchMedia('screen and (max-width: 900px)').matches ? (
+          <Landing data={data} />
+        ) : (
+          <Tilt
+            className="Tilt"
+            options={{
+              reverse: false,
+              reset: true,
+              max: 20,
+              scale: 0.95,
+            }}
+          >
+            <Landing data={data} />
+          </Tilt>
+        )}
+      </React.Fragment>
     );
   }
 }
+
+const Landing = props => (
+  <div className="landing-wrap">
+    <div className="landing-text">
+      <h1 className="heading">I am Nick Veale, a musician and film composer.</h1>
+    </div>
+    <div className="landing-picture">
+      <Img
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+        alt="Nick Veale portrait"
+        sizes={props.data.portrait.sizes}
+      />
+    </div>
+  </div>
+);
 
 export const pageQuery = graphql`
   query indexQuery {

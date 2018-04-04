@@ -6,13 +6,6 @@
   width: inherit;
 }
 
-.about-box {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10vw;
-  width: inherit;
-}
-
 .about-picture {
   align-self: flex-end;
   background-color: rgb(128, 128, 128);
@@ -23,8 +16,6 @@
 }
 
 .about-text {
-  // margin-right: 5em;
-
   margin-bottom: 5vw;
   width: 65%;
 }
@@ -32,8 +23,6 @@
 .about-body {
   line-height: 2;
   margin: 0;
-  //column-count: 2;
-  //column-gap: 2em;
   max-width: 40em;
 }
 

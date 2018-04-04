@@ -19,6 +19,10 @@
     line-height: 2;
     margin: 0;
   }
+
+  a {
+    color: inherit;
+  }
 }
 
 @include extrasmall {

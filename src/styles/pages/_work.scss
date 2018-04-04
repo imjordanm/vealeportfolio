@@ -142,7 +142,6 @@
   bottom: 0;
   color: rgb(128, 128, 128);
   display: flex;
-  font-family: 'League Spartan', $system-fonts;
   justify-content: space-between;
   left: 0;
   margin: 0 auto;
@@ -282,7 +281,7 @@ https://flickity.metafizzy.co
 /* draggable */
 
 .flickity-enabled.is-draggable {
-  tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
   user-select: none;
 }
 

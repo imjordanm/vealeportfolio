@@ -6,15 +6,6 @@
     margin: 0.5em 0;
   }
 
-  .small-input {
-    display: inline-block;
-    width: calc(50% - 1em);
-
-    &.email {
-      margin-left: 2em;
-    }
-  }
-
   label {
     display: none;
     font-size: 0.75em;
@@ -59,9 +50,27 @@
   }
 }
 
+.small-input {
+  display: inline-block;
+  width: calc(50% - 1em);
+
+  &.email {
+    margin-left: 2em;
+  }
+}
+
 @include extrasmall {
   .contact-form {
     width: inherit;
+  }
+
+  .small-input {
+    display: block;
+    width: 100%;
+
+    &.email {
+      margin-left: 0;
+    }
   }
 }
 

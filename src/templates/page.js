@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
-import ContactForm from '../components/ContactForm';
 import WorkList from '../components/WorkList';
 
 export default function Template({ data }) {
@@ -37,7 +36,46 @@ export default function Template({ data }) {
                 <a href="mailto:nickveale@gmail.com">email</a> or by filling out the form below.
               </p>
             </div>
-            <ContactForm />
+            <form
+              name="Contact Form"
+              className="contact-form"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <div className="small-input name">
+                <label htmlFor="name">Name</label>
+                <input
+                  className="input-form"
+                  name="name"
+                  type="text"
+                  id="name"
+                  placeholder="What's your name?"
+                />
+              </div>
+              <div className="small-input email">
+                <label htmlFor="email">Email</label>
+                <input
+                  className="input-form"
+                  name="email"
+                  id="email"
+                  type="email"
+                  placeholder="What's your email?"
+                />
+              </div>
+              <div className="big-input">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  className="input-form"
+                  name="message"
+                  id="message"
+                  placeholder="What can I help you with?"
+                />
+              </div>
+              <button type="submit" className="submitButton">
+                Send message
+              </button>
+            </form>
           </div>
         </section>
       ) : null}

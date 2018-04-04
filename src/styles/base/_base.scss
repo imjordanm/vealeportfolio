@@ -20,7 +20,7 @@ body {
   //background: $background-colour;
   background: linear-gradient($background-colour);
   color: $body-colour;
-  font-family: 'Nunito Sans', $system-fonts;
+  font-family: $primary-font, $system-fonts;
   font-size: calc(var(--base-em) * var(--step-zero));
   line-height: 1.5;
 }
@@ -59,7 +59,6 @@ h3,
 h2,
 h1 {
   color: $heading-colour;
-  font-family: 'League Spartan', $system-fonts;
   line-height: 1.25;
   margin: 0;
   margin-bottom: $vertical-rhythm;

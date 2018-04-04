@@ -4,18 +4,6 @@ import Img from 'gatsby-image';
 import Tilt from 'react-tilt';
 
 export default class IndexPage extends React.Component {
-  componentDidMount() {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
-  }
-
   render() {
     const { data } = this.props;
     const { edges: pages } = data.allMarkdownRemark;
@@ -32,9 +20,7 @@ export default class IndexPage extends React.Component {
       >
         <div className="landing-wrap">
           <div className="landing-text">
-            <h1 className="heading">
-              I am Nick Veale,<br />a musician and<br />film composer.
-            </h1>
+            <h1 className="heading">I am Nick Veale, a musician and film composer.</h1>
           </div>
           <div className="landing-picture">
             <Img

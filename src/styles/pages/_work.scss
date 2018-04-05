@@ -88,7 +88,6 @@
 
 .work-item.clicked {
   background: $background-colour;
-  display: flex;
   left: 0;
   margin: 0;
   min-height: 80vh;
@@ -100,9 +99,18 @@
   z-index: 98;
 }
 
+.item-box.clicked {
+  display: flex;
+  left: 7.5vw;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  width: 85vw;
+  z-index: 99;
+}
+
 .item-cover.clicked {
   height: 35vw;
-  margin-left: 7.5vw;
   width: 35vw;
 }
 
@@ -111,7 +119,8 @@
 }
 
 .item-text.clicked {
-  margin: 0 7.5vw 0 2.5vw;
+  margin: 0;
+  margin-left: 2.5vw;
   width: 50vw;
 }
 
@@ -475,6 +484,14 @@ https://flickity.metafizzy.co
 
   .work-item {
     margin: 0 5vw;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
   }
 
   .item-box {
@@ -514,6 +531,14 @@ https://flickity.metafizzy.co
 
   .work-item {
     margin: 0 5vw;
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
   }
 
   .item-box {

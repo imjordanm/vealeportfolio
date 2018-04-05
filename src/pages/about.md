@@ -3,7 +3,7 @@ path: /about
 title: About
 ---
 
-## I pride myself on producing excellent work on tight turnarounds.
+## I take pride in producing excellent work on tight turnarounds.
 
 <div class="about-body">
 

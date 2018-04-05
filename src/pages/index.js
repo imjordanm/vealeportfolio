@@ -4,15 +4,32 @@ import Img from 'gatsby-image';
 import Tilt from 'react-tilt';
 
 export default class IndexPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tilt: true,
+    };
+  }
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      this.checkScreen();
+    }
+  }
+
+  checkScreen() {
+    if (matchMedia('screen and (max-width: 900px)').matches) {
+      this.setState({ tilt: false });
+    }
+  }
+
   render() {
     const { data } = this.props;
     const { edges: pages } = data.allMarkdownRemark;
 
     return (
       <React.Fragment>
-        {matchMedia('screen and (max-width: 900px)').matches ? (
-          <Landing data={data} />
-        ) : (
+        {this.state.tilt ? (
           <Tilt
             className="Tilt"
             options={{
@@ -24,6 +41,8 @@ export default class IndexPage extends React.Component {
           >
             <Landing data={data} />
           </Tilt>
+        ) : (
+          <Landing data={data} />
         )}
       </React.Fragment>
     );

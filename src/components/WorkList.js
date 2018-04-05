@@ -13,6 +13,7 @@ const options = {
   lazyLoad: 4,
   freeScrollFriction: 0.05,
   contain: true,
+  wrapAround: false,
 };
 
 export default class WorkList extends React.Component {
@@ -25,10 +26,12 @@ export default class WorkList extends React.Component {
       cachedFilters: {},
       clickedItem: '',
       toggledFilter: false,
+      isFlickity: true,
     };
 
     this.itemClick = this.itemClick.bind(this);
     this.filterClick = this.filterClick.bind(this);
+    this.keyPress = this.keyPress.bind(this);
   }
 
   componentWillMount() {
@@ -40,6 +43,7 @@ export default class WorkList extends React.Component {
       if (matchMedia('screen and (max-width: 900px)').matches) {
         options.lazyLoad = 2;
         options.freeScroll = false;
+        options.wrapAround = true;
       }
 
       const carousel = document.getElementsByClassName('sf')[0];
@@ -51,11 +55,12 @@ export default class WorkList extends React.Component {
           this.itemClick(this.flkty.selectedElement);
         }
       });
+      // document.addEventListener('keyup', this.enterPress, false);
     }
   }
 
   componentDidUpdate() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && !this.state.isFlickity) {
       if (matchMedia('screen and (max-width: 900px)').matches) {
         options.lazyLoad = 2;
         options.freeScroll = false;
@@ -70,12 +75,22 @@ export default class WorkList extends React.Component {
           this.itemClick(this.flkty.selectedElement);
         }
       });
+      this.setState({ isFlickity: true });
     }
   }
 
   componentWillUnmount() {
     if (this.flkty) {
       this.flkty.destroy();
+    }
+    // document.removeEventListener('keyup', this.enterPress, false);
+  }
+
+  keyPress(event) {
+    if (event.key === 'Enter') {
+      this.itemClick(this.flkty.selectedElement);
+    } else if (event.key === 'Escape') {
+      this.setState({ clickedItem: null });
     }
   }
 
@@ -103,6 +118,7 @@ export default class WorkList extends React.Component {
 
   renderCategory(selected) {
     this.flkty.destroy();
+    this.setState({ isFlickity: false });
 
     if (this.state.cachedFilters.hasOwnProperty(selected)) {
       this.setState({ items: this.state.cachedFilters[selected] });
@@ -127,18 +143,13 @@ export default class WorkList extends React.Component {
 
   render() {
     return (
-      <section className="work">
+      <section className="work" onKeyUp={this.keyPress}>
         {this.state.clickedItem ? (
           <ClickedItem item={this.state.clickedItem} itemClick={this.itemClick} />
         ) : null}
         <div className="test">
           <div className="sf">
-            <WorkItem
-              items={this.state.items}
-              categories={this.state.categories}
-              itemClick={this.itemClick}
-              clickedItem={this.state.clickedItem}
-            />
+            <WorkItem items={this.state.items} categories={this.state.categories} />
           </div>
         </div>
         <div className="work-bar">
@@ -146,10 +157,9 @@ export default class WorkList extends React.Component {
             categories={this.state.categories}
             selectedCategory={this.state.selectedCategory}
             filterClick={this.filterClick}
-            displayFilters={this.displayFilters}
             toggledFilter={this.state.toggledFilter}
           />
-          <WorkBar position={this.state.x} drag={this.scrollDrag} />
+          {/* <WorkBar position={this.state.x} drag={this.scrollDrag} /> */}
         </div>
       </section>
     );

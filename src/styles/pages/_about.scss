@@ -1,22 +1,23 @@
 .about {
   display: flex;
   flex-direction: column;
-  margin-top: 10vw;
+  margin: 10vh 0;
   min-height: 80vh;
-  width: inherit;
+  width: 100%;
 }
 
 .about-picture {
   align-self: flex-end;
   background-color: rgb(128, 128, 128);
   border-radius: 4px;
-  height: 60vh;
   overflow: hidden;
-  width: 35vw;
+  width: 50%;
+  //max-width:
 }
 
 .about-text {
   margin-bottom: 5vw;
+  min-width: 45em;
   width: 65%;
 }
 
@@ -29,11 +30,11 @@
 @include extrasmall {
   .about {
     flex-direction: column;
-    height: unset;
     min-height: 90vh;
   }
 
   .about-text {
+    min-width: unset;
     width: 100%;
   }
 
@@ -49,6 +50,7 @@
   }
 
   .about-text {
+    min-width: unset;
     width: 100%;
   }
 

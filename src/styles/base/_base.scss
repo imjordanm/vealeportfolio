@@ -27,7 +27,7 @@ body {
 
 h1 {
   font-size: calc(var(--base-em) * var(--step-six));
-  line-height: 1.125;
+  //line-height: 1.125;
 }
 
 h2 {
@@ -57,27 +57,58 @@ h3,
 h2,
 h1 {
   color: $heading-colour;
+  line-height: 1.25;
   margin: 0;
   margin-bottom: $vertical-rhythm;
-}
-
-h6,
-h5,
-h4,
-h3,
-h2 {
-  line-height: 1.25;
 }
 
 @include extrasmall {
   body {
     font-size: 14px;
   }
+
+  h1 {
+    font-size: calc(var(--base-em) * var(--step-five));
+  }
+
+  h2 {
+    font-size: calc(var(--base-em) * var(--step-four));
+  }
+
+  h3 {
+    font-size: calc(var(--base-em) * var(--step-three));
+  }
+}
+
+@include tiny {
+  h1 {
+    font-size: calc(var(--base-em) * var(--step-two));
+  }
+
+  h2 {
+    font-size: calc(var(--base-em) * var(--step-two));
+  }
+
+  h3 {
+    font-size: calc(var(--base-em) * var(--step-one));
+  }
 }
 
 @include small {
   body {
     font-size: 14px;
+  }
+
+  h1 {
+    font-size: calc(var(--base-em) * var(--step-five));
+  }
+
+  h2 {
+    font-size: calc(var(--base-em) * var(--step-four));
+  }
+
+  h3 {
+    font-size: calc(var(--base-em) * var(--step-three));
   }
 }
 
@@ -87,7 +118,7 @@ h2 {
   }
 }
 
-@include extralarge {
+@include huge {
   body {
     font-size: 1vw;
   }

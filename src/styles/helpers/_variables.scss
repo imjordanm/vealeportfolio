@@ -49,4 +49,5 @@ $vertical-rhythm: 1rem * 1.5;
   --step-five: calc(var(--ratio) * var(--step-four)); /* 2.488 */
   --step-six: calc(var(--ratio) * var(--step-five)); /* 2.986 */
   --step-seven: calc(var(--ratio) * var(--step-six)); /* 3.583 */
+  --step-eight: calc(var(--ratio) * var(--step-seven));
 }

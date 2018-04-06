@@ -62,3 +62,9 @@
     width: 100%;
   }
 }
+
+@include medium {
+  .contact-box {
+    width: 70%;
+  }
+}

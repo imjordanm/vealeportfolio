@@ -2,7 +2,6 @@ import React from 'react';
 
 class WorkItem extends React.PureComponent {
   render() {
-    console.log('item');
     return (
       <React.Fragment>
         {this.props.items

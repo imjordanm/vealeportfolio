@@ -96,7 +96,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 98;
+  z-index: 97;
 }
 
 .item-box.clicked {
@@ -106,7 +106,7 @@
   position: absolute;
   top: 0;
   width: 85vw;
-  z-index: 99;
+  z-index: 98;
 }
 
 .item-cover.clicked {
@@ -136,8 +136,14 @@
 }
 
 .item-close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
   position: absolute;
-  right: 7.5vw;
+  right: 0;
 }
 
 //What do about this?
@@ -171,13 +177,15 @@
   display: none;
 
   ul {
+    font-size: calc(var(--base-em) * var(--step-seven));
     list-style-type: none;
     margin: 20vh 7.5vw 0;
     padding: 0;
   }
 
   li {
-    font-size: 5vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
@@ -190,12 +198,12 @@
   padding: 0;
   text-align: left;
   text-transform: capitalize;
+  transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   width: 100%;
 
   &:hover {
     color: #fff;
     cursor: pointer;
-    transition: 0.3s;
   }
 
   &.active {
@@ -503,13 +511,16 @@ https://flickity.metafizzy.co
   }
 
   .work-item.clicked {
-    flex-direction: column-reverse;
-    justify-content: flex-end;
     min-height: 90vh;
   }
 
+  .item-box.clicked {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
   .item-text.clicked {
-    margin: 10vw 7.5vw 0;
+    margin: 10vw 0 0;
     width: 85vw;
   }
 
@@ -519,8 +530,13 @@ https://flickity.metafizzy.co
     width: 85vw;
   }
 
+  .item-close {
+    top: 10vw;
+  }
+
   .filter-list ul {
     margin: 10vh 7.5vw 0;
+    width: 85vw;
   }
 }
 
@@ -550,13 +566,16 @@ https://flickity.metafizzy.co
   }
 
   .work-item.clicked {
-    flex-direction: column-reverse;
-    justify-content: flex-end;
     min-height: 90vh;
   }
 
+  .item-box.clicked {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
   .item-text.clicked {
-    margin: 10vw 7.5vw 0;
+    margin: 10vw 0 0;
     width: 85vw;
   }
 
@@ -564,6 +583,10 @@ https://flickity.metafizzy.co
     height: 85vw;
     margin-top: 2.5vw;
     width: 85vw;
+  }
+
+  .item-close {
+    top: 10vw;
   }
 
   .filter-list ul {
@@ -587,5 +610,11 @@ https://flickity.metafizzy.co
   .item-cover.clicked {
     height: 37vw;
     width: 37vw;
+  }
+}
+
+@include tiny {
+  .filter-list ul {
+    font-size: calc(var(--base-em) * var(--step-five));
   }
 }

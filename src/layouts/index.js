@@ -14,7 +14,6 @@ if (typeof window !== 'undefined') {
       // return;
     } else {
       document.fonts.load('1em ObjectiveSubset').then(() => {
-        console.log('test');
         document.documentElement.className += ' fonts-loaded-1';
         Promise.all([
           document.fonts.load('400 1em Objective'),

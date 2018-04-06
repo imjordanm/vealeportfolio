@@ -15,7 +15,6 @@ export default function Template({ data }) {
               style={{
                 width: '100%',
                 height: '100%',
-                transform: 'translate(0, -5%)',
               }}
               alt="About Nick Veale"
               sizes={data.about.sizes}
@@ -44,6 +43,7 @@ export default function Template({ data }) {
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
+              <input type="hidden" name="form-name" value="contact-form" />
               <div className="small-input name">
                 <label htmlFor="name">Name</label>
                 <input
@@ -105,7 +105,7 @@ export const pageQuery = graphql`
       html
     }
 
-    about: imageSharp(id: { regex: "/aboutnick2/" }) {
+    about: imageSharp(id: { regex: "/nickabout/" }) {
       sizes(maxWidth: 1200) {
         ...GatsbyImageSharpSizes
       }

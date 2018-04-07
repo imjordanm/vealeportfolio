@@ -130,7 +130,7 @@
 
   .nav-list {
     flex-direction: column;
-    font-size: calc(var(--base-em) * var(--step-six));
+    font-size: calc(var(--base-em) * var(--step-seven));
     margin: 0 7.5vw;
     width: 85vw;
 
@@ -190,5 +190,11 @@
 
   .hamburger {
     display: flex;
+  }
+}
+
+@include tiny {
+  .nav-list {
+    font-size: calc(var(--base-em) * var(--step-six));
   }
 }

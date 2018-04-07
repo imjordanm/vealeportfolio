@@ -1,5 +1,6 @@
 .landing-wrap {
   align-items: center;
+
   backface-visibility: hidden;
   display: flex;
   flex-flow: row;
@@ -12,6 +13,7 @@
 }
 
 .landing-text {
+  //animation: 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s 1 slideInFromLeft;
   margin: 0;
   transform-style: preserve-3d;
   user-select: none;
@@ -25,13 +27,14 @@
 }
 
 .heading-shadow {
-  color: #292929;
+  color: #222;
   position: absolute;
   transform: translate3d(0, 4px, -15px);
 }
 
 .landing-picture {
-  background-color: rgba(255, 255, 255, 0.05);
+  //animation: 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s 1 slideInFromBottom;
+  background-color: #2f2f2f;
   border-radius: 4px;
   flex: 0 0 55%;
   height: 90%;
@@ -40,17 +43,9 @@
   transform: translateZ(-60px);
 }
 
-/*.gatsby-image-wrapper {
-  @include extralarge {
-    transform: translateY(-20%);
-  }
-  @include large {
-    transform: translateY(-20%);
-  }
-  @include medium {
-    transform: translateY(-5%);
-  }
-}*/
+.gatsby-image-wrapper {
+  animation: 1.2s ease-in-out 0s 1 imageAppear;
+}
 
 .Tilt {
   backface-visibility: hidden;
@@ -61,26 +56,39 @@
 @include extrasmall {
   .landing-wrap {
     flex-direction: column;
+    height: 80vh;
     justify-content: unset;
-    min-height: 90vh;
   }
 
   .landing-text {
     margin-top: 10vh;
   }
 
+  .heading,
+  .heading-shadow {
+    font-size: calc(var(--base-em) * var(--step-four));
+  }
+
   .landing-picture {
+    flex: unset;
+    height: 50vh;
     margin: 0;
     margin-top: -10vh;
+    padding-top: 10vh;
     width: 100%;
+  }
+
+  .gatsby-image-wrapper {
+    bottom: 0;
+    height: 80% !important;
   }
 }
 
 @include small {
   .landing-wrap {
     flex-direction: column;
+    height: 80vh;
     justify-content: unset;
-    min-height: 90vh;
   }
 
   .landing-text {
@@ -88,15 +96,53 @@
   }
 
   .landing-picture {
+    flex: unset;
+    height: 50vh;
     margin: 0;
     margin-top: -10vh;
-    width: 100%;
+    padding-top: 10vh;
+
+    width: 80%;
+  }
+
+  .gatsby-image-wrapper {
+    bottom: 0;
+    height: 80% !important;
   }
 }
 
-@include tiny {
-  .heading,
-  .heading-shadow {
-    font-size: calc(var(--base-em) * var(--step-four));
+@keyframes imageAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateZ(-60px) translateY(200%);
+  }
+
+  100% {
+    transform: translateZ(-60px) translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

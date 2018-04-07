@@ -68,15 +68,15 @@ h1 {
   }
 
   h1 {
-    font-size: calc(var(--base-em) * var(--step-five));
-  }
-
-  h2 {
     font-size: calc(var(--base-em) * var(--step-four));
   }
 
-  h3 {
+  h2 {
     font-size: calc(var(--base-em) * var(--step-three));
+  }
+
+  h3 {
+    font-size: calc(var(--base-em) * var(--step-two));
   }
 }
 

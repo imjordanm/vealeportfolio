@@ -37,13 +37,14 @@ export default function Template({ data }) {
               </p>
             </div>
             <form
-              name="Contact Form"
+              name="contact"
               className="contact-form"
+              autoComplete="nope"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="form-name" value="contact-form" />
+              <input type="hidden" name="form-name" value="contact" />
               <div className="small-input name">
                 <label htmlFor="name">Name</label>
                 <input

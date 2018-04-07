@@ -5,6 +5,7 @@ module.exports = {
   siteMetadata: {
     title: 'Nick Veale',
     subtitle: 'Musician and Film Composer',
+    siteUrl: 'https://heuristic-bhabha-2bbf33.netlify.com/',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -31,6 +32,9 @@ module.exports = {
       options: {
         postCssPlugins: [autoprefixer({ browsers: ['last 2 versions'] }), cssnano()],
       },
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
     },
   ],
 };

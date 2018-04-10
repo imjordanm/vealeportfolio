@@ -13,7 +13,7 @@ if (typeof window !== 'undefined') {
       document.documentElement.className += ' fonts-loaded-2';
       // return;
     } else {
-      document.fonts.load('1em Glacial IndifferenceSubset').then(() => {
+      document.fonts.load('700 1em Glacial IndifferenceSubset').then(() => {
         document.documentElement.className += ' fonts-loaded-1';
         Promise.all([
           document.fonts.load('400 1em Glacial Indifference'),

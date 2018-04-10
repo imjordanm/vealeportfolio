@@ -8,7 +8,7 @@
 
 .about-picture {
   align-self: flex-end;
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(218, 218, 218);
   border-radius: 4px;
   overflow: hidden;
   width: 50%;
@@ -16,12 +16,14 @@
 
 .about-text {
   color: $subheading-colour;
+
   margin-bottom: 5vw;
   min-width: 45em;
   width: 65%;
 }
 
 .about-body {
+  font-size: 1.1em;
   line-height: 1.8;
   margin: 0;
   max-width: 45em;

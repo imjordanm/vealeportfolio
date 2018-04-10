@@ -52,7 +52,7 @@ export default class IndexPage extends React.Component {
 const Landing = props => (
   <div className="landing-wrap">
     <div className="landing-text">
-      <h1 className="heading-shadow">I am Nick Veale, a musician and film composer.</h1>
+      {/* } <h1 className="heading-shadow">I am Nick Veale, a musician and film composer.</h1> */}
       <h1 className="heading">I am Nick Veale, a musician and film composer.</h1>
     </div>
     <div className="landing-picture">
@@ -61,7 +61,7 @@ const Landing = props => (
           width: '100%',
           height: '100%',
           position: 'absolute',
-          filter: 'saturate(0.5) brightness(0.9)',
+          filter: 'saturate(0.5) brightness(1.2)',
         }}
         alt="Nick Veale portrait"
         sizes={props.data.portrait.sizes}
@@ -94,7 +94,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    portrait: imageSharp(id: { regex: "/nicklanding/" }) {
+    portrait: imageSharp(id: { regex: "/sideDone/" }) {
       sizes(maxWidth: 1400) {
         ...GatsbyImageSharpSizes
       }

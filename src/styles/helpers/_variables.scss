@@ -9,15 +9,15 @@ $system-fonts: (
   'sans-serif'
 );
 
-$primary-font: 'Objective';
+$primary-font: 'Glacial Indifference';
 
 //colours
-$background-colour: #222;
-//#fff
+$background-colour: rgb(246, 246, 246);
+//#222
 
-$heading-colour: #fff; //#1e1e1e
-$subheading-colour: rgba(255, 255, 255, 0.5);
-$body-colour: #f1f1f1;
+$heading-colour: rgb(30, 30, 34); //#1e1e1e
+$subheading-colour: rgb(44, 44, 44);
+$body-colour: rgb(59, 59, 59);
 
 $vertical-rhythm: 1rem * 1.5;
 

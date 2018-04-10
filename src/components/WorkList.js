@@ -14,6 +14,8 @@ const options = {
   freeScrollFriction: 0.05,
   contain: true,
   wrapAround: false,
+  prevNextButtons: false,
+  pageDots: false,
 };
 
 export default class WorkList extends React.Component {

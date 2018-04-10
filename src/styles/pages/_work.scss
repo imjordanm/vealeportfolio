@@ -1,11 +1,12 @@
 .work {
+  align-items: center;
   display: flex;
+
   height: 80vh;
   position: relative;
 }
 
 .test {
-  align-items: center;
   display: flex;
   overflow: hidden;
   touch-action: pan-y;
@@ -25,7 +26,7 @@
 }
 
 .work-item {
-  margin: 0 2vw;
+  margin: 0 1.5vw;
   //transition: transform 0.4s cubic-bezier();
 
   &:first-of-type {
@@ -52,14 +53,14 @@
 }
 
 .item-cover {
-  background: rgb(48, 48, 48);
-  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  //border-radius: 8px;
   height: 20vw;
   overflow: hidden;
 }
 
 .item-image {
-  border-radius: 8px;
+  //border-radius: 8px;
   height: 100%;
   opacity: 0;
 }
@@ -156,12 +157,12 @@
 .work-bar {
   align-items: center;
   bottom: 0;
-  color: rgb(128, 128, 128);
+  color: gray;
   display: flex;
-  justify-content: space-between;
+  height: 10vh;
+  justify-content: center;
   left: 0;
   margin: 0 auto;
-  margin-bottom: 5vh;
   position: fixed;
   right: 0;
   user-select: none;
@@ -174,18 +175,21 @@
 }
 
 .filter-list {
-  display: none;
+  //display: none;
+  font-weight: 700;
 
   ul {
-    font-size: calc(var(--base-em) * var(--step-seven));
     list-style-type: none;
-    margin: 20vh 7.5vw 0;
+    margin: 0;
     padding: 0;
   }
 
   li {
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-right: 4em;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
   }
 }
 
@@ -194,39 +198,21 @@
   background: none;
   border: none;
   color: inherit;
+  display: inline-block;
   outline: none;
   padding: 0;
-  text-align: left;
   text-transform: capitalize;
   transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  width: 100%;
 
-  &:hover {
-    color: #fff;
-    cursor: pointer;
-  }
-
+  &:hover,
   &.active {
-    color: rgb(255, 255, 255);
+    color: $heading-colour;
     cursor: pointer;
   }
 }
 
-.filter-active.toggled + .filter-list {
-  align-items: center;
-  background: $background-colour;
-  display: flex;
-  height: 100vh;
-  left: 0;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 98;
-  z-index: 98;
+.filter-active {
+  display: none;
 }
 
 .work-progress {
@@ -486,8 +472,36 @@ https://flickity.metafizzy.co
 }
 
 @include extrasmall {
+  .filter-active {
+    display: block;
+  }
+
+  .filter-list {
+    display: none;
+  }
+
+  .filter-active.toggled + .filter-list {
+    align-items: center;
+    background: $background-colour;
+    display: flex;
+
+    height: 100vh;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 98;
+  }
+
   .work {
     height: 90vh;
+  }
+
+  .test {
+    align-items: center;
   }
 
   .work-item {
@@ -535,12 +549,42 @@ https://flickity.metafizzy.co
   }
 
   .filter-list ul {
+    font-size: calc(var(--base-em) * var(--step-seven));
     margin: 10vh 7.5vw 0;
     width: 85vw;
+
+    li {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
 @include small {
+  .filter-active {
+    display: block;
+  }
+
+  .filter-list {
+    display: none;
+  }
+
+  .filter-active.toggled + .filter-list {
+    align-items: center;
+    background: $background-colour;
+    display: flex;
+
+    height: 100vh;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 98;
+  }
+
   .work {
     height: 90vh;
   }
@@ -558,11 +602,11 @@ https://flickity.metafizzy.co
   }
 
   .item-box {
-    width: 65vw;
+    width: 45vw;
   }
 
   .item-cover {
-    height: 65vw;
+    height: 45vw;
   }
 
   .work-item.clicked {
@@ -590,7 +634,14 @@ https://flickity.metafizzy.co
   }
 
   .filter-list ul {
+    font-size: calc(var(--base-em) * var(--step-seven));
     margin: 10vh 7.5vw 0;
+    width: 85vw;
+
+    li {
+      display: block;
+      width: 100%;
+    }
   }
 }
 

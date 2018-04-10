@@ -14,7 +14,7 @@
 
   input,
   textarea {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgb(230, 230, 230);
     border: 0;
     border-radius: 4px;
     color: inherit;
@@ -36,12 +36,12 @@
   }
 
   button {
-    background: #2f2f2f;
+    background: #1a1a1a;
     border: none;
     border-radius: 4px;
-    box-shadow: 1px 4px 10px #252525;
-    color: #cecece;
-    font-weight: 700;
+    //box-shadow: 1px 4px 10px #252525;
+    color: #fff;
+    //font-weight: 700;
     padding: 1em 1.5em;
 
     &:hover {

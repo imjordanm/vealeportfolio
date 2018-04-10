@@ -18,16 +18,29 @@ html {
 
 body {
   //background: $background-colour;
-  background: linear-gradient($background-colour);
+  background: $background-colour;
   color: $body-colour;
+  //-webkit-text-stroke: 1px rgba($body-colour, 0.2);
   font-family: $primary-font, $system-fonts;
   font-size: calc(var(--base-em) * var(--step-zero));
   line-height: 1.5;
 }
 
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  color: $heading-colour;
+  line-height: 1.25;
+  margin: 0;
+  margin-bottom: $vertical-rhythm;
+}
+
 h1 {
   font-size: calc(var(--base-em) * var(--step-six));
-  //line-height: 1.125;
+  line-height: 1.125;
 }
 
 h2 {
@@ -48,18 +61,6 @@ h5 {
 
 h6 {
   font-size: calc(var(--base-em) * var(--step-one));
-}
-
-h6,
-h5,
-h4,
-h3,
-h2,
-h1 {
-  color: $heading-colour;
-  line-height: 1.25;
-  margin: 0;
-  margin-bottom: $vertical-rhythm;
 }
 
 @include extrasmall {

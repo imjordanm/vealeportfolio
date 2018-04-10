@@ -1,7 +1,7 @@
 .header {
   align-items: center;
-  color: $subheading-colour;
   display: flex;
+  font-weight: 700;
   height: 20vh;
   justify-content: space-between;
   user-select: none;
@@ -20,14 +20,12 @@
 
 .nav-list {
   display: flex;
-  font-size: 0.75em;
-  font-weight: 700;
   list-style: none;
   margin: 0;
   padding: 0;
 
   li {
-    margin-right: 3em;
+    margin-right: 4em;
 
     &:last-of-type {
       margin-right: 0;
@@ -35,16 +33,13 @@
   }
 
   a {
-    color: inherit;
+    color: gray;
     text-decoration: none;
     transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-    &:hover {
-      color: #fff;
-    }
-
+    &:hover,
     &.active {
-      color: #fff;
+      color: $heading-colour;
     }
   }
 }
@@ -61,7 +56,7 @@
   z-index: 100;
 
   > div {
-    background: $subheading-colour;
+    background: $heading-colour;
     height: 2px;
     transition: all 0.4s ease;
     width: 1em;

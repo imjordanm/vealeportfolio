@@ -10,16 +10,16 @@
   margin-top: 10vw;
   user-select: none;
   width: 60%;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
 }
 
 .contact-text {
   font-size: 1.1em;
+  line-height: 1.8;
   max-width: 40em;
-
-  p {
-    line-height: 1.8;
-    margin: 0;
-  }
 
   a {
     color: inherit;
@@ -37,6 +37,10 @@
 
   .contact-box {
     width: 100%;
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .contact-text {
@@ -56,6 +60,10 @@
 
   .contact-box {
     width: 100%;
+
+    h1 {
+      margin-bottom: 1.5rem;
+    }
   }
 
   .contact-text {

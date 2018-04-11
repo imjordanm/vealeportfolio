@@ -57,7 +57,6 @@ export default class WorkList extends React.Component {
           this.itemClick(this.flkty.selectedElement);
         }
       });
-      // document.addEventListener('keyup', this.enterPress, false);
     }
   }
 

@@ -8,10 +8,10 @@
 
 .test {
   display: flex;
+  min-width: 100vw;
   overflow: hidden;
   touch-action: pan-y;
   user-select: none;
-  width: 100vw;
 }
 
 .sf {
@@ -53,14 +53,14 @@
 }
 
 .item-cover {
-  background: rgba(0, 0, 0, 0.2);
-  //border-radius: 8px;
+  background-color: rgb(218, 218, 218);
+  border-radius: 4px;
   height: 20vw;
   overflow: hidden;
 }
 
 .item-image {
-  //border-radius: 8px;
+  border-radius: 4px;
   height: 100%;
   opacity: 0;
 }
@@ -83,6 +83,7 @@
 }
 
 .item-more {
+  //display: none;
   opacity: 0;
   visibility: hidden;
 }
@@ -215,53 +216,6 @@
   display: none;
 }
 
-.work-progress {
-  background: rgba(255, 255, 255, 0.15);
-  height: 1px;
-  left: 0;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  width: 30%;
-}
-
-.progress-bar {
-  bottom: 0;
-  cursor: grab;
-  left: 0;
-  padding: 15px 0;
-  position: absolute;
-  top: -16px;
-  //transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-  width: 10%;
-
-  &:hover {
-    top: -17px;
-
-    .progress-bar-line {
-      background: rgb(211, 211, 211);
-      height: 5px;
-    }
-  }
-
-  &:active {
-    cursor: grabbing;
-    top: -17px;
-
-    .progress-bar-line {
-      background: rgb(211, 211, 211);
-      height: 5px;
-    }
-  }
-}
-
-.progress-bar-line {
-  background: $subheading-colour;
-  border-radius: 10px;
-  display: block;
-  height: 3px;
-}
-
 /*! Flickity v2.1.1
 https://flickity.metafizzy.co
 ---------------------------------------------- */
@@ -296,10 +250,13 @@ https://flickity.metafizzy.co
 .flickity-enabled.is-draggable .flickity-viewport {
   cursor: move;
   cursor: grab;
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
   cursor: grabbing;
+
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* ---- flickity-button ---- */
@@ -498,10 +455,6 @@ https://flickity.metafizzy.co
 
   .work {
     height: 90vh;
-  }
-
-  .test {
-    align-items: center;
   }
 
   .work-item {

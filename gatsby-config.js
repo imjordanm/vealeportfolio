@@ -11,6 +11,8 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     'gatsby-transformer-remark',
+    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

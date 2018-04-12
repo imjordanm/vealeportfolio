@@ -13,6 +13,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             frontmatter {
               path
               title
+              order
               items {
                 item {
                   title

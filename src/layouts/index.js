@@ -53,12 +53,13 @@ export default ({ children, data }) => (
 
 export const pageQuery = graphql`
   query pagesQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: [frontmatter___order], order: ASC }) {
       edges {
         node {
           frontmatter {
             path
             title
+            order
           }
         }
       }

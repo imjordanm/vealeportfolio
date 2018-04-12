@@ -23,10 +23,9 @@ class WorkItem extends React.PureComponent {
                         <div className="item-artist">{item.artist}</div>
                         <div className="item-title">{item.title}</div>
                         <div className="item-more">
-                          <div className="item-description">{item.description}</div>
-                          <div className="item-year" />
-                          <div className="item-genre" />
-                          <div className="item-link" />
+                          <p>
+                            {item.year} - {item.genre}
+                          </p>
                         </div>
                       </div>
                     </div>

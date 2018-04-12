@@ -1,6 +1,7 @@
 ---
 path: /work
 title: Work
+order: 2
 items:
   item:
     - artist: Nick Veale

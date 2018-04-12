@@ -12,6 +12,9 @@ class WorkFilter extends React.PureComponent {
         </button>
         <div className="filter-list">
           <ul onClick={this.props.filterClick}>
+          <li key="All" id="All" className={this.props.selectedCategory == 'All' ? 'active' : ''}>
+              All
+            </li>
             {this.props
               ? Array.from(this.props.categories).map(category => (
                 <li
@@ -23,9 +26,7 @@ class WorkFilter extends React.PureComponent {
                 </li>
                 ))
               : null}
-            <li key="All" id="All" className={this.props.selectedCategory == 'All' ? 'active' : ''}>
-              All
-            </li>
+           
           </ul>
         </div>
       </div>

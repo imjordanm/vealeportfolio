@@ -1,6 +1,7 @@
 ---
 path: /about
 title: About
+order: 1
 ---
 
 # I produce excellent tailored work on tight turnarounds.

@@ -72,28 +72,6 @@ const Landing = props => (
 
 export const pageQuery = graphql`
   query indexQuery {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            path
-            title
-            items {
-              item {
-                title
-                artist
-                cover
-                category
-                description
-                year
-                genre
-              }
-            }
-          }
-          html
-        }
-      }
-    }
     portrait: imageSharp(id: { regex: "/sideDone/" }) {
       sizes(maxWidth: 1400) {
         ...GatsbyImageSharpSizes

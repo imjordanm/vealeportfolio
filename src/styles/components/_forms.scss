@@ -1,5 +1,5 @@
 .contact-form {
-  margin: 5.5vw 0;
+  margin: 5vw 0;
   width: 100%;
 
   div {
@@ -27,7 +27,7 @@
   }
 
   textarea {
-    height: 20vh;
+    height: 13em;
     resize: none;
   }
 
@@ -53,10 +53,10 @@
 
 .small-input {
   display: inline-block;
-  width: calc(50% - 1em);
+  width: calc(50% - 0.5em);
 
   &.email {
-    margin-left: 2em;
+    margin-left: 1em;
   }
 }
 
@@ -72,17 +72,5 @@
     &.email {
       margin-left: 0;
     }
-  }
-}
-
-@include small {
-  .contact-form {
-    width: inherit;
-  }
-}
-
-@include medium {
-  .contact-form {
-    width: 100%;
   }
 }

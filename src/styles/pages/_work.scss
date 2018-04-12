@@ -1,23 +1,21 @@
 .work {
   align-items: center;
   display: flex;
-
-  height: 80vh;
+  height: 60vh;
   position: relative;
 }
 
 .test {
   display: flex;
-  min-width: 100vw;
   overflow: hidden;
   touch-action: pan-y;
   user-select: none;
+  width: 100vw;
 }
 
 .sf {
   opacity: 0;
   outline: 0;
-  //transition: opacity 0.8s;
   width: 100%;
 }
 
@@ -27,7 +25,6 @@
 
 .work-item {
   margin: 0 1.5vw;
-  //transition: transform 0.4s cubic-bezier();
 
   &:first-of-type {
     padding-left: 7.5vw;
@@ -38,13 +35,7 @@
   }
 
   &:hover {
-    //transform: scale(1.1);
     cursor: pointer;
-
-    .item-more {
-      opacity: 1;
-      visibility: visible;
-    }
   }
 }
 
@@ -83,7 +74,7 @@
 }
 
 .item-more {
-  //display: none;
+  display: none;
   opacity: 0;
   visibility: hidden;
 }
@@ -176,7 +167,6 @@
 }
 
 .filter-list {
-  //display: none;
   font-weight: 700;
 
   ul {
@@ -250,13 +240,10 @@ https://flickity.metafizzy.co
 .flickity-enabled.is-draggable .flickity-viewport {
   cursor: move;
   cursor: grab;
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
   cursor: grabbing;
-
-  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* ---- flickity-button ---- */
@@ -441,7 +428,6 @@ https://flickity.metafizzy.co
     align-items: center;
     background: $background-colour;
     display: flex;
-
     height: 100vh;
     left: 0;
     margin: 0;
@@ -454,7 +440,7 @@ https://flickity.metafizzy.co
   }
 
   .work {
-    height: 90vh;
+    height: 80vh;
   }
 
   .work-item {
@@ -526,7 +512,6 @@ https://flickity.metafizzy.co
     align-items: center;
     background: $background-colour;
     display: flex;
-
     height: 100vh;
     left: 0;
     margin: 0;
@@ -539,7 +524,7 @@ https://flickity.metafizzy.co
   }
 
   .work {
-    height: 90vh;
+    height: 80vh;
   }
 
   .work-item {

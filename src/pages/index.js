@@ -25,7 +25,6 @@ export default class IndexPage extends React.Component {
 
   render() {
     const { data } = this.props;
-    const { edges: pages } = data.allMarkdownRemark;
 
     return (
       <React.Fragment>

@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../src/resources/icons/fontello.woff2?6796428') format('woff2'),
+    url('../../src/resources/icons/fontello.woff?6796428') format('woff');
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+  display: inline-block;
+  font-family: 'fontello';
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  font-weight: normal;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  speak: none;
+  text-align: center;
+  text-decoration: inherit;
+  text-transform: none;
+  width: 1em;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-twitter:before {
+  content: '\f099';
+} /* '' */
+.icon-facebook:before {
+  content: '\f09a';
+} /* '' */
+.icon-linkedin:before {
+  content: '\f0e1';
+} /* '' */
+.icon-youtube-play:before {
+  content: '\f16a';
+} /* '' */
+.icon-instagram:before {
+  content: '\f16d';
+} /* '' */
+.icon-spotify:before {
+  content: '\f1bc';
+} /* '' */

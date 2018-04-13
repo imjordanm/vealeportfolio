@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import Tilt from 'react-tilt';
 
-export default class IndexPage extends React.Component {
+export default class IndexPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

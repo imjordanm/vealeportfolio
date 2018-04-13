@@ -7,6 +7,7 @@
 
 .test {
   display: flex;
+  margin-bottom: calc(-5em);
   overflow: hidden;
   touch-action: pan-y;
   user-select: none;
@@ -24,7 +25,8 @@
 }
 
 .work-item {
-  margin: 0 1.5vw;
+  margin: 0 2vw;
+  transition: transform 0.3s ease 0.1s;
 
   &:first-of-type {
     padding-left: 7.5vw;
@@ -40,7 +42,7 @@
 }
 
 .item-box {
-  width: 20vw;
+  width: 30vw;
 }
 
 .item-cover {
@@ -61,22 +63,20 @@
 }
 
 .item-text {
-  margin-top: 1em;
+  height: 5em;
+  margin-top: 0.5em;
 }
 
 .item-artist {
+  font-size: 1.3em;
   font-weight: 700;
 }
 
 .item-title {
-  font-style: italic;
-  opacity: 0.8;
 }
 
 .item-more {
   display: none;
-  opacity: 0;
-  visibility: hidden;
 }
 
 .work-item.clicked {
@@ -124,8 +124,7 @@
 }
 
 .item-more.clicked {
-  opacity: 1;
-  visibility: visible;
+  display: block;
 }
 
 .item-close {
@@ -219,14 +218,18 @@ https://flickity.metafizzy.co
 }
 
 .flickity-viewport {
+  backface-visibility: hidden;
   height: 100%;
   overflow: hidden;
+  perspective: 100vw;
   position: relative;
+  transform-style: preserve-3d;
 }
 
 .flickity-slider {
   height: 100%;
   position: absolute;
+  transform-style: preserve-3d;
   width: 100%;
 }
 
@@ -244,6 +247,10 @@ https://flickity.metafizzy.co
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
   cursor: grabbing;
+
+  .work-item {
+    transform: translate3d(0, 0, -15vw);
+  }
 }
 
 /* ---- flickity-button ---- */
@@ -444,7 +451,7 @@ https://flickity.metafizzy.co
   }
 
   .work-item {
-    margin: 0 5vw;
+    margin: 0 4vw;
 
     &:first-of-type {
       padding-left: 0;
@@ -456,11 +463,13 @@ https://flickity.metafizzy.co
   }
 
   .item-box {
-    width: 65vw;
+    max-width: 60vh;
+    width: 67vw;
   }
 
   .item-cover {
-    height: 65vw;
+    height: 44.66vw;
+    max-height: 40vh;
   }
 
   .work-item.clicked {
@@ -485,6 +494,10 @@ https://flickity.metafizzy.co
 
   .item-close {
     top: 10vw;
+  }
+
+  .work-bar {
+    min-height: 7.5vw;
   }
 
   .filter-list ul {
@@ -528,7 +541,7 @@ https://flickity.metafizzy.co
   }
 
   .work-item {
-    margin: 0 5vw;
+    margin: 0 4vw;
 
     &:first-of-type {
       padding-left: 0;
@@ -540,11 +553,13 @@ https://flickity.metafizzy.co
   }
 
   .item-box {
-    width: 45vw;
+    max-width: 60vh;
+    width: 67vw;
   }
 
   .item-cover {
-    height: 45vw;
+    height: 44.66vw;
+    max-height: 40vh;
   }
 
   .work-item.clicked {
@@ -571,8 +586,12 @@ https://flickity.metafizzy.co
     top: 10vw;
   }
 
+  .work-bar {
+    min-height: 7.5vw;
+  }
+
   .filter-list ul {
-    font-size: calc(var(--base-em) * var(--step-seven));
+    font-size: 8vh;
     margin: 10vh 7.5vw 0;
     width: 85vw;
 
@@ -585,11 +604,13 @@ https://flickity.metafizzy.co
 
 @include medium {
   .item-box {
+    min-width: 45vh;
     width: 30vw;
   }
 
   .item-cover {
-    height: 30vw;
+    height: 20vw;
+    min-height: 30vh;
   }
 
   .item-text.clicked {

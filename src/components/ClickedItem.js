@@ -6,7 +6,7 @@ const ClickedItem = props => (
       className="work-item clicked"
       key={props.item.title}
       id={props.item.title}
-      onClick={props.itemClick}
+      onClick={props.itemClose}
     />
     <div className="item-box clicked">
       <div className="item-cover clicked">
@@ -31,7 +31,7 @@ const ClickedItem = props => (
           <div className="item-description">{props.item.description}</div>
         </div>
       </div>
-      <button className="item-close" onClick={props.itemClick}>
+      <button className="item-close" onClick={props.itemClose}>
         Go back
       </button>
     </div>

@@ -9,7 +9,6 @@ const options = {
   cellSelector: '.work-item',
   accessibility: true,
   freeScroll: true,
-  dragThreshold: 5,
   lazyLoad: 4,
   freeScrollFriction: 0.05,
   contain: true,
@@ -32,6 +31,7 @@ export default class WorkList extends React.Component {
     };
 
     this.itemClick = this.itemClick.bind(this);
+    this.itemClose = this.itemClose.bind(this);
     this.filterClick = this.filterClick.bind(this);
     this.keyPress = this.keyPress.bind(this);
   }
@@ -96,10 +96,14 @@ export default class WorkList extends React.Component {
   }
 
   itemClick(event) {
+    if (!this.state.clickedItem) {
+      this.setState({ clickedItem: this.state.items[event.dataset.index] });
+    }
+  }
+
+  itemClose(event) {
     if (this.state.clickedItem) {
       this.setState({ clickedItem: null });
-    } else {
-      this.setState({ clickedItem: this.state.items[event.dataset.index] });
     }
   }
 
@@ -146,7 +150,7 @@ export default class WorkList extends React.Component {
     return (
       <section className="work" onKeyUp={this.keyPress}>
         {this.state.clickedItem ? (
-          <ClickedItem item={this.state.clickedItem} itemClick={this.itemClick} />
+          <ClickedItem item={this.state.clickedItem} itemClose={this.itemClose} />
         ) : null}
         <div className="test">
           <div className="sf">

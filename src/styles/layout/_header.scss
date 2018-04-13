@@ -102,6 +102,7 @@
 @include extrasmall {
   .header {
     height: 10vh;
+    min-height: 7.5vw;
   }
 
   .pages {
@@ -145,6 +146,7 @@
 @include small {
   .header {
     height: 10vh;
+    min-height: 7.5vw;
   }
 
   .pages {
@@ -170,7 +172,7 @@
 
   .nav-list {
     flex-direction: column;
-    font-size: calc(var(--base-em) * var(--step-eight));
+    font-size: 8vh;
     margin: 0 7.5vw;
 
     width: 85vw;

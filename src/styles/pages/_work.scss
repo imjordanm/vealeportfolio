@@ -7,7 +7,7 @@
 
 .test {
   display: flex;
-  margin-bottom: calc(-5em);
+  margin-bottom: calc(-3.8em);
   overflow: hidden;
   touch-action: pan-y;
   user-select: none;
@@ -26,7 +26,7 @@
 
 .work-item {
   margin: 0 2vw;
-  transition: transform 0.3s ease 0.1s;
+  transition: transform 0.5s ease 0.1s;
 
   &:first-of-type {
     padding-left: 7.5vw;
@@ -42,20 +42,22 @@
 }
 
 .item-box {
-  width: 30vw;
+  width: 25.6vw;
 }
 
 .item-cover {
+  align-items: center;
   background-color: rgb(218, 218, 218);
-  border-radius: 4px;
-  height: 20vw;
+  //border-radius: 4px;
+  display: flex;
+  height: 19.2vw;
   overflow: hidden;
 }
 
 .item-image {
-  border-radius: 4px;
-  height: 100%;
+  //border-radius: 4px;
   opacity: 0;
+  width: 100%;
 }
 
 .item-description {
@@ -63,7 +65,7 @@
 }
 
 .item-text {
-  height: 5em;
+  height: 3.3em;
   margin-top: 0.5em;
 }
 
@@ -73,6 +75,7 @@
 }
 
 .item-title {
+  margin-top: -0.3em;
 }
 
 .item-more {
@@ -148,8 +151,9 @@
 .work-bar {
   align-items: center;
   bottom: 0;
-  color: gray;
+  color: inherit;
   display: flex;
+  font-weight: 700;
   height: 10vh;
   justify-content: center;
   left: 0;
@@ -161,24 +165,29 @@
   z-index: 1;
 }
 
-.work-filter {
-  font-weight: 700;
-}
-
 .filter-list {
-  font-weight: 700;
+  display: none;
 
   ul {
+    font-size: calc(var(--base-em) * var(--step-seven));
     list-style-type: none;
-    margin: 0;
+    margin: 10vh 7.5vw 0;
     padding: 0;
   }
 
   li {
-    margin-right: 4em;
+    clear: left;
+    display: inline-block;
+    float: left;
+    position: relative;
 
-    &:last-of-type {
-      margin-right: 0;
+    &::before {
+      @extend %strikethrough;
+    }
+
+    &:hover:before,
+    &.active:before {
+      transform: scaleX(1);
     }
   }
 }
@@ -188,26 +197,37 @@
   background: none;
   border: none;
   color: inherit;
-  display: inline-block;
+  cursor: pointer;
   outline: none;
   padding: 0;
   text-transform: capitalize;
   transition: color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-
-  &:hover,
-  &.active {
-    color: $heading-colour;
-    cursor: pointer;
-  }
 }
 
-.filter-active {
-  display: none;
+.filter-active.toggled + .filter-list {
+  align-items: center;
+  background: $background-colour;
+  display: flex;
+  height: 100vh;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 98;
 }
 
-/*! Flickity v2.1.1
-https://flickity.metafizzy.co
----------------------------------------------- */
+.filter-active::after {
+  color: $body-colour;
+  content: '';
+  display: inline-block;
+  height: 2px;
+  margin-left: 0.05em;
+  transform: rotate(0deg);
+  transition: transform 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
 
 .flickity-enabled {
   position: relative;
@@ -249,203 +269,11 @@ https://flickity.metafizzy.co
   cursor: grabbing;
 
   .work-item {
-    transform: translate3d(0, 0, -15vw);
+    transform: translate3d(0, 0, -20vw);
   }
-}
-
-/* ---- flickity-button ---- */
-
-.flickity-button {
-  background: inherit;
-  border: none;
-  color: #333;
-  position: absolute;
-}
-
-.flickity-button:hover {
-  //background: #fff;
-  cursor: pointer;
-}
-
-.flickity-button:focus {
-  //box-shadow: 0 0 0 5px #19f;
-  outline: none;
-}
-
-.flickity-button:active {
-  opacity: 0.6;
-}
-
-.flickity-button:disabled {
-  cursor: auto;
-  opacity: 0.3;
-  // prevent disabled button from capturing pointer up event. #716
-  pointer-events: none;
-}
-
-.flickity-button-icon {
-  fill: $subheading-colour;
-}
-
-/*.flickity-button {
-  background: hsla(0, 0%, 100%, 0.75);
-  border: none;
-  color: #333;
-  position: absolute;
-}
-
-.flickity-button:hover {
-  background: #fff;
-  cursor: pointer;
-}
-
-.flickity-button:focus {
-  box-shadow: 0 0 0 5px #19f;
-  outline: none;
-}
-
-.flickity-button:active {
-  opacity: 0.6;
-}
-
-.flickity-button:disabled {
-  cursor: auto;
-  opacity: 0.3;
-  // prevent disabled button from capturing pointer up event. #716
-  pointer-events: none;
-}
-
-.flickity-button-icon {
-  fill: #333;
-} */
-
-/* ---- previous/next buttons ---- */
-
-.flickity-prev-next-button {
-  bottom: -10vh;
-  height: 44px;
-  //vertically center
-  transform: translateY(-50%);
-  width: 44px;
-}
-
-.flickity-prev-next-button.previous {
-  left: 7.5vw;
-}
-
-.flickity-prev-next-button.next {
-  right: 7.5vw;
-}
-//right to left
-.flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: 10px;
-}
-
-.flickity-rtl .flickity-prev-next-button.next {
-  left: 10px;
-  right: auto;
-}
-
-.flickity-prev-next-button .flickity-button-icon {
-  height: 60%;
-  left: 20%;
-  position: absolute;
-  top: 20%;
-  width: 60%;
-}
-
-/*.flickity-prev-next-button {
-  border-radius: 50%;
-  height: 44px;
-  top: 50%;
-//vertically center
-  transform: translateY(-50%);
-  width: 44px;
-}
-
-.flickity-prev-next-button.previous {
-  left: 10px;
-}
-
-.flickity-prev-next-button.next {
-  right: 10px;
-}
-//right to left
-.flickity-rtl .flickity-prev-next-button.previous {
-  left: auto;
-  right: 10px;
-}
-
-.flickity-rtl .flickity-prev-next-button.next {
-  left: 10px;
-  right: auto;
-}
-
-.flickity-prev-next-button .flickity-button-icon {
-  height: 60%;
-  left: 20%;
-  position: absolute;
-  top: 20%;
-  width: 60%;
-} */
-
-/* ---- page dots ---- */
-
-.flickity-page-dots {
-  bottom: -25px;
-  line-height: 1;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-}
-
-.flickity-rtl .flickity-page-dots {
-  direction: rtl;
-}
-
-.flickity-page-dots .dot {
-  background: #333;
-  border-radius: 50%;
-  cursor: pointer;
-  display: inline-block;
-  height: 10px;
-  margin: 0 8px;
-  opacity: 0.25;
-  width: 10px;
-}
-
-.flickity-page-dots .dot.is-selected {
-  opacity: 1;
 }
 
 @include extrasmall {
-  .filter-active {
-    display: block;
-  }
-
-  .filter-list {
-    display: none;
-  }
-
-  .filter-active.toggled + .filter-list {
-    align-items: center;
-    background: $background-colour;
-    display: flex;
-    height: 100vh;
-    left: 0;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: 98;
-  }
-
   .work {
     height: 80vh;
   }
@@ -468,8 +296,8 @@ https://flickity.metafizzy.co
   }
 
   .item-cover {
-    height: 44.66vw;
-    max-height: 40vh;
+    height: 50.25vw;
+    max-height: 45vh;
   }
 
   .work-item.clicked {
@@ -499,43 +327,9 @@ https://flickity.metafizzy.co
   .work-bar {
     min-height: 7.5vw;
   }
-
-  .filter-list ul {
-    font-size: calc(var(--base-em) * var(--step-seven));
-    margin: 10vh 7.5vw 0;
-    width: 85vw;
-
-    li {
-      display: block;
-      width: 100%;
-    }
-  }
 }
 
 @include small {
-  .filter-active {
-    display: block;
-  }
-
-  .filter-list {
-    display: none;
-  }
-
-  .filter-active.toggled + .filter-list {
-    align-items: center;
-    background: $background-colour;
-    display: flex;
-    height: 100vh;
-    left: 0;
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: 98;
-  }
-
   .work {
     height: 80vh;
   }
@@ -558,8 +352,8 @@ https://flickity.metafizzy.co
   }
 
   .item-cover {
-    height: 44.66vw;
-    max-height: 40vh;
+    height: 50.25vw;
+    max-height: 45vh;
   }
 
   .work-item.clicked {
@@ -592,13 +386,6 @@ https://flickity.metafizzy.co
 
   .filter-list ul {
     font-size: 8vh;
-    margin: 10vh 7.5vw 0;
-    width: 85vw;
-
-    li {
-      display: block;
-      width: 100%;
-    }
   }
 }
 
@@ -609,8 +396,8 @@ https://flickity.metafizzy.co
   }
 
   .item-cover {
-    height: 20vw;
-    min-height: 30vh;
+    height: 22.5vw;
+    min-height: 33.75vh;
   }
 
   .item-text.clicked {

@@ -2,14 +2,6 @@
   margin: 5vw 0;
   width: 100%;
 
-  div {
-    margin-bottom: 1em;
-
-    &:last-of-type {
-      margin-bottom: 2em;
-    }
-  }
-
   label {
     display: none;
     font-size: 0.75em;
@@ -53,11 +45,16 @@
 
 .small-input {
   display: inline-block;
+  margin-bottom: 1em;
   width: calc(50% - 0.5em);
 
   &.email {
     margin-left: 1em;
   }
+}
+
+.big-input {
+  margin-bottom: 1.5em;
 }
 
 @include extrasmall {

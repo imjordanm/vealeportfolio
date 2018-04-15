@@ -8,11 +8,11 @@ class WorkFilter extends React.PureComponent {
           className={this.props.toggledFilter === true ? 'filter-active toggled' : 'filter-active'}
           onClick={this.props.filterClick}
         >
-          {`Viewing ${this.props.selectedCategory}`}
+          {`Filter ${this.props.selectedCategory}`}
         </button>
         <div className="filter-list">
           <ul onClick={this.props.filterClick}>
-          <li key="All" id="All" className={this.props.selectedCategory == 'All' ? 'active' : ''}>
+            <li key="All" id="All" className={this.props.selectedCategory == 'All' ? 'active' : ''}>
               All
             </li>
             {this.props
@@ -26,7 +26,6 @@ class WorkFilter extends React.PureComponent {
                 </li>
                 ))
               : null}
-           
           </ul>
         </div>
       </div>

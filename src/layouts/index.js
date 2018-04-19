@@ -37,7 +37,7 @@ if (process.env.NODE_ENV !== 'production') {
 export default ({ children, data }) => (
   <div>
     <Helmet
-      title="Nick Veale"
+      title="Nick Veale - Film Composer"
       meta={[
         { name: 'description', content: 'Film composer and musician Nick Veale' },
         { name: 'keywords', content: 'Film composer and musician Nick Veale' },

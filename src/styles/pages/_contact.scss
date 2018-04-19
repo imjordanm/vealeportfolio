@@ -12,16 +12,6 @@
   width: 60%;
 }
 
-.contact-text {
-  font-size: 1.1em;
-  line-height: 1.8;
-  max-width: 40em;
-
-  a {
-    color: inherit;
-  }
-}
-
 @include extrasmall {
   .contact-container {
     flex-direction: column-reverse;

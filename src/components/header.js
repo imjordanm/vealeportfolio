@@ -1,21 +1,28 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
-const menuToggle = e => {
-  if (document.getElementById('menu-toggle').checked) {
-    document.getElementById('menu-toggle').checked = false;
-  } else {
-    document.getElementById('menu-toggle').checked = true;
+const menuToggle = () => {
+  if (document.getElementsByClassName('header toggled')[0]) {
+    document.getElementsByClassName('pages toggled')[0].className = 'pages';
+    document.getElementsByClassName('hamburger toggled')[0].className = 'hamburger';
+    document.getElementsByClassName('header toggled')[0].className = 'header';
+  } else if (document.getElementsByClassName('header')[0]) {
+    document.getElementsByClassName('pages')[0].className = 'pages toggled';
+    document.getElementsByClassName('hamburger')[0].className = 'hamburger toggled';
+    document.getElementsByClassName('header')[0].className = 'header toggled';
   }
 };
 
-const hideMenu = e => {
-  document.getElementById('menu-toggle').checked = false;
+const hideMenu = () => {
+  if (document.getElementsByClassName('header toggled')[0]) {
+    document.getElementsByClassName('pages toggled')[0].className = 'pages';
+    document.getElementsByClassName('hamburger toggled')[0].className = 'hamburger';
+    document.getElementsByClassName('header toggled')[0].className = 'header';
+  }
 };
 
 const Navigation = props => (
   <nav className="navigation">
-    <input type="checkbox" className="menu-toggle" id="menu-toggle" />
     <div className="hamburger" onClick={menuToggle}>
       <div />
       <div />

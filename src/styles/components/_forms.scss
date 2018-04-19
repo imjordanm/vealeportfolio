@@ -1,5 +1,8 @@
 .contact-form {
+  animation: 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 slideUpContact
+    forwards;
   margin: 5vw 0;
+  opacity: 0;
   width: 100%;
 
   label {
@@ -36,6 +39,30 @@
     font-weight: 700;
     letter-spacing: 0.02em;
     padding: 1em 1.5em;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      background: rgb(151, 39, 39);
+      border-radius: 4px;
+      color: $heading-colour;
+      content: '';
+
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.25s cubic-bezier(0.42, 0, 0.58, 1);
+      width: 100%;
+      z-index: -1;
+    }
+
+    &:hover:before {
+      color: $heading-colour;
+      transform: scaleX(1);
+    }
 
     &:hover {
       cursor: pointer;

@@ -9,16 +9,28 @@ export default function Template({ data }) {
     <React.Fragment>
       {page.frontmatter.path === '/about' ? (
         <section className="about">
-          <div className="about-text" dangerouslySetInnerHTML={{ __html: page.html }} />
+          <div className="about-text">
+            <div className="page-heading">
+              <h1 className="re">I write and produce tailored</h1>
+              <h1 className="te">work on tight deadlines.</h1>
+            </div>
+            <div className="page-subheading">
+              I am a working composer based in Wellington, New Zealand. I completed a Master's
+              degree in Film Scoring at the New Zealand School of Music. My specialty is in rapidly
+              composing high quality music for advertising, films, and artistic projects.
+            </div>
+          </div>
           <div className="about-picture">
-            <Img
-              style={{
-                width: '100%',
-                height: '100%',
-              }}
-              alt="About Nick Veale"
-              sizes={data.about.sizes}
-            />
+            <div className="picture-wrapper">
+              <Img
+                style={{
+                  width: '100%',
+                  height: '100%',
+                }}
+                alt="About Nick Veale"
+                sizes={data.about.sizes}
+              />
+            </div>
           </div>
         </section>
       ) : null}
@@ -28,12 +40,15 @@ export default function Template({ data }) {
       {page.frontmatter.path === '/contact' ? (
         <section className="contact">
           <div className="contact-box">
-            <h1>Let's collaborate!</h1>
-            <div className="contact-text">
+            <div className="page-heading">
+              <h1>Let's collaborate!</h1>
+            </div>
+            <div className="page-subheading">
               <p>
                 Find out more about what I can do for your next project by getting in touch
                 via&nbsp;
-                <a href="mailto:nickveale@gmail.com">email</a> or by filling out the form below.
+                <a href="mailto:nickveale@gmail.com">email</a> or by filling out the form below. I
+                am always down for a coffee.
               </p>
             </div>
             <form

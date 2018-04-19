@@ -2,8 +2,6 @@
   align-items: center;
   backface-visibility: hidden;
   display: flex;
-  flex-flow: row;
-  flex-wrap: nowrap;
   height: 60vh;
   justify-content: center;
   pointer-events: none;
@@ -39,10 +37,6 @@
   margin-left: -15%;
   overflow: hidden;
   transform: translateZ(-60px);
-}
-
-.gatsby-image-wrapper {
-  animation: 1.2s ease-in-out 0s 1 imageAppear;
 }
 
 .Tilt {
@@ -106,41 +100,5 @@
   .gatsby-image-wrapper {
     bottom: 0;
     height: 80% !important;
-  }
-}
-
-@keyframes imageAppear {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideInFromBottom {
-  0% {
-    transform: translateZ(-60px) translateY(200%);
-  }
-
-  100% {
-    transform: translateZ(-60px) translateY(0);
-  }
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-200%);
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }

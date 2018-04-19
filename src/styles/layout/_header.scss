@@ -1,10 +1,10 @@
 %strikethrough {
   background-color: $body-colour;
+  bottom: 0.1em;
   content: '';
-  height: 0.09em;
+  height: 0.12em;
   left: 0;
   position: absolute;
-  top: 48%;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform 0.25s cubic-bezier(0.42, 0, 0.58, 1);
@@ -13,6 +13,7 @@
 
 .header {
   align-items: center;
+  color: $subheading-colour;
   display: flex;
   font-weight: 700;
   height: 20vh;
@@ -90,29 +91,38 @@
   }
 }
 
-.menu-toggle {
-  opacity: 0;
+.header.toggled {
+  color: #fff;
+}
+
+.hamburger.toggled > div {
+  background: #fff;
   position: absolute;
+  right: 0;
+  top: 25%;
+  transform: rotate(135deg);
 
-  &:checked {
-    & ~ .hamburger > div {
-      position: absolute;
-      right: 0;
-      top: 25%;
-      transform: rotate(135deg);
+  &:first-of-type {
+    transform: rotate(-135deg);
+  }
 
-      &:first-of-type {
-        transform: rotate(-135deg);
-      }
+  &:last-of-type {
+    opacity: 0;
+  }
+}
 
-      &:last-of-type {
-        opacity: 0;
-      }
-    }
+.pages.toggled {
+  //animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 overlay forwards;
+  opacity: 1;
+  transform: translateX(0);
+  transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) transform;
 
-    & ~ .pages {
-      visibility: visible;
-    }
+  .pages-container {
+    //animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s 1 overlayContent forwards;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) transform 0.4s,
+      opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
   }
 }
 
@@ -123,13 +133,16 @@
   }
 
   .pages {
-    background: $background-colour;
+    background: $heading-colour;
     height: 100%;
     left: 0;
+    opacity: 0;
     overflow: hidden;
     position: fixed;
     top: 0;
-    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
+      opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
     width: 100%;
     z-index: 99;
   }
@@ -139,6 +152,10 @@
     display: flex;
     height: 90vh;
     margin-top: 10vh;
+    opacity: 0;
+    transform: translateX(10%);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
+      opacity 0s;
   }
 
   .nav-list {
@@ -164,15 +181,16 @@
   }
 
   .pages {
-    align-items: center;
-    background: $background-colour;
-    display: flex;
+    background: $heading-colour;
     height: 100%;
     left: 0;
+    opacity: 0;
     overflow: hidden;
     position: fixed;
     top: 0;
-    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
+      opacity 5s 5s;
     width: 100%;
     z-index: 99;
   }
@@ -182,6 +200,10 @@
     display: flex;
     height: 90vh;
     margin-top: 10vh;
+    opacity: 0;
+    transform: translateX(10%);
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
+      opacity 0s;
   }
 
   .nav-list {

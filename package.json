@@ -22,8 +22,7 @@
     "gatsby-source-filesystem": "^1.5.33",
     "gatsby-transformer-remark": "^1.7.40",
     "gatsby-transformer-sharp": "1.6.16",
-    "react-tilt": "^0.1.4",
-    "why-did-you-update": "^0.1.1"
+    "react-tilt": "^0.1.4"
   },
   "keywords": [
     "gatsby"

@@ -30,8 +30,21 @@ export default function Template({ data }) {
                 alt="About Nick Veale"
                 sizes={data.about.sizes}
               />
+              <div className="picture-reveal" />
             </div>
           </div>
+
+          {/* }
+          <footer className="about-footer">
+            <div className="about-footer wrapper">
+              <h4>
+                See my work <Link to="/work">here.</Link>
+              </h4>
+              <h4>
+                Or start the <Link to="/contact">conversation.</Link>
+              </h4>
+            </div>
+          </footer> */}
         </section>
       ) : null}
 

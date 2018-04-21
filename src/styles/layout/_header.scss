@@ -13,12 +13,13 @@
 
 .header {
   align-items: center;
-  color: $subheading-colour;
+  color: $body-colour;
   display: flex;
   font-weight: 700;
   height: 20vh;
   justify-content: space-between;
   -webkit-tap-highlight-color: transparent;
+
   user-select: none;
   width: inherit;
 }
@@ -93,6 +94,7 @@
 
 .header.toggled {
   color: #fff;
+  transition: 0.3s color cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
 }
 
 .hamburger.toggled > div {

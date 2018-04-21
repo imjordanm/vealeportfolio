@@ -8,13 +8,14 @@ import ClickedItem from './ClickedItem';
 const options = {
   cellSelector: '.work-item',
   accessibility: true,
-  freeScroll: true,
-  lazyLoad: 4,
-  freeScrollFriction: 0.05,
-  contain: true,
+  lazyLoad: 2,
+  contain: false,
   wrapAround: false,
   prevNextButtons: false,
   pageDots: false,
+  autoPlay: 5000,
+  selectedAttraction: 0.018,
+  friction: 0.28,
 };
 
 export default class WorkList extends React.Component {
@@ -43,8 +44,6 @@ export default class WorkList extends React.Component {
   componentDidMount() {
     if (typeof window !== 'undefined') {
       if (matchMedia('screen and (max-width: 900px)').matches) {
-        options.lazyLoad = 2;
-        options.freeScroll = false;
         options.wrapAround = true;
       }
 
@@ -53,8 +52,11 @@ export default class WorkList extends React.Component {
       this.flkty.focus();
       this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
         if (typeof cellIndex === 'number') {
+          console.log(`${cellIndex} ${this.flkty.selectedIndex}`);
+          if (cellIndex === this.flkty.selectedIndex) {
+            this.itemClick(this.flkty.selectedElement);
+          }
           this.flkty.select(cellIndex);
-          this.itemClick(this.flkty.selectedElement);
         }
       });
     }

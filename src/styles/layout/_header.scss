@@ -123,7 +123,7 @@
     //animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s 1 overlayContent forwards;
     opacity: 1;
     transform: translateX(0);
-    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) transform 0.4s,
+    transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) transform 0s,
       opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
   }
 }
@@ -155,9 +155,8 @@
     height: 90vh;
     margin-top: 10vh;
     opacity: 0;
-    transform: translateX(10%);
-    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
-      opacity 0s;
+    transform: translateX(25%);
+    transition: opacity 0s;
   }
 
   .nav-list {
@@ -203,9 +202,8 @@
     height: 90vh;
     margin-top: 10vh;
     opacity: 0;
-    transform: translateX(10%);
-    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
-      opacity 0s;
+    transform: translateX(25%);
+    transition: opacity 0s;
   }
 
   .nav-list {

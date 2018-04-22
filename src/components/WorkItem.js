@@ -14,8 +14,8 @@ class WorkItem extends React.PureComponent {
                         <img
                           className="item-image"
                           alt={item.title}
-                          data-flickity-lazyload-srcset={require(`../resources${item.cover}`)}
-                          data-flickity-lazyload-src={require(`../resources${item.cover}`)}
+                          data-flickity-lazyload-srcset={item.cover}
+                          data-flickity-lazyload-src={item.cover}
                           draggable="false"
                         />
                       </div>

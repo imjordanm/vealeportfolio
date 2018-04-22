@@ -14,8 +14,8 @@ const options = {
   prevNextButtons: false,
   pageDots: false,
   autoPlay: 5000,
-  selectedAttraction: 0.018,
-  friction: 0.28,
+  selectedAttraction: 0.015,
+  friction: 0.3,
 };
 
 export default class WorkList extends React.Component {

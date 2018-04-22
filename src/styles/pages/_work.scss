@@ -24,8 +24,7 @@
 }
 
 .work-item {
-  margin: 0 11.5vw;
-  transition: transform 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  margin: 0 16.85vw;
 
   &:hover {
     cursor: pointer;
@@ -33,7 +32,7 @@
 }
 
 .item-box {
-  width: 40vw;
+  width: 25vw;
 }
 
 .item-cover {
@@ -43,6 +42,7 @@
   display: flex;
   height: 25vw;
   overflow: hidden;
+  transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
 }
 
 .item-image {
@@ -52,13 +52,13 @@
 }
 
 .item-text {
-  left: -15%;
+  left: -50%;
   opacity: 0;
   position: absolute;
   top: 50%;
   transform: translateY(-35%);
-  transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-    opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  transition: transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+    opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
 }
 
 .item-title {
@@ -66,6 +66,7 @@
   font-size: 3vw;
   line-height: 1.125;
   max-width: 9em;
+  text-shadow: 0 0 1px #f6f6f6;
 }
 
 .item-more {
@@ -82,6 +83,11 @@
 }
 
 .work-item.is-selected {
+  .item-cover {
+    box-shadow: 3px 2px 6px #848484;
+    transform: rotate3d(2, -1, 0, 30deg);
+  }
+
   .item-text {
     opacity: 1;
     transform: translateY(-50%);
@@ -143,7 +149,7 @@
 //What do about this?
 .item-image.flickity-lazyloaded,
 .item-image.flickity-lazyerror {
-  filter: opacity(0.5);
+  filter: opacity(0.8);
   opacity: 1;
 }
 
@@ -170,7 +176,7 @@
   background: $heading-colour;
   color: #fff;
   display: flex;
-  height: 100vh;
+  height: 100%;
   left: 0;
   margin: 0;
   opacity: 0;
@@ -191,9 +197,8 @@
     margin: 10vh 7.5vw 0;
     opacity: 0;
     padding: 0;
-    transform: translateX(15%);
-    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
-      opacity 0s;
+    transform: translateX(25%);
+    transition: opacity 0s;
   }
 
   li {
@@ -232,7 +237,7 @@
   ul {
     opacity: 1;
     transform: translateX(0);
-    transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) transform 0.4s,
+    transition: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) transform 0s,
       opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
   }
 }
@@ -287,9 +292,9 @@
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
   cursor: grabbing;
 
-  .work-item {
-    transform: translate3d(0, 0, -20vw);
-  }
+  //.work-item {
+  //  transform: translate3d(0, 0, -20vw);
+  //}
 }
 
 @include extrasmall {
@@ -298,11 +303,11 @@
   }
 
   .work-item {
-    margin: 0 6vw;
+    margin: 0 10.6vw;
   }
 
   .item-text {
-    margin: 1em 0;
+    margin-top: 1em;
     position: unset;
     transform: translateY(35%);
     transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
@@ -318,21 +323,32 @@
 
   .item-title {
     font-size: calc(var(--base-em) * var(--step-two));
+    margin-bottom: 0;
     max-width: unset;
   }
 
+  .item-more {
+    display: none;
+  }
+
   .item-box {
-    max-width: 64vh;
-    width: 60vw;
+    max-width: 50vh;
+    width: 50vw;
   }
 
   .item-cover {
-    height: 37.5vw;
-    max-height: 40vh;
+    height: 50vw;
+    max-height: 50vh;
   }
 
   .work-bar {
     min-height: 7.5vw;
+  }
+
+  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    .work-item {
+      transform: none;
+    }
   }
 }
 
@@ -342,11 +358,11 @@
   }
 
   .work-item {
-    margin: 0 6vw;
+    margin: 0 10.6vw;
   }
 
   .item-text {
-    margin: 1em 0;
+    margin-top: 1em;
     position: unset;
     transform: translateY(35%);
     transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
@@ -362,17 +378,22 @@
 
   .item-title {
     font-size: calc(var(--base-em) * var(--step-three));
+    margin-bottom: 0;
     max-width: unset;
   }
 
+  .item-more {
+    display: none;
+  }
+
   .item-box {
-    max-width: 64vh;
-    width: 60vw;
+    max-width: 50vh;
+    width: 50vw;
   }
 
   .item-cover {
-    height: 37.5vw;
-    max-height: 40vh;
+    height: 50vw;
+    max-height: 50vh;
   }
 
   .work-item-clicked {
@@ -386,23 +407,25 @@
   .filter-list ul {
     font-size: 8vh;
   }
+
+  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+    .work-item {
+      transform: none;
+    }
+  }
 }
 
 @include medium {
   .work-item {
-    margin: 0 8.5vw;
+    margin: 0 15.6vw;
   }
 
   .item-box {
-    width: 50vw;
-  }
-
-  .item-text {
-    left: -7.5%;
+    width: 30vw;
   }
 
   .item-cover {
-    height: 31.25vw;
+    height: 30vw;
   }
 }
 

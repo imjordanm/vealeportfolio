@@ -109,6 +109,7 @@
 
 .item-box-clicked {
   display: flex;
+  height: inherit;
   left: 7.5vw;
   position: absolute;
   top: 0;
@@ -192,7 +193,7 @@
   z-index: 98;
 
   ul {
-    font-size: calc(var(--base-em) * var(--step-seven));
+    font-size: 7vh;
     list-style-type: none;
     margin: 10vh 7.5vw 0;
     opacity: 0;
@@ -309,6 +310,7 @@
   .item-text {
     margin-top: 1em;
     position: unset;
+    text-align: center;
     transform: translateY(35%);
     transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
       opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
@@ -341,6 +343,10 @@
     max-height: 50vh;
   }
 
+  .work-item-clicked {
+    min-height: 90vh;
+  }
+
   .work-bar {
     min-height: 7.5vw;
   }
@@ -364,6 +370,7 @@
   .item-text {
     margin-top: 1em;
     position: unset;
+    text-align: center;
     transform: translateY(35%);
     transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
       opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
@@ -431,6 +438,6 @@
 
 @include tiny {
   .filter-list ul {
-    font-size: calc(var(--base-em) * var(--step-five));
+    font-size: 6vh;
   }
 }

@@ -44,7 +44,7 @@ export default class WorkList extends React.Component {
   componentDidMount() {
     if (typeof window !== 'undefined') {
       if (matchMedia('screen and (max-width: 900px)').matches) {
-        options.wrapAround = true;
+        //options.wrapAround = true;
       }
 
       const carousel = document.getElementsByClassName('sf')[0];
@@ -52,7 +52,6 @@ export default class WorkList extends React.Component {
       this.flkty.focus();
       this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
         if (typeof cellIndex === 'number') {
-          console.log(`${cellIndex} ${this.flkty.selectedIndex}`);
           if (cellIndex === this.flkty.selectedIndex) {
             this.itemClick(this.flkty.selectedElement);
           }
@@ -63,10 +62,9 @@ export default class WorkList extends React.Component {
   }
 
   componentDidUpdate() {
-    if (typeof window !== 'undefined' && !this.state.isFlickity) {
+    if (!this.state.isFlickity) {
       if (matchMedia('screen and (max-width: 900px)').matches) {
-        options.lazyLoad = 2;
-        options.freeScroll = false;
+        //options.wrapAround = true;
       }
 
       const carousel = document.getElementsByClassName('sf')[0];
@@ -74,8 +72,10 @@ export default class WorkList extends React.Component {
       this.flkty.focus();
       this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
         if (typeof cellIndex === 'number') {
+          if (cellIndex === this.flkty.selectedIndex) {
+            this.itemClick(this.flkty.selectedElement);
+          }
           this.flkty.select(cellIndex);
-          this.itemClick(this.flkty.selectedElement);
         }
       });
       this.setState({ isFlickity: true });

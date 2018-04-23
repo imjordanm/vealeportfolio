@@ -30,7 +30,10 @@
 
   a {
     color: inherit;
+    letter-spacing: -0.03em;
     text-decoration: none;
+    text-shadow: 0 0;
+    text-transform: uppercase;
   }
 }
 
@@ -160,7 +163,7 @@
   }
 
   .nav-list {
-    font-size: calc(var(--base-em) * var(--step-seven));
+    font-size: 7vh;
     margin: 0 7.5vw;
 
     li {
@@ -207,7 +210,7 @@
   }
 
   .nav-list {
-    font-size: 8vh;
+    font-size: 7vh;
     margin: 0 7.5vw;
 
     li {
@@ -224,6 +227,6 @@
 
 @include tiny {
   .nav-list {
-    font-size: calc(var(--base-em) * var(--step-six));
+    font-size: 6vh;
   }
 }

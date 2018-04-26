@@ -9,6 +9,7 @@ class WorkFilter extends React.PureComponent {
           onClick={this.props.filterClick}
         >
           {`Filter ${this.props.selectedCategory}`}
+          <div className="arrow"></div>
         </button>
         <div className="filter-list">
           <ul onClick={this.props.filterClick}>

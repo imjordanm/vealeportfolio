@@ -2,12 +2,6 @@ import React from 'react';
 
 const ClickedItem = props => (
   <React.Fragment>
-    <div
-      className="work-item-clicked"
-      key={props.item.title}
-      id={props.item.title}
-      onClick={props.itemClose}
-    />
     <div className="item-box-clicked">
       <div className="item-text-clicked">
         <div className="item-title-clicked">

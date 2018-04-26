@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import Header from '../components/header';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 import '../styles/main.scss';
 
@@ -39,10 +40,12 @@ export default ({ children, data }) => (
       ]}
     />
 
-    <main className="container">
-      <Header pages={data.allMarkdownRemark.edges} />
-      {children()}
-    </main>
+    <Scrollbars autoHide autoHideTimeout={1000} style={{ width: '100%', minHeight: '100vh' }}>
+      <main className="container">
+        <Header pages={data.allMarkdownRemark.edges} />
+        {children()}
+      </main>
+    </Scrollbars>
   </div>
 );
 

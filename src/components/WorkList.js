@@ -26,7 +26,7 @@ export default class WorkList extends React.Component {
       categories: new Set([]),
       selectedCategory: 'All',
       cachedFilters: {},
-      clickedItem: '',
+      clickedItem: null,
       toggledFilter: false,
       isFlickity: true,
     };
@@ -44,10 +44,10 @@ export default class WorkList extends React.Component {
   componentDidMount() {
     if (typeof window !== 'undefined') {
       if (matchMedia('screen and (max-width: 900px)').matches) {
-        //options.wrapAround = true;
+        // options.wrapAround = true;
       }
 
-      const carousel = document.getElementsByClassName('sf')[0];
+      const carousel = document.getElementsByClassName('work-list')[0];
       this.flkty = new Flickity(carousel, options);
       this.flkty.focus();
       this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
@@ -64,10 +64,10 @@ export default class WorkList extends React.Component {
   componentDidUpdate() {
     if (!this.state.isFlickity) {
       if (matchMedia('screen and (max-width: 900px)').matches) {
-        //options.wrapAround = true;
+        // options.wrapAround = true;
       }
 
-      const carousel = document.getElementsByClassName('sf')[0];
+      const carousel = document.getElementsByClassName('work-list')[0];
       this.flkty = new Flickity(carousel, options);
       this.flkty.focus();
       this.flkty.on('staticClick', (event, pointer, cellElement, cellIndex) => {
@@ -154,8 +154,12 @@ export default class WorkList extends React.Component {
         {this.state.clickedItem ? (
           <ClickedItem item={this.state.clickedItem} itemClose={this.itemClose} />
         ) : null}
-        <div className="test">
-          <div className="sf">
+        <div
+          className={this.state.clickedItem !== null ? 'item-overlay clicked' : 'item-overlay'}
+          onClick={this.itemClose}
+        />
+        <div className={this.state.clickedItem !== null ? 'test clicked' : 'test'}>
+          <div className="work-list">
             <WorkItem items={this.state.items} categories={this.state.categories} />
           </div>
         </div>

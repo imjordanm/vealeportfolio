@@ -38,6 +38,14 @@ export default ({ children, data }) => (
         { name: 'description', content: 'Film composer and musician Nick Veale' },
         { name: 'keywords', content: 'Film composer and musician Nick Veale' },
       ]}
+      link={[
+        {
+ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png',
+},
+        {
+ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-16x16.png',
+},
+      ]}
     />
 
     <Scrollbars autoHide autoHideTimeout={1000} style={{ width: '100%', minHeight: '100vh' }}>

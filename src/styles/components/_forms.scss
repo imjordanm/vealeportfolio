@@ -47,7 +47,6 @@
       border-radius: 4px;
       color: $heading-colour;
       content: '';
-
       height: 100%;
       left: 0;
       position: absolute;
@@ -81,7 +80,7 @@
 }
 
 .big-input {
-  margin-bottom: 1.5em;
+  margin-bottom: 2em;
 }
 
 @include extrasmall {

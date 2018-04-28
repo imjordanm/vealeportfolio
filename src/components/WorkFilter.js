@@ -9,11 +9,15 @@ class WorkFilter extends React.PureComponent {
           onClick={this.props.filterClick}
         >
           {`Filter ${this.props.selectedCategory}`}
-          <div className="arrow"></div>
+          <div className="arrow" />
         </button>
         <div className="filter-list">
           <ul onClick={this.props.filterClick}>
-            <li key="All" id="All" className={this.props.selectedCategory == 'All' ? 'active' : ''}>
+            <li
+              key="All"
+              id="All"
+              className={this.props.selectedCategory === 'All' ? 'active' : ''}
+            >
               All
             </li>
             {this.props
@@ -21,7 +25,7 @@ class WorkFilter extends React.PureComponent {
                 <li
                   key={category}
                   id={category}
-                  className={this.props.selectedCategory == category ? 'active' : ''}
+                  className={this.props.selectedCategory === category ? 'active' : ''}
                 >
                   {category}
                 </li>

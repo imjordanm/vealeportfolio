@@ -43,10 +43,6 @@ export default class WorkList extends React.Component {
 
   componentDidMount() {
     if (typeof window !== 'undefined') {
-      if (matchMedia('screen and (max-width: 900px)').matches) {
-        // options.wrapAround = true;
-      }
-
       const carousel = document.getElementsByClassName('work-list')[0];
       this.flkty = new Flickity(carousel, options);
       this.flkty.focus();
@@ -63,10 +59,6 @@ export default class WorkList extends React.Component {
 
   componentDidUpdate() {
     if (!this.state.isFlickity) {
-      if (matchMedia('screen and (max-width: 900px)').matches) {
-        // options.wrapAround = true;
-      }
-
       const carousel = document.getElementsByClassName('work-list')[0];
       this.flkty = new Flickity(carousel, options);
       this.flkty.focus();
@@ -86,7 +78,6 @@ export default class WorkList extends React.Component {
     if (this.flkty) {
       this.flkty.destroy();
     }
-    // document.removeEventListener('keyup', this.enterPress, false);
   }
 
   keyPress(event) {

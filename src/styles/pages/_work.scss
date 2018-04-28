@@ -2,7 +2,6 @@
   align-items: center;
   display: flex;
   height: 60vh;
-  position: relative;
 }
 
 .test {
@@ -103,8 +102,8 @@
   opacity: 0;
   overflow: hidden;
   padding: 0;
-  position: absolute;
-  top: -20vh;
+  position: fixed;
+  top: 0;
   transform: translateY(100%) scaleY(0);
   transform-origin: top;
   transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
@@ -128,7 +127,7 @@
   left: 7.5vw;
   opacity: 0;
   position: absolute;
-  top: 0;
+  top: 20vh;
   width: 85vw;
   z-index: 98;
 }
@@ -161,6 +160,20 @@
   padding: 0;
   position: absolute;
   right: 0;
+}
+
+.item-video {
+  margin: 2.5vw 0;
+  padding: 56.25% 0 0;
+  position: relative;
+
+  iframe {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 }
 
 //What do about this?
@@ -311,10 +324,6 @@
 
 .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
   cursor: grabbing;
-
-  //.work-item {
-  //  transform: translate3d(0, 0, -20vw);
-  //}
 }
 
 @include extrasmall {
@@ -357,13 +366,13 @@
     width: 50vw;
   }
 
+  .item-box-clicked {
+    top: 10vh;
+  }
+
   .item-cover {
     height: 50vw;
     max-height: 50vh;
-  }
-
-  .item-overlay {
-    top: -10vh;
   }
 
   .work-bar {
@@ -417,13 +426,13 @@
     width: 50vw;
   }
 
+  .item-box-clicked {
+    top: 10vh;
+  }
+
   .item-cover {
     height: 50vw;
     max-height: 50vh;
-  }
-
-  .item-overlay {
-    top: -10vh;
   }
 
   .work-bar {

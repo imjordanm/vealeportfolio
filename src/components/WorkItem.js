@@ -6,7 +6,7 @@ class WorkItem extends React.PureComponent {
       <React.Fragment>
         {this.props.items
           ? this.props.items.map((item, index) => (
-                this.props ? this.props.categories.add(item.category) : null,
+                this.props.categories.add(item.category),
                 (
                   <div className="work-item" key={item.title} id={item.title} data-index={index}>
                     <div className="item-box">

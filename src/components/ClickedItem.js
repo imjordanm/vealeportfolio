@@ -19,6 +19,16 @@ const ClickedItem = props => (
           </div>
         </div>
         <div className="item-description">{props.item.description}</div>
+        <div className="item-video">
+          <iframe
+            src="https://player.vimeo.com/video/266286146"
+            frameBorder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowFullScreen
+          />
+        </div>
+        <script src="https://player.vimeo.com/api/player.js" />
       </div>
       {/*
       <div className="item-cover-clicked">

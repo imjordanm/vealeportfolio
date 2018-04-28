@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import Header from '../components/header';
 import { Scrollbars } from 'react-custom-scrollbars';
+import Header from '../components/header';
 
 import '../styles/main.scss';
 
@@ -40,11 +40,17 @@ export default ({ children, data }) => (
       ]}
       link={[
         {
- rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png',
-},
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon-32x32.png',
+        },
         {
- rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-16x16.png',
-},
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon-16x16.png',
+        },
       ]}
     />
 

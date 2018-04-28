@@ -54,7 +54,12 @@ export default ({ children, data }) => (
       ]}
     />
 
-    <Scrollbars autoHide autoHideTimeout={1000} style={{ width: '100%', minHeight: '100vh' }}>
+    <Scrollbars
+      universal
+      autoHide
+      autoHideTimeout={1000}
+      style={{ width: '100%', minHeight: '100vh' }}
+    >
       <main className="container">
         <Header pages={data.allMarkdownRemark.edges} />
         {children()}

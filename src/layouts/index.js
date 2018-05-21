@@ -20,6 +20,7 @@ if (typeof window !== 'undefined') {
           document.fonts.load('400 1em Glacial Indifference'),
           document.fonts.load('700 1em Glacial Indifference'),
           document.fonts.load('italic 1em Glacial Indifference'),
+          document.fonts.load('700 1em Trueno ExBold'),
         ]).then(() => {
           document.documentElement.className += ' fonts-loaded-2';
           // Optimization for Repeat Views

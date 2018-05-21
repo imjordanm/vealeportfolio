@@ -1,7 +1,6 @@
 import React from 'react';
 import Flickity from 'flickity';
 import WorkItem from './WorkItem';
-import WorkBar from './WorkBar';
 import WorkFilter from './WorkFilter';
 import ClickedItem from './ClickedItem';
 
@@ -33,6 +32,7 @@ export default class WorkList extends React.Component {
 
     this.itemClick = this.itemClick.bind(this);
     this.itemClose = this.itemClose.bind(this);
+    this.itemSwitch = this.itemSwitch.bind(this);
     this.filterClick = this.filterClick.bind(this);
     this.keyPress = this.keyPress.bind(this);
   }
@@ -100,6 +100,19 @@ export default class WorkList extends React.Component {
     }
   }
 
+  itemSwitch(event) {
+    const index = this.flkty.selectedIndex;
+    const length = this.flkty.cells.length;
+    if (event.clientX <= window.innerWidth / 2 && index !== 0) {
+      this.setState({ clickedItem: this.state.items[index - 1] });
+      this.flkty.previous();
+    }
+    if (event.clientX >= window.innerWidth / 2 && index !== length - 1) {
+      this.setState({ clickedItem: this.state.items[index + 1] });
+      this.flkty.next();
+    }
+  }
+
   filterClick(event) {
     if (this.state.toggledFilter) {
       this.setState({ toggledFilter: false });
@@ -147,7 +160,7 @@ export default class WorkList extends React.Component {
         ) : null}
         <div
           className={this.state.clickedItem !== null ? 'item-overlay clicked' : 'item-overlay'}
-          onClick={this.itemClose}
+          onClick={this.itemSwitch}
         />
         <div className={this.state.clickedItem !== null ? 'test clicked' : 'test'}>
           <div className="work-list">
@@ -161,7 +174,6 @@ export default class WorkList extends React.Component {
             filterClick={this.filterClick}
             toggledFilter={this.state.toggledFilter}
           />
-          {/* <WorkBar position={this.state.x} drag={this.scrollDrag} /> */}
         </div>
       </section>
     );

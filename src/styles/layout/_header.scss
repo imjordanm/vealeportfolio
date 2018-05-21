@@ -24,15 +24,14 @@
 }
 
 .logo {
+  font-family: $logo-font, $primary-font, $system-fonts;
   margin: 0;
-  z-index: 100;
+  z-index: 103;
 
   a {
     color: inherit;
     letter-spacing: -0.03em;
     text-decoration: none;
-    text-shadow: 0 0;
-    text-transform: uppercase;
   }
 }
 
@@ -97,12 +96,12 @@
 }
 
 .header.toggled {
-  color: #fff;
-  transition: 0.3s color cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  //color: #fff;
+  //transition: 0.3s color cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
 }
 
 .hamburger.toggled > div {
-  background: #fff;
+  //background: #fff;
   position: absolute;
   right: 0;
   top: 25%;
@@ -119,6 +118,7 @@
 
 .pages.toggled {
   //animation: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0s 1 overlay forwards;
+  color: #fff;
   opacity: 1;
   transform: translateX(0);
   transition: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) transform;

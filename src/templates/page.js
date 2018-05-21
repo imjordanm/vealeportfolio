@@ -127,14 +127,16 @@ export const pageQuery = graphql`
             description
             year
             genre
+            video
+            heading
           }
         }
       }
       html
     }
 
-    about: imageSharp(id: { regex: "/nickabout/" }) {
-      sizes(maxWidth: 1200) {
+    about: imageSharp(id: { regex: "/nature/" }) {
+      sizes(maxWidth: 1800) {
         ...GatsbyImageSharpSizes
       }
     }

@@ -23,6 +23,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                   description
                   year
                   genre
+                  video
+                  heading
                 }
               }
             }

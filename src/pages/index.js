@@ -60,7 +60,6 @@ const Landing = props => (
           width: '100%',
           height: '100%',
           position: 'absolute',
-          filter: 'saturate(0.5) brightness(1.2)',
         }}
         alt="Nick Veale portrait"
         sizes={props.data.portrait.sizes}
@@ -71,7 +70,7 @@ const Landing = props => (
 
 export const pageQuery = graphql`
   query indexQuery {
-    portrait: imageSharp(id: { regex: "/sideDone/" }) {
+    portrait: imageSharp(id: { regex: "/portrait/" }) {
       sizes(maxWidth: 1400) {
         ...GatsbyImageSharpSizes
       }

@@ -31,9 +31,9 @@
 .landing-picture {
   background-color: rgb(218, 218, 218);
   border-radius: 4px;
-  flex: 0 0 55%;
-  height: 90%;
-  margin-left: -15%;
+  flex: 0 0 50%;
+  height: 100%;
+  margin-left: -10%;
   overflow: hidden;
   transform: translateZ(-60px);
 }
@@ -52,7 +52,7 @@
   }
 
   .landing-text {
-    margin-top: 10vh;
+    margin-top: 15vh;
   }
 
   .heading,
@@ -62,16 +62,16 @@
 
   .landing-picture {
     flex: unset;
-    height: 50vh;
+    //height: 50vh;
     margin: 0;
-    margin-top: -10vh;
-    padding-top: 10vh;
+    margin-top: -5vh;
+    //padding-top: 10vh;
     width: 100%;
   }
 
   .gatsby-image-wrapper {
-    bottom: 0;
-    height: 80% !important;
+    //bottom: 0;
+    //height: 80% !important;
   }
 }
 
@@ -83,21 +83,21 @@
   }
 
   .landing-text {
-    margin-top: 10vh;
+    margin-top: 15vh;
   }
 
   .landing-picture {
     flex: unset;
-    height: 50vh;
+    //height: 50vh;
     margin: 0;
-    margin-top: -10vh;
-    padding-top: 10vh;
+    margin-top: -5vh;
+    //padding-top: 10vh;
 
     width: 80%;
   }
 
   .gatsby-image-wrapper {
-    bottom: 0;
-    height: 80% !important;
+    //bottom: 0;
+    //height: 80% !important;
   }
 }

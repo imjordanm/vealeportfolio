@@ -57,9 +57,12 @@ export default ({ children, data }) => (
 
     <Scrollbars
       universal
-      autoHide
-      autoHideTimeout={1000}
-      style={{ width: '100%', minHeight: '100vh' }}
+      hideTracksWhenNotNeeded
+      style={{
+        width: '100%',
+        minHeight: '100vh',
+      }}
+      renderTrackVertical={props => <div {...props} className="track-vertical" />}
     >
       <main className="container">
         <Header pages={data.allMarkdownRemark.edges} />

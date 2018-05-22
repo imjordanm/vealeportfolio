@@ -1,10 +1,13 @@
+.gatsby-image-outer-wrapper {
+  height: 100%;
+}
+
 .landing-wrap {
   align-items: center;
   backface-visibility: hidden;
   display: flex;
   height: 60vh;
   justify-content: center;
-  pointer-events: none;
   transform-style: preserve-3d;
   width: 85vw;
 }
@@ -61,17 +64,11 @@
   }
 
   .landing-picture {
-    flex: unset;
-    //height: 50vh;
+    height: unset;
     margin: 0;
     margin-top: -5vh;
-    //padding-top: 10vh;
+    overflow: unset;
     width: 100%;
-  }
-
-  .gatsby-image-wrapper {
-    //bottom: 0;
-    //height: 80% !important;
   }
 }
 
@@ -87,17 +84,18 @@
   }
 
   .landing-picture {
-    flex: unset;
-    //height: 50vh;
+    height: unset;
     margin: 0;
     margin-top: -5vh;
-    //padding-top: 10vh;
-
+    overflow: unset;
     width: 80%;
   }
+}
 
-  .gatsby-image-wrapper {
-    //bottom: 0;
-    //height: 80% !important;
-  }
+.track-vertical {
+  height: 100%;
+  right: 0;
+  top: 0;
+  width: 8px !important;
+  z-index: 200;
 }

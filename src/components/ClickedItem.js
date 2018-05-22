@@ -30,6 +30,8 @@ const ClickedItem = props => (
           </div>
         </div>
 
+        <div className="item-line" />
+
         {props.item.video ? (
           <div className="item-video">
             <iframe

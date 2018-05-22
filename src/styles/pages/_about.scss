@@ -16,13 +16,14 @@
   color: $subheading-colour;
   margin-bottom: 5vw;
   min-width: 45em;
-  width: 60%;
+  width: 55%;
 }
 
 .page-heading {
   animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 fadeInHeading
     forwards;
   opacity: 0;
+  top: 0;
 }
 
 .re {
@@ -32,8 +33,6 @@
 }
 
 .te {
-  animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 slideUpHeading
-    forwards;
   margin-bottom: 4.5rem;
 }
 
@@ -41,7 +40,7 @@
   animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 slideUpBody
     forwards;
   font-size: 1.1em;
-  line-height: 1.8;
+  line-height: 1.7;
   max-width: 45em;
   opacity: 0;
 

@@ -70,10 +70,10 @@
   cursor: pointer;
   display: none;
   flex-direction: column;
-  height: 1em;
+  height: 3em;
   justify-content: space-between;
   opacity: 1;
-  padding: 2px 0;
+  padding: 15px 0 15px 15px;
   position: relative;
   z-index: 100;
 
@@ -104,7 +104,7 @@
   //background: #fff;
   position: absolute;
   right: 0;
-  top: 25%;
+  top: 50%;
   transform: rotate(135deg);
 
   &:first-of-type {

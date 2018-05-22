@@ -10,8 +10,7 @@ export default function Template({ data }) {
         <section className="about">
           <div className="about-text">
             <div className="page-heading">
-              <h1 className="re">I write and produce tailored</h1>
-              <h1 className="te">work on tight deadlines.</h1>
+              <h1 className="te">I write and produce tailored work on tight deadlines.</h1>
             </div>
             <div className="page-subheading">
               I am a working composer based in Wellington, New Zealand. I completed a Master's

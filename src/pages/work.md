@@ -10,8 +10,7 @@ items:
       heading: >
         This is a test. Please drop your weapons or face dire physical consequences. I repeat, this is not a test of large flippant proportional parliamentary toads that are buoyant and cruel.
       description: >-
-        My first self-titled release that is in the post-rock genre of music. I
-        made a million dollars off of this one.
+        Donecs acumentation metus ex. Donec sit amet laoreet magna. Cras porttitor non arcu a interdum. Ut venenatis dolor et scelerisque dignissim. Quisque non odio porttitor, finibus magna quis, viverra elit. Nulla felis purus, volutpat vel urna at, tempus auctor est. Vestibulum mauris augue, tristique quis semper quis, tincidunt vel neque. Curabitur quis varius nunc, ultricies finibus ex. Maecenas scelerisque ante eget rutrum viverra. Pellentesque ullamcorper risus nec hendrerit porta. 
       genre: Post rock
       title: Nick Veale
       year: 2016

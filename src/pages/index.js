@@ -61,13 +61,18 @@ const Landing = props => (
       </div>
     </div>
     <div className="landing-picture">
-      <Img
-        style={{
-          position: 'unset',
-        }}
-        alt="Nick Veale portrait"
-        sizes={props.data.portrait.sizes}
-      />
+      <div style={{ overflow: 'hidden', height: '100%' }}>
+        <div className="picture-wrapper">
+          <Img
+            style={{
+              position: 'unset',
+            }}
+            alt="Nick Veale portrait"
+            sizes={props.data.portrait.sizes}
+          />
+          <div className="picture-reveal" />
+        </div>
+      </div>
     </div>
   </div>
 );

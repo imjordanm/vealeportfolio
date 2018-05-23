@@ -75,11 +75,17 @@
   cursor: pointer;
   margin-top: 1.5em;
   position: absolute;
+  transform: translateX(0);
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+
+  &:hover {
+    transform: translateX(15%);
+  }
 }
 
 .item-more.landing {
+  left: 17%;
   margin-top: 3em;
-  transform: translateX(35%);
 }
 
 .more-icon {
@@ -179,7 +185,7 @@
   opacity: 0;
 
   h1 {
-    color: $background-colour;
+    color: #fff;
     font-size: calc(var(--base-em) * var(--step-eight));
     margin-bottom: 1.5em;
   }
@@ -194,8 +200,9 @@
 }
 
 .item-heading {
-  color: $background-colour;
+  color: #fff;
   font-size: calc(var(--base-em) * var(--step-two));
+  line-height: 1.7;
   width: 55%;
 }
 
@@ -254,6 +261,11 @@
     content: '\2716';
     padding: 1em;
   }
+}
+
+.item-close.filter {
+  display: none;
+  z-index: 98;
 }
 
 .item-line {
@@ -350,6 +362,12 @@
     &.active:before {
       transform: scaleX(1);
     }
+  }
+}
+
+.filter-active.toggled {
+  ~ .item-close.filter {
+    display: block;
   }
 }
 
@@ -460,7 +478,7 @@
   .item-title {
     font-size: calc(var(--base-em) * var(--step-two));
     margin-bottom: 0;
-    max-width: unset;
+    width: unset;
   }
 
   .item-more {
@@ -561,7 +579,7 @@
   .item-title {
     font-size: calc(var(--base-em) * var(--step-three));
     margin-bottom: 0;
-    max-width: unset;
+    width: unset;
   }
 
   .item-more {

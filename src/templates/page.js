@@ -59,7 +59,7 @@ export default function Template({ data }) {
                 Find out more about what I can do for your next project by getting in touch
                 via&nbsp;
                 <a href="mailto:nickveale@gmail.com">email</a> or by filling out the form below. I
-                am always down for a coffee.
+                am always up for a coffee.
               </p>
             </div>
             <form

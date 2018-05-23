@@ -14,7 +14,10 @@
 
 .landing-text {
   //animation: 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s 1 slideInFromLeft;
+  animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 fadeInHeading
+    forwards;
   margin: 0;
+  opacity: 0;
   transform-style: preserve-3d;
   user-select: none;
 }
@@ -32,7 +35,6 @@
 }
 
 .landing-picture {
-  background-color: rgb(218, 218, 218);
   border-radius: 4px;
   flex: 0 0 50%;
   height: 100%;

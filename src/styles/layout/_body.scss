@@ -1,8 +1,9 @@
 .container {
-  @include viewport-unit(width, 85vw);
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  width: 85vw;
 }
 
 .picture-reveal {

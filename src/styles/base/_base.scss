@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   height: 100%;
+  //overflow: hidden;
 }
 
 * {
@@ -18,6 +19,7 @@ html {
 body {
   background: $background-colour;
   color: $body-colour;
+  //-webkit-text-stroke: 1px rgba($body-colour, 0.2);
   font-family: $primary-font, $system-fonts;
   font-size: $base-em * $step-zero;
   height: 100%;

@@ -33,7 +33,7 @@ class WorkFilter extends React.PureComponent {
               : null}
           </ul>
         </div>
-        <button className="item-close filter" onClick={this.props.filterClick} />
+        <button className="item-btn filter" onClick={this.props.filterClick} />
       </div>
     );
   }

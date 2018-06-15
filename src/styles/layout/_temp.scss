@@ -13,7 +13,6 @@
 }
 
 .landing-text {
-  //animation: 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s 1 slideInFromLeft;
   animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 fadeInHeading
     forwards;
   margin: 0;
@@ -24,9 +23,8 @@
 
 .heading,
 .heading-shadow {
-  //font-size: calc(var(--base-em) * var(--step-five));
   margin: 0;
-  max-width: 7.6em;
+  max-width: 7.8em;
 }
 
 .heading-shadow {
@@ -45,31 +43,18 @@
 
 .Tilt {
   backface-visibility: hidden;
-  transform-style: preserve-3d;
   //will-change: transform;
+  height: 70vh;
+  transform-style: preserve-3d;
 }
 
 @include extrasmall {
-  .landing-wrap {
-    flex-direction: column;
-    height: 80vh;
-    justify-content: unset;
-  }
-
-  .landing-text {
-    margin-top: 15vh;
-  }
-
   .heading,
   .heading-shadow {
-    font-size: calc(var(--base-em) * var(--step-four));
+    font-size: $base-em * $step-four;
   }
 
   .landing-picture {
-    height: unset;
-    margin: 0;
-    margin-top: -5vh;
-    overflow: unset;
     width: 100%;
   }
 }

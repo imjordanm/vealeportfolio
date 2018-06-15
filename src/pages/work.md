@@ -14,6 +14,7 @@ items:
       genre: Post rock
       title: Nick Veale
       year: 2016
+      music: spotify:album:1fKPZL8wPk34b6mF97oiUA
     - artist: Slymouse Supreme
       category: release
       cover: /images/journeyoftanguine.jpg
@@ -72,4 +73,5 @@ items:
       title: To Pimp a Butterfly
       year: 2015
       video: https://player.vimeo.com/video/266286146
+      music: spotify:album:104g5VLtuvctk0lxXHokNy
 ---

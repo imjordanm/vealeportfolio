@@ -22,17 +22,12 @@
 .page-heading {
   animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 fadeInHeading
     forwards;
+
   opacity: 0;
   top: 0;
 }
 
-.re {
-  animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.1s 1 slideUpHeading
-    forwards;
-  margin: 0;
-}
-
-.te {
+.about-header {
   margin-bottom: 4.5rem;
 }
 
@@ -40,8 +35,8 @@
   animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 slideUpBody
     forwards;
   font-size: 1.1em;
-  line-height: 1.7;
-  max-width: 45em;
+  line-height: 1.8;
+  max-width: 36em;
   opacity: 0;
 
   a {
@@ -58,23 +53,11 @@
 }
 
 @include extrasmall {
-  .about {
-    flex-direction: column;
-  }
-
-  .about-text {
-    min-width: unset;
-    width: 100%;
-  }
-
-  .te {
+  .about-header {
     margin-bottom: 1.5rem;
   }
-
-  .about-picture {
-    width: 100%;
-  }
 }
+
 @include small {
   .about {
     flex-direction: column;
@@ -85,8 +68,8 @@
     width: 100%;
   }
 
-  .te {
-    margin-bottom: 1.5rem;
+  .page-subheading {
+    max-width: unset;
   }
 
   .about-picture {

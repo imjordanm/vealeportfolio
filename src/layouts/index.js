@@ -32,7 +32,7 @@ if (typeof window !== 'undefined') {
 }
 
 export default ({ children, data }) => (
-  <div>
+  <React.Fragment>
     <Helmet
       title="Nick Veale - Film Composer"
       meta={[
@@ -58,10 +58,6 @@ export default ({ children, data }) => (
     <Scrollbars
       universal
       hideTracksWhenNotNeeded
-      style={{
-        width: '100%',
-        minHeight: '100vh',
-      }}
       renderTrackVertical={props => <div {...props} className="track-vertical" />}
     >
       <main className="container">
@@ -69,7 +65,7 @@ export default ({ children, data }) => (
         {children()}
       </main>
     </Scrollbars>
-  </div>
+  </React.Fragment>
 );
 
 export const pageQuery = graphql`

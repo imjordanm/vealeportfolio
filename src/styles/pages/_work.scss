@@ -64,7 +64,6 @@
 }
 
 .item-title {
-  //font-size: calc(var(--base-em) * var(--step-six));
   font-size: 3vw;
   line-height: 1.125;
   text-shadow: 0 0 1px #f6f6f6;
@@ -83,9 +82,11 @@
   }
 }
 
-.item-more.landing {
+.item-more-landing {
+  cursor: pointer;
   left: 17%;
   margin-top: 3em;
+  position: absolute;
 }
 
 .more-icon {
@@ -186,7 +187,7 @@
 
   h1 {
     color: #fff;
-    font-size: calc(var(--base-em) * var(--step-eight));
+    font-size: $base-em * $step-eight;
     margin-bottom: 1.5em;
   }
 }
@@ -201,8 +202,8 @@
 
 .item-heading {
   color: #fff;
-  font-size: calc(var(--base-em) * var(--step-two));
-  line-height: 1.7;
+  font-size: $base-em * $step-two;
+  line-height: 1.8;
   width: 55%;
 }
 
@@ -215,7 +216,7 @@
 .detail {
   color: $background-colour;
   display: flex;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.6em;
   text-transform: capitalize;
 
   &:last-of-type {
@@ -243,7 +244,7 @@
   white-space: pre-wrap;
 }
 
-.item-close {
+.item-btn {
   animation: 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 imageAppear
     forwards;
   background: none;
@@ -254,8 +255,29 @@
   outline: none;
   padding: 0;
   position: fixed;
-  right: calc(7.5vw - 1em);
   top: calc(10vh - 0.7em);
+}
+
+.item-btn.prev {
+  left: calc(7.5vw - 1em);
+
+  &::before {
+    content: '\25C4';
+    padding: 1em;
+  }
+}
+
+.item-btn.next {
+  right: calc(7.5vw - 1em);
+
+  &::before {
+    content: '\25BA';
+    padding: 1em;
+  }
+}
+
+.item-btn.close {
+  right: calc(50% - 1.5em);
 
   &::before {
     content: '\2716';
@@ -263,9 +285,15 @@
   }
 }
 
-.item-close.filter {
+.item-btn.filter {
   display: none;
+  right: calc(7.5vw - 1em);
   z-index: 98;
+
+  &::before {
+    content: '\2716';
+    padding: 1em;
+  }
 }
 
 .item-line {
@@ -292,6 +320,12 @@
     top: 0;
     width: 100%;
   }
+}
+
+.item-music {
+  animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s 1 slideUpContact
+    forwards;
+  opacity: 0;
 }
 
 //What do about this?
@@ -366,7 +400,7 @@
 }
 
 .filter-active.toggled {
-  ~ .item-close.filter {
+  ~ .item-btn.filter {
     display: block;
   }
 }
@@ -451,47 +485,8 @@
 }
 
 @include extrasmall {
-  .work {
-    height: 80vh;
-  }
-
-  .work-item {
-    margin: 0 10.6vw;
-  }
-
-  .item-text {
-    margin-top: 1em;
-    position: unset;
-    text-align: center;
-    transform: translateY(35%);
-    transition: transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-      opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-  }
-
-  .work-item.is-selected {
-    .item-text {
-      position: unset;
-      transform: translateY(0%);
-    }
-  }
-
   .item-title {
-    font-size: calc(var(--base-em) * var(--step-two));
-    margin-bottom: 0;
-    width: unset;
-  }
-
-  .item-more {
-    display: none;
-  }
-
-  .item-box {
-    max-width: 50vh;
-    width: 50vw;
-  }
-
-  .item-box-clicked {
-    top: 10vh;
+    font-size: $base-em * $step-two;
   }
 
   .item-text-clicked {
@@ -502,52 +497,23 @@
     margin: 0;
 
     h1 {
-      font-size: calc(var(--base-em) * var(--step-four));
+      font-size: $base-em * $step-four;
       margin-bottom: 1.5rem;
     }
   }
 
-  .item-more-clicked {
-    flex-direction: column;
-  }
-
   .item-heading {
-    font-size: calc(var(--base-em) * var(--step-zero));
+    font-size: $base-em * $step-zero;
     margin-bottom: 1.5rem;
-    width: unset;
-  }
-
-  .item-details {
-    width: unset;
   }
 
   .item-line {
-    margin: 3rem 0;
+    margin: 3em 0;
     width: 100%;
   }
 
   .item-description {
     column-count: unset;
-  }
-
-  .item-close {
-    //top: calc(5vh - 0.8em);
-    top: calc((5vh + 3.75vw) / 2 + ((5vh - 3.75vw) / 2) - 0.6em);
-  }
-
-  .item-cover {
-    height: 50vw;
-    max-height: 50vh;
-  }
-
-  .work-bar {
-    min-height: 7.5vw;
-  }
-
-  .flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-    .work-item {
-      transform: none;
-    }
   }
 }
 
@@ -577,12 +543,13 @@
   }
 
   .item-title {
-    font-size: calc(var(--base-em) * var(--step-three));
+    font-size: $base-em * $step-three;
     margin-bottom: 0;
     width: unset;
   }
 
-  .item-more {
+  .item-more,
+  .item-more-landing {
     display: none;
   }
 
@@ -622,7 +589,7 @@
     width: unset;
   }
 
-  .item-close {
+  .item-btn {
     //top: calc(5vh - 0.3em);
     top: calc((5vh + 3.75vw) / 2 + ((5vh - 3.75vw) / 2) - 0.6em);
   }

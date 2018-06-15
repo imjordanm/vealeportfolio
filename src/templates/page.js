@@ -10,12 +10,12 @@ export default function Template({ data }) {
         <section className="about">
           <div className="about-text">
             <div className="page-heading">
-              <h1 className="te">I write and produce tailored work on tight deadlines.</h1>
+              <h1 className="about-header">Tailored work with equal parts quality and speed.</h1>
             </div>
             <div className="page-subheading">
-              I am a working composer based in Wellington, New Zealand. I completed a Master's
-              degree in Film Scoring at the New Zealand School of Music. My specialty is in rapidly
-              composing high quality music for advertising, films, and artistic projects.
+              I am a working composer based in Wellington, New Zealand. I hold a Master's degree in
+              Film Scoring from the New Zealand School of Music. My specialty is in rapidly
+              composing quality music for film, advertising, and artistic projects.
             </div>
           </div>
           <div className="about-picture">
@@ -128,6 +128,7 @@ export const pageQuery = graphql`
             genre
             video
             heading
+            music
           }
         }
       }

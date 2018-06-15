@@ -21,8 +21,14 @@ body {
   color: $body-colour;
   //-webkit-text-stroke: 1px rgba($body-colour, 0.2);
   font-family: $primary-font, $system-fonts;
-  font-size: calc(var(--base-em) * var(--step-zero));
+  font-size: $base-em * $step-zero;
+  height: 100%;
+  letter-spacing: 0.02em;
   line-height: 1.5;
+}
+
+#___gatsby {
+  height: 100%;
 }
 
 h6,
@@ -38,60 +44,28 @@ h1 {
 }
 
 h1 {
-  font-size: calc(var(--base-em) * var(--step-six));
-  line-height: 1.125;
+  font-size: $base-em * $step-six;
+  //line-height: 1.125;
 }
 
 h2 {
-  font-size: calc(var(--base-em) * var(--step-five));
+  font-size: $base-em * $step-five;
 }
 
 h3 {
-  font-size: calc(var(--base-em) * var(--step-four));
+  font-size: $base-em * $step-four;
 }
 
 h4 {
-  font-size: calc(var(--base-em) * var(--step-three));
+  font-size: $base-em * $step-three;
 }
 
 h5 {
-  font-size: calc(var(--base-em) * var(--step-two));
+  font-size: $base-em * $step-two;
 }
 
 h6 {
-  font-size: calc(var(--base-em) * var(--step-one));
-}
-
-@include extrasmall {
-  body {
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: calc(var(--base-em) * var(--step-four));
-  }
-
-  h2 {
-    font-size: calc(var(--base-em) * var(--step-three));
-  }
-
-  h3 {
-    font-size: calc(var(--base-em) * var(--step-two));
-  }
-}
-
-@include tiny {
-  h1 {
-    font-size: calc(var(--base-em) * var(--step-three));
-  }
-
-  h2 {
-    font-size: calc(var(--base-em) * var(--step-two));
-  }
-
-  h3 {
-    font-size: calc(var(--base-em) * var(--step-one));
-  }
+  font-size: $base-em * $step-one;
 }
 
 @include small {
@@ -100,15 +74,43 @@ h6 {
   }
 
   h1 {
-    font-size: calc(var(--base-em) * var(--step-five));
+    font-size: $base-em * $step-five;
   }
 
   h2 {
-    font-size: calc(var(--base-em) * var(--step-four));
+    font-size: $base-em * $step-four;
   }
 
   h3 {
-    font-size: calc(var(--base-em) * var(--step-three));
+    font-size: $base-em * $step-three;
+  }
+}
+
+@include extrasmall {
+  h1 {
+    font-size: $base-em * $step-four;
+  }
+
+  h2 {
+    font-size: $base-em * $step-three;
+  }
+
+  h3 {
+    font-size: $base-em * $step-two;
+  }
+}
+
+@include tiny {
+  h1 {
+    font-size: $base-em * $step-three;
+  }
+
+  h2 {
+    font-size: $base-em * $step-two;
+  }
+
+  h3 {
+    font-size: $base-em * $step-one;
   }
 }
 

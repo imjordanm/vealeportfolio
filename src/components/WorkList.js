@@ -31,8 +31,8 @@ export default class WorkList extends React.Component {
     };
 
     this.itemClick = this.itemClick.bind(this);
-    this.itemClose = this.itemClose.bind(this);
     this.itemSwitch = this.itemSwitch.bind(this);
+    this.itemClose = this.itemClose.bind(this);
     this.filterClick = this.filterClick.bind(this);
     this.keyPress = this.keyPress.bind(this);
   }
@@ -103,6 +103,9 @@ export default class WorkList extends React.Component {
   itemSwitch(event) {
     const index = this.flkty.selectedIndex;
     const length = this.flkty.cells.length;
+
+    console.log(event);
+
     if (event.clientX <= window.innerWidth / 2 && index !== 0) {
       this.setState({ clickedItem: this.state.items[index - 1] });
       this.flkty.previous();
@@ -156,11 +159,14 @@ export default class WorkList extends React.Component {
     return (
       <section className="work" onKeyUp={this.keyPress}>
         {this.state.clickedItem ? (
-          <ClickedItem item={this.state.clickedItem} itemClose={this.itemClose} />
+          <ClickedItem
+            item={this.state.clickedItem}
+            itemSwitch={this.itemSwitch}
+            itemClose={this.itemClose}
+          />
         ) : null}
         <div
           className={this.state.clickedItem !== null ? 'item-overlay clicked' : 'item-overlay'}
-          onClick={this.itemSwitch}
         />
         <div className={this.state.clickedItem !== null ? 'test clicked' : 'test'}>
           <div className="work-list">

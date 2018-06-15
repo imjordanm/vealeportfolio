@@ -47,20 +47,25 @@ const ClickedItem = props => (
         ) : null}
 
         {props.item.music ? (
-          <iframe
-            width="100%"
-            height="450"
-            scrolling="no"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/303337927&color=%23fbfbf7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
-          />
+          <div className="item-music">
+            <iframe
+              title="Spotify"
+              className="SpotifyPlayer"
+              src={`https://embed.spotify.com/?uri=${props.item.music}&amp;theme=${'black'}`}
+              width="100%"
+              height="311"
+              frameBorder="0"
+              allowTransparency="true"
+            />
+          </div>
         ) : null}
 
         <div className="item-description">{props.item.description}</div>
       </div>
 
-      <button className="item-close" onClick={props.itemClose} />
+      <button className="item-btn close" onClick={props.itemClose} />
+      <button className="item-btn prev" onClick={props.itemSwitch} />
+      <button className="item-btn next" onClick={props.itemSwitch} />
     </div>
   </React.Fragment>
 );

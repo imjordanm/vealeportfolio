@@ -1,10 +1,11 @@
 .work {
+  @include viewport-unit(height, 60vh);
   align-items: center;
   display: flex;
-  height: 60vh;
 }
 
 .test {
+  @include viewport-unit(width, 100vw);
   animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 slideUpList
     forwards;
   display: flex;
@@ -12,7 +13,6 @@
   overflow: hidden;
   touch-action: pan-y;
   user-select: none;
-  width: 100vw;
 }
 
 .work-list {
@@ -34,15 +34,15 @@
 }
 
 .item-box {
-  width: 25vw;
+  @include viewport-unit(width, 25vw);
 }
 
 .item-cover {
+  @include viewport-unit(height, 25vw);
   align-items: center;
   background-color: rgb(218, 218, 218);
   border-radius: 4px;
   display: flex;
-  height: 25vw;
   overflow: hidden;
   transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -173,8 +173,8 @@
 }
 
 .item-text-clicked {
+  @include viewport-unit(width, 85vw);
   margin: 20vh auto 0;
-  width: 85vw;
 }
 
 .item-title-clicked {
@@ -336,23 +336,24 @@
 
 //Work Bar CSS
 .work-bar {
+  @include viewport-unit(height, 10vh);
+  @include viewport-unit(width, 85vw);
   align-items: center;
   bottom: 0;
   color: inherit;
   display: flex;
   font-weight: 700;
-  height: 10vh;
   justify-content: center;
   left: 0;
   margin: 0 auto;
-  position: absolute;
+  position: fixed;
   right: 0;
   user-select: none;
-  width: 85vw;
   z-index: 1;
 }
 
 .filter-list {
+  @include viewport-unit(width, 100vw);
   align-items: center;
   background: $heading-colour;
   color: #fff;
@@ -368,7 +369,6 @@
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-  width: 100vw;
   z-index: 98;
 
   ul {
@@ -518,7 +518,7 @@
 
 @include small {
   .work {
-    height: 80vh;
+    @include viewport-unit(height, 80vh);
   }
 
   .work-item {
@@ -553,8 +553,8 @@
   }
 
   .item-box {
+    @include viewport-unit(width, 50vw);
     max-width: 50vh;
-    width: 50vw;
   }
 
   .item-box-clicked {
@@ -594,7 +594,7 @@
   }
 
   .item-cover {
-    height: 50vw;
+    @include viewport-unit(height, 50vw);
     max-height: 50vh;
   }
 
@@ -619,11 +619,11 @@
   }
 
   .item-box {
-    width: 30vw;
+    @include viewport-unit(width, 30vw);
   }
 
   .item-cover {
-    height: 30vw;
+    @include viewport-unit(height, 30vw);
   }
 }
 

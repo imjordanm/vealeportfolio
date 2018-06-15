@@ -12,11 +12,11 @@
 }
 
 .header {
+  @include viewport-unit(height, 20vh);
   align-items: center;
   color: $body-colour;
   display: flex;
   font-weight: 700;
-  height: 20vh;
   justify-content: space-between;
   -webkit-tap-highlight-color: transparent;
   user-select: none;
@@ -139,7 +139,7 @@
 
 @include small {
   .header {
-    height: 10vh;
+    @include viewport-unit(height, 10vh);
     min-height: 7.5vw;
   }
 
@@ -169,7 +169,7 @@
   }
 
   .nav-list {
-    font-size: 8vh;
+    @include viewport-unit(font-size, 8vh);
     margin: 0 7.5vw;
 
     li {
@@ -186,6 +186,6 @@
 
 @include tiny {
   .nav-list {
-    font-size: 7vh;
+    @include viewport-unit(font-size, 7vh);
   }
 }

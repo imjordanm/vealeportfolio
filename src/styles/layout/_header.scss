@@ -145,7 +145,7 @@
 
   .pages {
     background: $heading-colour;
-    height: 100vh;
+    height: 100%;
     left: 0;
     opacity: 0;
     overflow: hidden;
@@ -161,7 +161,7 @@
   .pages-container {
     align-items: center;
     display: flex;
-    height: 90vh;
+    height: 90%;
     margin-top: 10vh;
     opacity: 0;
     transform: translateX(25%);

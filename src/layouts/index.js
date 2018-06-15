@@ -55,16 +55,23 @@ export default ({ children, data }) => (
       ]}
     />
 
-    <Scrollbars
-      universal
-      hideTracksWhenNotNeeded
-      renderTrackVertical={props => <div {...props} className="track-vertical" />}
-    >
+    {matchMedia('screen and (max-width: 900px)').matches ? (
       <main className="container">
         <Header pages={data.allMarkdownRemark.edges} />
         {children()}
       </main>
-    </Scrollbars>
+    ) : (
+      <Scrollbars
+        universal
+        hideTracksWhenNotNeeded
+        renderTrackVertical={props => <div {...props} className="track-vertical" />}
+      >
+        <main className="container">
+          <Header pages={data.allMarkdownRemark.edges} />
+          {children()}
+        </main>
+      </Scrollbars>
+    )}
   </React.Fragment>
 );
 

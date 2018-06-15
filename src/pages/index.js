@@ -51,7 +51,6 @@ export default class IndexPage extends React.PureComponent {
 const Landing = props => (
   <div className="landing-wrap">
     <div className="landing-text">
-      {/* } <h1 className="heading-shadow">I am Nick Veale, a musician and film composer.</h1> */}
       <h1 className="heading">I am Nick Veale, a musician and film composer.</h1>
       <div className="item-more-landing">
         <div className="more-icon">

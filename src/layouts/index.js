@@ -55,12 +55,7 @@ export default ({ children, data }) => (
       ]}
     />
 
-    {typeof window !== 'undefined' && matchMedia('screen and (max-width: 900px)').matches ? (
-      <main className="container">
-        <Header pages={data.allMarkdownRemark.edges} />
-        {children()}
-      </main>
-    ) : (
+    {typeof window !== 'undefined' && matchMedia('screen and (min-width: 901px)').matches ? (
       <Scrollbars
         universal
         hideTracksWhenNotNeeded
@@ -71,6 +66,11 @@ export default ({ children, data }) => (
           {children()}
         </main>
       </Scrollbars>
+    ) : (
+      <main className="container">
+        <Header pages={data.allMarkdownRemark.edges} />
+        {children()}
+      </main>
     )}
   </React.Fragment>
 );

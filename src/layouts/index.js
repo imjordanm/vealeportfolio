@@ -55,7 +55,7 @@ export default ({ children, data }) => (
       ]}
     />
 
-    {matchMedia('screen and (max-width: 900px)').matches ? (
+    {typeof window !== 'undefined' && matchMedia('screen and (max-width: 900px)').matches ? (
       <main className="container">
         <Header pages={data.allMarkdownRemark.edges} />
         {children()}

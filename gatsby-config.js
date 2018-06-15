@@ -32,7 +32,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-postcss-sass',
       options: {
-        postCssPlugins: [autoprefixer({ browsers: ['last 2 versions'] }), cssnano()],
+        postCssPlugins: [
+          autoprefixer({ browsers: ['last 2 versions', '> 1% in US', 'iOS 7'] }),
+          cssnano(),
+        ],
       },
     },
     {

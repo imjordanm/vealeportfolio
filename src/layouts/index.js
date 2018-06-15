@@ -61,10 +61,16 @@ export default ({ children, data }) => (
         {children()}
       </main>
     ) : (
-      <main className="container">
-        <Header pages={data.allMarkdownRemark.edges} />
-        {children()}
-      </main>
+      <Scrollbars
+        universal
+        hideTracksWhenNotNeeded
+        renderTrackVertical={props => <div {...props} className="track-vertical" />}
+      >
+        <main className="container">
+          <Header pages={data.allMarkdownRemark.edges} />
+          {children()}
+        </main>
+      </Scrollbars>
     )}
   </React.Fragment>
 );

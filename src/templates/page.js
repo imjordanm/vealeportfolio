@@ -10,7 +10,7 @@ export default function Template({ data }) {
         <section className="about">
           <div className="about-text">
             <div className="page-heading">
-              <h1 className="about-header">Music that ticks the boxes</h1>
+              <h1 className="about-header">Add stuff and style this page</h1>
             </div>
             <div className="page-subheading">
               I am a passionate composer and musician based in Wellington New Zealand. Since

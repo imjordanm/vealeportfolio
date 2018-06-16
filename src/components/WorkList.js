@@ -104,8 +104,6 @@ export default class WorkList extends React.Component {
     const index = this.flkty.selectedIndex;
     const length = this.flkty.cells.length;
 
-    console.log(event);
-
     if (event.clientX <= window.innerWidth / 2 && index !== 0) {
       this.setState({ clickedItem: this.state.items[index - 1] });
       this.flkty.previous();

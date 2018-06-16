@@ -63,19 +63,16 @@ export default ({ children, data }) => (
     />
 
     {typeof window !== 'undefined' && matchMedia('screen and (min-width: 901px)').matches ? (
-      (console.log('hi lol'),
-      (
-        <Scrollbars
-          universal
-          hideTracksWhenNotNeeded
-          renderTrackVertical={props => <div {...props} className="track-vertical" />}
-        >
-          <main className="container">
-            <Header pages={data.allMarkdownRemark.edges} />
-            {children()}
-          </main>
-        </Scrollbars>
-      ))
+      <Scrollbars
+        universal
+        hideTracksWhenNotNeeded
+        renderTrackVertical={props => <div {...props} className="track-vertical" />}
+      >
+        <main className="container">
+          <Header pages={data.allMarkdownRemark.edges} />
+          {children()}
+        </main>
+      </Scrollbars>
     ) : (
       <main className="container">
         <Header pages={data.allMarkdownRemark.edges} />

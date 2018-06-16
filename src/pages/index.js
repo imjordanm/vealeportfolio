@@ -56,7 +56,7 @@ const Landing = props => (
         <div className="more-icon">
           <div className="play" />
         </div>
-        <p className="more-text">Watch my reel</p>
+        <p className="more-text">Listen to my reel</p>
       </div>
     </div>
     <div className="landing-picture">

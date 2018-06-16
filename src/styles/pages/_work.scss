@@ -75,7 +75,7 @@
   margin-top: 1.5em;
   position: absolute;
   transform: translateX(0);
-  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+  transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
 
   &:hover {
     transform: translateX(15%);
@@ -207,7 +207,6 @@
 }
 
 .item-details {
-  font-style: italic;
   margin-top: 0.2em;
   width: 35%;
 }
@@ -224,6 +223,7 @@
 }
 
 .detail-left {
+  font-style: italic;
   max-width: 10em;
   width: 40%;
 }
@@ -250,42 +250,33 @@
   border: none;
   color: $background-colour;
   cursor: pointer;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   opacity: 0;
   outline: none;
   padding: 0;
   position: fixed;
+  text-transform: uppercase;
   top: calc(10vh - 0.7em);
 }
 
 .item-btn.prev {
-  left: calc(7.5vw - 1em);
-
-  &::before {
-    content: '\25C4';
-    padding: 1em;
-  }
+  left: 7.5vw;
 }
 
 .item-btn.next {
-  right: calc(7.5vw - 1em);
-
-  &::before {
-    content: '\25BA';
-    padding: 1em;
-  }
+  right: 7.5vw;
 }
 
 .item-btn.close {
-  right: calc(50% - 1.5em);
-
-  &::before {
-    content: '\2716';
-    padding: 1em;
-  }
+  right: calc(50% - 1.7em);
 }
 
 .item-btn.filter {
   display: none;
+  font-size: 1.1em;
+  font-weight: 400;
   right: calc(7.5vw - 1em);
   z-index: 98;
 
@@ -345,11 +336,15 @@
   justify-content: center;
   left: 0;
   margin: 0 auto;
-  position: absolute;
+  position: fixed;
   right: 0;
   user-select: none;
   width: 85vw;
   z-index: 1;
+}
+
+.work-filter {
+  height: 100%;
 }
 
 .filter-list {
@@ -410,9 +405,12 @@
   border: none;
   color: inherit;
   cursor: pointer;
+  display: inline-block;
+  height: 100%;
   outline: none;
   padding: 0;
   text-transform: capitalize;
+  vertical-align: middle;
 }
 
 .filter-active.toggled + .filter-list {
@@ -483,36 +481,28 @@
   cursor: grabbing;
 }
 
-@include extrasmall {
-  .item-title {
-    font-size: $base-em * $step-two;
+@include medium {
+  .work-item {
+    margin: 0 15.6vw;
   }
 
-  .item-text-clicked {
-    margin: 20vw auto 0;
+  .item-box {
+    width: 30vw;
   }
 
   .item-title-clicked {
-    margin: 0;
-
     h1 {
-      font-size: $base-em * $step-four;
-      margin-bottom: 1.5rem;
+      font-size: $base-em * $step-seven;
+      margin-bottom: 3rem;
     }
   }
 
   .item-heading {
-    font-size: $base-em * $step-zero;
-    margin-bottom: 1.5rem;
+    font-size: $base-em * $step-one;
   }
 
-  .item-line {
-    margin: 3em 0;
-    width: 100%;
-  }
-
-  .item-description {
-    column-count: unset;
+  .item-cover {
+    height: 30vw;
   }
 }
 
@@ -544,7 +534,7 @@
   .item-title {
     font-size: $base-em * $step-three;
     margin-bottom: 0;
-    width: unset;
+    width: auto;
   }
 
   .item-more,
@@ -565,12 +555,6 @@
     margin: 10vw auto 0;
   }
 
-  .item-title-clicked {
-    h1 {
-      margin-bottom: 3rem;
-    }
-  }
-
   .item-more-clicked {
     flex-direction: column;
   }
@@ -579,13 +563,20 @@
     margin: 3rem 0;
   }
 
+  .item-title-clicked {
+    h1 {
+      font-size: $base-em * $step-six;
+      margin-bottom: 3rem;
+    }
+  }
+
   .item-heading {
     margin-bottom: 3rem;
-    width: unset;
+    width: auto;
   }
 
   .item-details {
-    width: unset;
+    width: auto;
   }
 
   .item-btn {
@@ -613,22 +604,45 @@
   }
 }
 
-@include medium {
-  .work-item {
-    margin: 0 15.6vw;
+@include extrasmall {
+  .item-title {
+    font-size: $base-em * $step-two;
   }
 
-  .item-box {
-    width: 30vw;
+  .item-heading {
+    font-size: $base-em * $step-zero;
+    margin-bottom: 1.5rem;
   }
 
-  .item-cover {
-    height: 30vw;
+  .item-title-clicked {
+    margin: 0;
+
+    h1 {
+      font-size: $base-em * $step-five;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .item-line {
+    margin: 3em 0;
+    width: 100%;
+  }
+
+  .item-description {
+    column-count: unset;
   }
 }
 
 @include tiny {
   .filter-list ul {
     font-size: 7vh;
+  }
+
+  .item-title-clicked {
+    margin: 0;
+
+    h1 {
+      font-size: $base-em * $step-four;
+    }
   }
 }

@@ -10,12 +10,16 @@ export default function Template({ data }) {
         <section className="about">
           <div className="about-text">
             <div className="page-heading">
-              <h1 className="about-header">Tailored work with equal parts quality and speed.</h1>
+              <h1 className="about-header">Music that ticks the boxes</h1>
             </div>
             <div className="page-subheading">
-              I am a working composer based in Wellington, New Zealand. I hold a Master's degree in
-              Film Scoring from the New Zealand School of Music. My specialty is in rapidly
-              composing quality music for film, advertising, and artistic projects.
+              I am a passionate composer and musician based in Wellington New Zealand. Since
+              finishing my Master’s degree in composition at the New Zealand School of Music, I have
+              been eagerly searching for opportunities to produce and write music for film,
+              advertising and creative projects. I have amassed valuable experience composing large
+              scale advertising material for Victoria University and writing film music for both
+              feature length and short films. My aim is to bring as much passion and life as
+              possible into every piece of music that I write, no matter the context.
             </div>
           </div>
           <div className="about-picture">
@@ -58,8 +62,8 @@ export default function Template({ data }) {
               <p>
                 Find out more about what I can do for your next project by getting in touch
                 via&nbsp;
-                <a href="mailto:nickveale@gmail.com">email</a> or by filling out the form below. I
-                am always up for a coffee.
+                <a href="mailto:novingle@gmail.com">email</a> or by filling out the form below. I am
+                always up for a coffee.
               </p>
             </div>
             <form

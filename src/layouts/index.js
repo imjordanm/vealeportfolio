@@ -36,8 +36,15 @@ export default ({ children, data }) => (
     <Helmet
       title="Nick Veale - Film Composer"
       meta={[
-        { name: 'description', content: 'Film composer and musician Nick Veale' },
-        { name: 'keywords', content: 'Film composer and musician Nick Veale' },
+        {
+          name: 'description',
+          content:
+            'Nick Veale is a film composer based in New Zealand. He scores and produces music for film, advertisements and creative projects.',
+        },
+        {
+          name: 'keywords',
+          content: 'Film composer advertisement ad music producer musician Nick Veale',
+        },
       ]}
       link={[
         {
@@ -56,16 +63,19 @@ export default ({ children, data }) => (
     />
 
     {typeof window !== 'undefined' && matchMedia('screen and (min-width: 901px)').matches ? (
-      <Scrollbars
-        universal
-        hideTracksWhenNotNeeded
-        renderTrackVertical={props => <div {...props} className="track-vertical" />}
-      >
-        <main className="container">
-          <Header pages={data.allMarkdownRemark.edges} />
-          {children()}
-        </main>
-      </Scrollbars>
+      (console.log('hi lol'),
+      (
+        <Scrollbars
+          universal
+          hideTracksWhenNotNeeded
+          renderTrackVertical={props => <div {...props} className="track-vertical" />}
+        >
+          <main className="container">
+            <Header pages={data.allMarkdownRemark.edges} />
+            {children()}
+          </main>
+        </Scrollbars>
+      ))
     ) : (
       <main className="container">
         <Header pages={data.allMarkdownRemark.edges} />

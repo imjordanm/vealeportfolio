@@ -63,9 +63,15 @@ const ClickedItem = props => (
         <div className="item-description">{props.item.description}</div>
       </div>
 
-      <button className="item-btn close" onClick={props.itemClose} />
-      <button className="item-btn prev" onClick={props.itemSwitch} />
-      <button className="item-btn next" onClick={props.itemSwitch} />
+      <button className="item-btn close" onClick={props.itemClose}>
+        Close
+      </button>
+      <button className="item-btn prev" onClick={props.itemSwitch}>
+        Previous
+      </button>
+      <button className="item-btn next" onClick={props.itemSwitch}>
+        Next
+      </button>
     </div>
   </React.Fragment>
 );

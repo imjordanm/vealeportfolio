@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const flexbugs = require('postcss-flexbugs-fixes');
 
 module.exports = {
   siteMetadata: {
@@ -33,8 +34,9 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss-sass',
       options: {
         postCssPlugins: [
-          autoprefixer({ browsers: ['last 2 versions', '> 1% in US', 'iOS 7'] }),
+          autoprefixer({ browsers: ['last 2 versions', '> 1% in US', 'iOS >= 6'] }),
           cssnano(),
+          flexbugs(),
         ],
       },
     },

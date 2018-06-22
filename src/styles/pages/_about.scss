@@ -6,17 +6,48 @@
 }
 
 .about-picture {
-  align-self: flex-end;
-  border-radius: 4px;
+  margin-bottom: 10vw;
+  margin-left: -7.5vw;
+  min-width: 64em;
   overflow: hidden;
-  width: 50%;
+  width: calc(70% + 7.5vw);
+
+  @include large {
+    min-width: 0;
+    width: calc(85% + 7.5vw);
+  }
+
+  @include medium {
+    width: 100vw;
+  }
 }
 
 .about-text {
   color: $subheading-colour;
-  margin-bottom: 5vw;
-  min-width: 45em;
-  width: 55%;
+  margin-bottom: 7.5vw;
+  width: 60em;
+
+  @include large {
+    max-width: none;
+    width: 85%;
+  }
+
+  @include medium {
+    width: 50em;
+  }
+
+  @include medium {
+    align-self: center;
+  }
+
+  @include small {
+    width: 100%;
+  }
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .page-heading {
@@ -30,16 +61,53 @@
   //margin-bottom: 4.5rem;
 }
 
-.page-subheading {
+.about-section {
+  align-self: unset;
   animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 slideUpBody
     forwards;
-  font-size: 1.1em;
-  line-height: 1.8;
-  max-width: 36em;
+  display: flex;
+  flex: 1;
+  margin: 0 0 10vw;
+  max-width: 70%;
+  min-width: 58em;
   opacity: 0;
+
+  @include large {
+    max-width: none;
+    min-width: 0;
+    width: 85%;
+  }
+
+  @include medium {
+    width: 100%;
+  }
+
+  @include extrasmall {
+    flex-direction: column;
+    margin-bottom: 10vw;
+  }
+
+  p {
+    flex: 3;
+    font-size: $base-em * $step-one;
+  }
 
   a {
     color: inherit;
+  }
+}
+
+.about-section-heading {
+  flex: 1;
+  font-size: $base-em * $step-zero;
+  margin-right: 10vw;
+
+  @include small {
+    font-size: $base-em * $step-zero;
+  }
+
+  @include extrasmall {
+    margin-bottom: 1.25em;
   }
 }
 
@@ -49,29 +117,4 @@
 
 .about-footer.wrapper {
   padding: 2.5vh 0;
-}
-
-@include extrasmall {
-  .about-header {
-    margin-bottom: 1.5rem;
-  }
-}
-
-@include small {
-  .about {
-    flex-direction: column;
-  }
-
-  .about-text {
-    min-width: 0;
-    width: 100%;
-  }
-
-  .page-subheading {
-    max-width: none;
-  }
-
-  .about-picture {
-    width: 100%;
-  }
 }

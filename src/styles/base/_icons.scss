@@ -40,6 +40,12 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.social-icons {
+  bottom: 4vh;
+  position: absolute;
+  right: 7.5vw;
+}
+
 .icon-twitter:before {
   content: '\f099';
 } /* '' */

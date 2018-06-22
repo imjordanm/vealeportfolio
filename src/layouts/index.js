@@ -39,11 +39,11 @@ export default ({ children, data }) => (
         {
           name: 'description',
           content:
-            'Nick Veale is a film composer based in New Zealand. He scores and produces music for film, advertisements and creative projects.',
+            'Nick Veale is a professional composer based in Wellington, New Zealand. He composes and produces music for film, advertisements and creative projects.',
         },
         {
           name: 'keywords',
-          content: 'Film composer advertisement ad music producer musician Nick Veale',
+          content: 'Film composer advertisement ad New Zealand music producer musician Nick Veale',
         },
       ]}
       link={[

@@ -24,7 +24,7 @@ body {
   font-size: $base-em * $step-zero;
   height: 100%;
   letter-spacing: 0.02em;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 #___gatsby {
@@ -40,7 +40,7 @@ h1 {
   color: $heading-colour;
   line-height: 1.25;
   margin: 0;
-  margin-bottom: $vertical-rhythm;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -66,6 +66,32 @@ h5 {
 
 h6 {
   font-size: $base-em * $step-one;
+}
+
+@include huge {
+  body {
+    font-size: 1vw;
+  }
+}
+
+@include large {
+  h1 {
+    font-size: $base-em * $step-five;
+  }
+
+  h2 {
+    font-size: $base-em * $step-four;
+  }
+
+  h3 {
+    font-size: $base-em * $step-three;
+  }
+}
+
+@include medium {
+  body {
+    font-size: 16px;
+  }
 }
 
 @include small {
@@ -118,18 +144,6 @@ h6 {
 
   h3 {
     font-size: $base-em * $step-one;
-  }
-}
-
-@include medium {
-  body {
-    font-size: 16px;
-  }
-}
-
-@include huge {
-  body {
-    font-size: 1vw;
   }
 }
 

@@ -165,6 +165,11 @@ export default class WorkList extends React.Component {
         ) : null}
         <div
           className={this.state.clickedItem !== null ? 'item-overlay clicked' : 'item-overlay'}
+          style={
+            this.state.clickedItem !== null && this.state.clickedItem.colour !== null
+              ? { background: this.state.clickedItem.colour }
+              : { background: 'rgb(36, 36, 36)' }
+          }
         />
         <div className={this.state.clickedItem !== null ? 'test clicked' : 'test'}>
           <div className="work-list">

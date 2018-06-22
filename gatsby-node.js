@@ -26,6 +26,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                   video
                   heading
                   music
+                  colour
                 }
               }
             }

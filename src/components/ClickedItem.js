@@ -1,4 +1,5 @@
 import React from 'react';
+import Player from './Player';
 
 const ClickedItem = props => (
   <React.Fragment>
@@ -58,6 +59,27 @@ const ClickedItem = props => (
               allowTransparency="true"
             />
           </div>
+        ) : null}
+
+        {props.item.music ? (
+          <Player
+            audio={[
+              {
+                name: props.item.title,
+                artist: props.item.artist,
+                url:
+                  'https://cdn.discordapp.com/attachments/181618061588037632/457404051794165770/Advertising_Showreel_1.mp3',
+                cover: props.item.cover,
+              },
+              {
+                name: 'Flamingo',
+                artist: props.item.artist,
+                url:
+                  'https://cdn.discordapp.com/attachments/181618061588037632/457404051794165770/Advertising_Showreel_1.mp3',
+                cover: props.item.cover,
+              },
+            ]}
+          />
         ) : null}
 
         <div className="item-description">{props.item.description}</div>

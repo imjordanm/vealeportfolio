@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import WorkList from '../components/WorkList';
+import Link from 'gatsby-link';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
@@ -10,30 +11,47 @@ export default function Template({ data }) {
         <section className="about">
           <div className="about-text">
             <div className="page-heading">
-              <h1 className="about-header">Add stuff and style this page</h1>
-            </div>
-            <div className="page-subheading">
-              I am a passionate composer and musician based in Wellington New Zealand. Since
-              finishing my Master’s degree in composition at the New Zealand School of Music, I have
-              been eagerly searching for opportunities to produce and write music for film,
-              advertising and creative projects. I have amassed valuable experience composing large
-              scale advertising material for Victoria University and writing film music for both
-              feature length and short films. My aim is to bring as much passion and life as
-              possible into every piece of music that I write, no matter the context.
+              <h1 className="about-header">
+                I compose music for advertising and film that perfectly fits your goals.
+              </h1>
             </div>
           </div>
-          <div className="about-picture">
-            <div className="picture-wrapper">
-              <Img
-                style={{
-                  width: '100%',
-                  height: '100%',
-                }}
-                alt="About Nick Veale"
-                sizes={data.about.sizes}
-              />
-              <div className="picture-reveal" />
+          <div className="about-container">
+            <div className="about-picture">
+              <div className="picture-wrapper">
+                <Img
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                  }}
+                  alt="About Nick Veale"
+                  sizes={data.about.sizes}
+                />
+                <div className="picture-reveal" />
+              </div>
             </div>
+            <div className="about-section">
+              <h2 className="about-section-heading">Who am I?</h2>
+              <p>
+                I am a composer and musician based in Wellington New Zealand. I finished my Master’s
+                degree in Composition at the New Zealand School of Music in 2018.
+              </p>
+            </div>
+          </div>
+          <div className="about-section">
+            <h2 className="about-section-heading">What can I do?</h2>
+            <p>
+              My area of expertise is in composing music for film, advertising and creative
+              projects. Every project I undertake is crafted with passion through the vision of the
+              client.
+            </p>
+          </div>
+          <div className="about-section">
+            <h2 className="about-section-heading">What have I done?</h2>
+            <p>
+              I have produced the music for large scale advertisements and for a number of feature
+              length and short films. You can play samples of my work below or by visiting the&nbsp;<Link to="/work">work</Link> page.
+            </p>
           </div>
 
           {/* }
@@ -58,7 +76,7 @@ export default function Template({ data }) {
             <div className="page-heading">
               <h1>Let's collaborate!</h1>
             </div>
-            <div className="page-subheading">
+            <div className="contact-subheading">
               <p>
                 Find out more about what I can do for your next project by getting in touch
                 via&nbsp;
@@ -133,6 +151,7 @@ export const pageQuery = graphql`
             video
             heading
             music
+            colour
           }
         }
       }

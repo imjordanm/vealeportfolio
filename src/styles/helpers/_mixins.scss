@@ -17,19 +17,19 @@
 }
 
 @mixin medium {
-  @media screen and (min-width: 901px) and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     @content;
   }
 }
 
 @mixin large {
-  @media screen and (min-width: 1201px) and (max-width: 1600px) {
+  @media screen and (max-width: 1450px) {
     @content;
   }
 }
 
 @mixin extralarge {
-  @media screen and (min-width: 1601px) {
+  @media screen and (min-width: 1451px) {
     @content;
   }
 }

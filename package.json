@@ -23,6 +23,7 @@
     "gatsby-transformer-remark": "^1.7.43",
     "gatsby-transformer-sharp": "1.6.16",
     "postcss-flexbugs-fixes": "^3.3.1",
+    "react-aplayer": "^1.0.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-tilt": "^0.1.4"
   },

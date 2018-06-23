@@ -45,7 +45,7 @@ const Navigation = props => (
 );
 
 const Header = props => (
-  <header className="header">
+  <header className="header" id="top">
     <div className="logo" onClick={hideMenu}>
       <Link to="/">Nick Veale</Link>
     </div>

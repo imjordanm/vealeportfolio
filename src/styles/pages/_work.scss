@@ -72,7 +72,7 @@
 
 .item-more {
   cursor: pointer;
-  margin-top: 1.5em;
+  margin-top: 1em;
   position: absolute;
   transform: translateX(0);
   transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.15s;
@@ -222,12 +222,9 @@
 
 .detail-left {
   flex: 2;
-  font-size: 0.7em;
+  font-size: 0.8em;
   font-weight: 700;
-  letter-spacing: 0.05em;
   margin-right: 2em;
-  max-width: 10em;
-  text-transform: uppercase;
 }
 
 .detail-right {
@@ -498,7 +495,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 10vw;
+    margin-top: 7.5vw;
     width: 100%;
   }
 

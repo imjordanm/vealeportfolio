@@ -32,39 +32,48 @@ export default function Template({ data }) {
             </div>
             <div className="about-section">
               <h2 className="about-section-heading">Who am I?</h2>
-              <p>
-                I am a composer and musician based in Wellington New Zealand. I finished my Master’s
-                degree in Composition at the New Zealand School of Music in 2018.
-              </p>
+              <div className="about-section-text">
+                <p>
+                  I am a composer and musician based in Wellington New Zealand. I finished my
+                  Master’s degree in Composition at the New Zealand School of Music in 2018.
+                </p>
+              </div>
             </div>
           </div>
           <div className="about-section">
             <h2 className="about-section-heading">What can I do?</h2>
-            <p>
-              My area of expertise is in composing music for film, advertising and creative
-              projects. Every project I undertake is crafted with passion through the vision of the
-              client.
-            </p>
+            <div className="about-section-text">
+              <p>
+                My area of expertise is in composing music for film, advertising and creative
+                projects. Every project I undertake is crafted with passion through the vision of
+                the client.
+              </p>
+            </div>
           </div>
           <div className="about-section">
             <h2 className="about-section-heading">What have I done?</h2>
-            <p>
-              I have produced the music for large scale advertisements and for a number of feature
-              length and short films. You can play samples of my work below or by visiting the&nbsp;<Link to="/work">work</Link> page.
-            </p>
-          </div>
-
-          {/* }
-          <footer className="about-footer">
-            <div className="about-footer wrapper">
-              <h4>
-                See my work <Link to="/work">here.</Link>
-              </h4>
-              <h4>
-                Or start the <Link to="/contact">conversation.</Link>
-              </h4>
+            <div className="about-section-text">
+              <p>
+                I have produced music for large scale advertisements and for various feature length
+                and short films. You can play samples of my work below or hear everything on
+                the&nbsp;<Link to="/work">work</Link> page.
+              </p>
+              <div className="about-samples">
+                <div className="sample">
+                  <p>Advertising Reel</p>
+                  <div className="more-icon">
+                    <div className="play" />
+                  </div>
+                </div>
+                <div className="sample">
+                  <p>Film Reel</p>
+                  <div className="more-icon">
+                    <div className="play" />
+                  </div>
+                </div>
+              </div>
             </div>
-          </footer> */}
+          </div>
         </section>
       ) : null}
 

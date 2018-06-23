@@ -23,7 +23,7 @@
 }
 
 .about-text {
-  color: $subheading-colour;
+  color: $body-colour;
   margin-bottom: 7.5vw;
   width: 60em;
 
@@ -87,11 +87,6 @@
     margin-bottom: 10vw;
   }
 
-  p {
-    flex: 3;
-    font-size: $base-em * $step-one;
-  }
-
   a {
     color: inherit;
   }
@@ -100,7 +95,7 @@
 .about-section-heading {
   flex: 1;
   font-size: $base-em * $step-zero;
-  margin-right: 10vw;
+  margin: 0.3em 10vw 0 0;
 
   @include small {
     font-size: $base-em * $step-zero;
@@ -111,10 +106,29 @@
   }
 }
 
-.about-footer {
-  background: rgb(187, 187, 187);
+.about-section-text {
+  flex: 3;
+  font-size: $base-em * $step-one;
+
+  p {
+    margin: 0;
+  }
 }
 
-.about-footer.wrapper {
-  padding: 2.5vh 0;
+.about-samples {
+  display: flex;
+  font-size: 0.7em;
+  list-style-type: none;
+  margin: 5vw 0 0;
+}
+
+.sample {
+  display: flex;
+  flex: 1 1 50%;
+  flex-direction: column;
+
+  p {
+    font-weight: 700;
+    margin: 0 2em 1em 0;
+  }
 }

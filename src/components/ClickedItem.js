@@ -1,5 +1,5 @@
 import React from 'react';
-import Player from './Player';
+import Playlist from './Playlist';
 
 const ClickedItem = props => (
   <React.Fragment>
@@ -48,37 +48,10 @@ const ClickedItem = props => (
         ) : null}
 
         {props.item.music ? (
-          <div className="item-music">
-            <iframe
-              title="Spotify"
-              className="SpotifyPlayer"
-              src={`https://embed.spotify.com/?uri=${props.item.music}&amp;theme=${'black'}`}
-              width="100%"
-              height="311"
-              frameBorder="0"
-              allowTransparency="true"
-            />
-          </div>
-        ) : null}
-
-        {props.item.music ? (
-          <Player
-            audio={[
-              {
-                name: props.item.title,
-                artist: props.item.artist,
-                url:
-                  'https://cdn.discordapp.com/attachments/181618061588037632/457404051794165770/Advertising_Showreel_1.mp3',
-                cover: props.item.cover,
-              },
-              {
-                name: 'Flamingo',
-                artist: props.item.artist,
-                url:
-                  'https://cdn.discordapp.com/attachments/181618061588037632/457404051794165770/Advertising_Showreel_1.mp3',
-                cover: props.item.cover,
-              },
-            ]}
+          <Playlist
+            clientId="358b0fa53153c2425022d97d00261118"
+            resolveUrl={props.item.music}
+            preload="metadata"
           />
         ) : null}
 

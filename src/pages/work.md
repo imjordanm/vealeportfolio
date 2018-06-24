@@ -36,7 +36,7 @@ items:
       title: To Pimp a Butterfly
       year: 2015
       video: https://player.vimeo.com/video/266286146
-      music: spotify:album:104g5VLtuvctk0lxXHokNy
+      music: https://soundcloud.com/nick-veale/sets/beats-on-stream
       colour: rgb(47, 138, 186)
     - artist: Nick Veale
       category: release
@@ -48,7 +48,7 @@ items:
       genre: Post rock
       title: Discovery
       year: 2016
-      music: spotify:album:1fKPZL8wPk34b6mF97oiUA
+      music: https://soundcloud.com/nick-veale/sets/beats-on-stream
     - artist: Slymouse Supreme
       category: release
       cover: /images/journeyoftanguine.jpg

@@ -2,6 +2,7 @@ import React from 'react';
 import Img from 'gatsby-image';
 import WorkList from '../components/WorkList';
 import Link from 'gatsby-link';
+import Playlist from '../components/Playlist';
 
 export default function Template({ data }) {
   const { markdownRemark: page } = data;
@@ -59,7 +60,12 @@ export default function Template({ data }) {
                 the&nbsp;<Link to="/work">work</Link> page.
               </p>
               <div className="about-samples">
-                <div className="sample">
+                <Playlist
+                  clientId="358b0fa53153c2425022d97d00261118"
+                  resolveUrl="https://soundcloud.com/nick-veale/sets/lounge"
+                  preload="metadata"
+                />
+                {/* <div className="sample">
                   <p>Advertising Reel</p>
                   <div className="more-icon">
                     <div className="play" />
@@ -70,7 +76,7 @@ export default function Template({ data }) {
                   <div className="more-icon">
                     <div className="play" />
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

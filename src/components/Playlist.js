@@ -62,7 +62,7 @@ class PlaylistSoundPlayer extends Component {
 
     const tracks = playlist.tracks.map((track, i) => {
       const classNames = ClassNames(
-        'flex flex-center full-width left-align button button-transparent',
+        'flex flex-center full-width left-align button button-transparent player-track',
         {
           'is-active': this.props.soundCloudAudio._playlistIndex === i,
         },
@@ -82,47 +82,41 @@ class PlaylistSoundPlayer extends Component {
 
   render() {
     const { playlist, currentTime, duration } = this.props;
-    console.log(playlist);
-    console.log(this.props);
 
     return (
-      <div className="music-player">
+      <div className={this.props.class ? `music-player ${this.props.class}` : 'music-player'}>
         <div className="player-top">
-          <div className="flex flex-center">
-            <h2 className="flex-auto nowrap m0 playing-artist">
-              {playlist ? playlist.user.username : ''}
-            </h2>
-            <Timer duration={duration || 0} currentTime={currentTime} {...this.props} />
-          </div>
-          <h2 className="nowrap caps mt0 mb2 playing-title">
-            {playlist ? playlist.tracks[this.state.activeIndex].title : ''}
-          </h2>
+          <Progress value={(currentTime / duration) * 100 || 0} {...this.props} />
+          <div className="player-controls">
+            <div className="player-buttons">
+              {' '}
+              <PrevButton
+                className="flex-none h3 button button-narrow button-transparent button-grow"
+                onPrevClick={this.prevIndex.bind(this)}
+                {...this.props}
+              />
+              <PlayButton
+                className="flex-none h2 button button-transparent button-grow"
+                {...this.props}
+              />
+              <NextButton
+                className="flex-none h3 button button-narrow button-transparent button-grow"
+                onNextClick={this.nextIndex.bind(this)}
+                {...this.props}
+              />
+              <div className="playing-details">
+                <Timer duration={duration || 0} currentTime={currentTime} {...this.props} />
+                <span className="playing-title">
+                  {playlist ? playlist.user.username : ''}
+                  {' - '}
+                  {playlist ? playlist.tracks[this.state.activeIndex].title : ''}
+                </span>
+              </div>
+            </div>
 
-          <div className="flex flex-center player-controls">
-            <PrevButton
-              className="flex-none h3 button button-narrow button-transparent button-grow rounded"
-              onPrevClick={this.prevIndex.bind(this)}
-              {...this.props}
-            />
-
-            <PlayButton
-              className="flex-none h2 button button-transparent button-grow rounded"
-              {...this.props}
-            />
-            <NextButton
-              className="flex-none h3 button button-narrow button-transparent button-grow rounded"
-              onNextClick={this.nextIndex.bind(this)}
-              {...this.props}
-            />
             <VolumeControl
-              className="flex flex-center mr2"
-              buttonClassName="flex-none h4 button button-transparent button-grow rounded"
-              {...this.props}
-            />
-            <Progress
-              className="rounded"
-              innerClassName="rounded-left"
-              value={(currentTime / duration) * 100 || 0}
+              className="flex flex-center"
+              buttonClassName="flex-none h4 button button-transparent button-grow"
               {...this.props}
             />
           </div>

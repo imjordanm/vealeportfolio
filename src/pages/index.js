@@ -2,13 +2,17 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 import Tilt from 'react-tilt';
+import Playlist from '../components/Playlist';
 
 export default class IndexPage extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       tilt: true,
+      display: 'hide',
     };
+
+    this.showPlayer = this.showPlayer.bind(this);
   }
 
   componentDidMount() {
@@ -20,6 +24,12 @@ export default class IndexPage extends React.PureComponent {
   checkScreen() {
     if (matchMedia('screen and (max-width: 900px)').matches) {
       this.setState({ tilt: false });
+    }
+  }
+
+  showPlayer() {
+    if (this.state.display !== 'show') {
+      this.setState({ display: 'show' });
     }
   }
 
@@ -38,11 +48,17 @@ export default class IndexPage extends React.PureComponent {
               scale: 0.95,
             }}
           >
-            <Landing data={data} />
+            <Landing data={data} showPlayer={this.showPlayer} />
           </Tilt>
         ) : (
-          <Landing data={data} />
+          <Landing data={data} showPlayer={this.showPlayer} />
         )}
+        <Playlist
+          clientId="358b0fa53153c2425022d97d00261118"
+          resolveUrl="https://soundcloud.com/nick-veale/sets/lounge"
+          preload="metadata"
+          class={`fixed landing ${this.state.display}`}
+        />
       </React.Fragment>
     );
   }
@@ -52,7 +68,7 @@ const Landing = props => (
   <div className="landing-wrap">
     <div className="landing-text">
       <h1 className="heading">I am Nick Veale, a musician and film composer.</h1>
-      <div className="item-more-landing">
+      <div className="item-more-landing" onClick={props.showPlayer}>
         <div className="more-icon">
           <div className="play" />
         </div>

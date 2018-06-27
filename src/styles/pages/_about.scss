@@ -45,11 +45,6 @@
   }
 }
 
-.about-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .page-heading {
   animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s 1 fadeInHeading
     forwards;
@@ -87,6 +82,10 @@
     margin-bottom: 10vw;
   }
 
+  &:last-of-type {
+    margin: 0;
+  }
+
   a {
     color: inherit;
   }
@@ -117,9 +116,21 @@
 
 .about-samples {
   display: flex;
-  font-size: 0.7em;
+  font-size: 18px;
   list-style-type: none;
-  margin: 5vw 0 0;
+  margin: 10vw 0 0;
+
+  @include huge {
+    font-size: 1vw;
+  }
+
+  @include medium {
+    font-size: 16px;
+  }
+
+  @include small {
+    font-size: 14px;
+  }
 
   @include extrasmall {
     margin-bottom: 1.25em;

@@ -17,28 +17,26 @@ export default function Template({ data }) {
               </h1>
             </div>
           </div>
-          <div className="about-container">
-            <div className="about-picture">
-              <div className="picture-wrapper">
-                <Img
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                  }}
-                  alt="About Nick Veale"
-                  sizes={data.about.sizes}
-                />
-                <div className="picture-reveal" />
-              </div>
+          <div className="about-picture">
+            <div className="picture-wrapper">
+              <Img
+                style={{
+                  width: '100%',
+                  height: '100%',
+                }}
+                alt="About Nick Veale"
+                sizes={data.about.sizes}
+              />
+              <div className="picture-reveal" />
             </div>
-            <div className="about-section">
-              <h2 className="about-section-heading">Who am I?</h2>
-              <div className="about-section-text">
-                <p>
-                  I am a composer and musician based in Wellington New Zealand. I finished my
-                  Master’s degree in Composition at the New Zealand School of Music in 2018.
-                </p>
-              </div>
+          </div>
+          <div className="about-section">
+            <h2 className="about-section-heading">Who am I?</h2>
+            <div className="about-section-text">
+              <p>
+                I am a composer and musician based in Wellington New Zealand. I finished my Master’s
+                degree in Composition at the New Zealand School of Music in 2018.
+              </p>
             </div>
           </div>
           <div className="about-section">
@@ -64,6 +62,7 @@ export default function Template({ data }) {
                   clientId="358b0fa53153c2425022d97d00261118"
                   resolveUrl="https://soundcloud.com/nick-veale/sets/lounge"
                   preload="metadata"
+                  class="fixed sample"
                 />
                 {/* <div className="sample">
                   <p>Advertising Reel</p>

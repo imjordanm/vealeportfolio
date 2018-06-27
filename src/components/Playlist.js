@@ -105,7 +105,12 @@ class PlaylistSoundPlayer extends Component {
                 {...this.props}
               />
               <div className="playing-details">
-                <Timer duration={duration || 0} currentTime={currentTime} {...this.props} />
+                <Timer
+                  className="playing-timer"
+                  duration={duration || 0}
+                  currentTime={currentTime}
+                  {...this.props}
+                />
                 <span className="playing-title">
                   {playlist ? playlist.user.username : ''}
                   {' - '}

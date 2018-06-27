@@ -40,9 +40,16 @@
   white-space: nowrap;
 }
 
+.playing-timer {
+  margin-right: 1em;
+
+  @include extrasmall {
+    display: none;
+  }
+}
+
 .playing-title {
   font-weight: 700;
-  margin: 0 0 0 1em;
   overflow: hidden;
   text-overflow: ellipsis;
 }

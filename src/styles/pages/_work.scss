@@ -498,14 +498,6 @@
     flex: 1 1 22.5%;
     flex-direction: column;
     margin: 0 2.5% 0 0;
-
-    @include extrasmall {
-      flex-basis: 47.5%;
-
-      &:nth-of-type(1) {
-        margin-bottom: 2em;
-      }
-    }
   }
 
   .detail-left {
@@ -562,6 +554,14 @@
     width: auto;
   }
 
+  .item-heading {
+    display: none;
+  }
+
+  .item-details {
+    margin-top: 5vw;
+  }
+
   .item-more,
   .item-more-landing {
     display: none;
@@ -612,6 +612,14 @@
 }
 
 @include extrasmall {
+  .detail {
+    flex-basis: 47.5%;
+
+    &:nth-of-type(1) {
+      margin-bottom: 1em;
+    }
+  }
+
   .item-title {
     font-size: $base-em * $step-two;
   }

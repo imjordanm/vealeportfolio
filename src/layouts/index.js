@@ -42,7 +42,7 @@ export default ({ children, data }) => (
         },
         {
           name: 'keywords',
-          content: 'Film composer advertisement ad New Zealand music producer musician Nick Veale',
+          content: 'Film composer advertisement ad New Zealand music producer Wellington musician Nick Veale',
         },
       ]}
       link={[

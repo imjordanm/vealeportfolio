@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: 'Nick Veale',
     subtitle: 'Composer and Musician',
-    siteUrl: 'https://heuristic-bhabha-2bbf33.netlify.com/',
+    siteUrl: 'https://www.nickveale.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -38,6 +38,14 @@ module.exports = {
           cssnano(),
           flexbugs(),
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.nickveale.com',
+        sitemap: 'https://www.nickveale.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {

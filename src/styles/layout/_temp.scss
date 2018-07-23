@@ -3,10 +3,10 @@
 }
 
 .landing-wrap {
+  @include viewport-unit(height, 60vh);
   align-items: center;
   backface-visibility: hidden;
   display: flex;
-  height: 60vh;
   justify-content: center;
   transform-style: preserve-3d;
   width: 85vw;
@@ -42,9 +42,9 @@
 }
 
 .Tilt {
-  backface-visibility: hidden;
   //will-change: transform;
-  height: 70vh;
+  @include viewport-unit(height, 70vh);
+  backface-visibility: hidden;
   transform-style: preserve-3d;
 }
 
@@ -61,13 +61,13 @@
 
 @include small {
   .landing-wrap {
+    @include viewport-unit(height, 80vh);
     flex-direction: column;
-    height: 80vh;
     justify-content: unset;
   }
 
   .landing-text {
-    margin-top: 15vh;
+    margin-top: 10vw;
   }
 
   .landing-picture {

@@ -49,14 +49,7 @@ const Header = props => (
     <div className="logo" onClick={hideMenu}>
       <Link to="/">Nick Veale</Link>
     </div>
-    {/* <div className="social-icons">
-      <i className="icon-twitter" />
-      <i className="icon-facebook" />
-      <i className="icon-linkedin" />
-      <i className="icon-youtube-play" />
-      <i className="icon-instagram" />
-      <i className="icon-spotify" />
-    </div> */}
+
     <Navigation pages={props.pages} />
   </header>
 );

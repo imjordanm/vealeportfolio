@@ -33,7 +33,7 @@ if (typeof window !== 'undefined') {
 export default ({ children, data }) => (
   <React.Fragment>
     <Helmet
-      title="Nick Veale - Film Composer"
+      title="Nick Veale - Composer and Musician"
       meta={[
         {
           name: 'description',
@@ -55,7 +55,7 @@ export default ({ children, data }) => (
         {
           rel: 'icon',
           type: 'image/png',
-          sizes: '32x32',
+          sizes: '16x16',
           href: '/favicon-16x16.png',
         },
       ]}

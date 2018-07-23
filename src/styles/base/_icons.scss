@@ -2,8 +2,8 @@
   font-family: 'fontello';
   font-style: normal;
   font-weight: normal;
-  src: url('../../src/resources/icons/fontello.woff2?6796428') format('woff2'),
-    url('../../src/resources/icons/fontello.woff?6796428') format('woff');
+  src: url('../../src/resources/icons/fontello.woff2?24834032') format('woff2'),
+    url('../../src/resources/icons/fontello.woff?24834032') format('woff');
 }
 
 [class^='icon-']:before,
@@ -41,26 +41,43 @@
 }
 
 .social-icons {
-  bottom: 4vh;
+  bottom: 1.5em;
+  left: 50%;
   position: absolute;
-  right: 7.5vw;
+  transform: translateX(-50%);
+
+  &.desktop {
+    @include small {
+      display: none;
+    }
+  }
+
+  &.mobile {
+    display: none;
+
+    @include small {
+      display: flex;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
 }
 
 .icon-twitter:before {
   content: '\f099';
+  margin-right: 1.5em;
 } /* '' */
 .icon-facebook:before {
   content: '\f09a';
+  margin-right: 1.5em;
 } /* '' */
-.icon-linkedin:before {
-  content: '\f0e1';
-} /* '' */
+
 .icon-youtube-play:before {
   content: '\f16a';
 } /* '' */
-.icon-instagram:before {
-  content: '\f16d';
-} /* '' */
-.icon-spotify:before {
-  content: '\f1bc';
-} /* '' */
+.icon-twitch:before {
+  content: '\f1e8';
+  margin-right: 1.5em;
+} /* '' */

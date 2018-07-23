@@ -1,5 +1,5 @@
 @mixin tiny {
-  @media screen and (max-width: 420px) {
+  @media screen and (max-width: 440px) {
     @content;
   }
 }
@@ -37,5 +37,48 @@
 @mixin huge {
   @media screen and (min-width: 1900px) {
     @content;
+  }
+}
+
+@mixin viewport-unit($property, $value) {
+  #{$property}: $value;
+
+  $unit: unit($value);
+
+  @if (index((vw, vh, vmin, vmax), $unit) != null) {
+    $devices: (
+      (768px, 1024px),
+      (320px, 480px),
+      (320px, 568px),
+      (414px, 736px),
+      (375px, 667px)
+    );
+
+    @each $device in $devices {
+      $device-width: nth($device, 1);
+      $device-height: nth($device, 2);
+
+      $device-query: 'only screen and (-webkit-min-device-pixel-ratio: 1)';
+      $device-query: '#{$device-query} and (device-width: #{$device-width})';
+      $device-query: '#{$device-query} and (device-height: #{$device-height})';
+
+      $percent: $value / ($value * 0 + 1);
+
+      $percent-width: $device-width * $percent / 100 + !important;
+      $percent-height: $device-height * $percent / 100 + !important;
+
+      @if ($unit == vmin or $unit == vmax) {
+        @media #{$device-query} {
+          #{$property}: if($unit == vmin, $percent-width, $percent-height);
+        }
+      } @else {
+        @media #{$device-query} and (orientation: portrait) {
+          #{$property}: if($unit == vw, $percent-width, $percent-height);
+        }
+        @media #{$device-query} and (orientation: landscape) {
+          #{$property}: if($unit == vw, $percent-height, $percent-width);
+        }
+      }
+    }
   }
 }

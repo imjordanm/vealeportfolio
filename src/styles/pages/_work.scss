@@ -1,7 +1,7 @@
 .work {
+  @include viewport-unit(height, 60vh);
   align-items: center;
   display: flex;
-  height: 60vh;
 }
 
 .test {
@@ -13,6 +13,10 @@
   touch-action: pan-y;
   user-select: none;
   width: 100vw;
+
+  &.clicked {
+    animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1 slideDownList forwards;
+  }
 }
 
 .work-list {
@@ -49,6 +53,9 @@
 
 .item-image {
   border-radius: 4px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
   opacity: 0;
   width: 100%;
 }
@@ -85,8 +92,19 @@
 .item-more-landing {
   cursor: pointer;
   left: 17%;
-  margin-top: 3em;
+  margin: 3em 0;
   position: absolute;
+
+  &.mobile {
+    display: none;
+
+    @include small {
+      display: table;
+      left: 50%;
+      margin: 1.5em 0 0;
+      transform: translateX(-50%);
+    }
+  }
 }
 
 .more-icon {
@@ -140,18 +158,17 @@
 }
 
 .item-overlay {
-  background: $heading-colour;
+  @include viewport-unit(min-height, 100vh);
+  background: $background-colour;
   left: 0;
   margin: 0;
-  min-height: 100vh;
   opacity: 0;
   padding: 0;
   position: fixed;
   top: 0;
   transform: translateY(100%) scaleY(0);
   transform-origin: top;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 0s 0.5s;
+  transition: transform 0s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.5s;
   width: 100%;
   z-index: 101;
 }
@@ -160,7 +177,7 @@
   opacity: 1;
   transform: translateY(0%) scaleY(1);
   transform-origin: top;
-  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0s;
+  transition: transform 0s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.5s;
 }
 
 .item-box-clicked {
@@ -174,45 +191,47 @@
 
 .item-text-clicked {
   margin: 20vh auto 0;
-  width: 85vw;
+  width: 50%;
 }
 
 .item-title-clicked {
-  animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s 1 fadeInHeading
+  animation: 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s 1 fadeInHeading
     forwards;
   margin-top: 10vw;
   opacity: 0;
 
   h1 {
-    color: #fff;
-    font-size: $base-em * $step-eight;
-    margin-bottom: 5vw;
+    //color: #fff;
+    font-size: 3vw;
+    line-height: 1.125;
+    width: 9em;
   }
 }
 
 .item-more-clicked {
-  animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s 1 slideUpContact
+  animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 slideUpContact
     forwards;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 6rem;
   opacity: 0;
 }
 
 .item-heading {
-  color: #fff;
-  font-size: $base-em * $step-two;
-  width: 55%;
+  //color: #fff;
+  font-size: $base-em * $step-one;
+  line-height: 1.25;
+  margin-bottom: 0.75em;
 }
 
 .item-details {
-  margin-top: 0.2em;
-  width: 35%;
+  flex: 1;
 }
 
 .detail {
-  align-items: center;
-  color: $background-colour;
+  //color: $background-colour;
   display: flex;
+  flex-direction: column;
   margin-bottom: 0.6em;
 
   &:last-of-type {
@@ -221,24 +240,20 @@
 }
 
 .detail-left {
-  flex: 2;
   font-size: 0.8em;
-  font-weight: 700;
-  margin-right: 2em;
 }
 
 .detail-right {
-  flex: 5;
+  font-weight: 700;
   text-transform: capitalize;
 }
 
 .item-description {
-  animation: 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s 1 imageAppear
+  animation: 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 imageAppear
     forwards;
-  color: $background-colour;
-  column-count: 2;
-  column-gap: 2em;
-  margin: 3em 0;
+  color: $heading-colour;
+  flex: 4 1;
+  margin-right: 4.5rem;
   opacity: 0;
   white-space: pre-wrap;
 }
@@ -248,7 +263,7 @@
     forwards;
   background: none;
   border: none;
-  color: $background-colour;
+  color: $heading-colour;
   cursor: pointer;
   font-size: 0.7em;
   font-weight: 700;
@@ -259,6 +274,10 @@
   position: fixed;
   text-transform: uppercase;
   top: calc(10vh - 0.7em);
+
+  &.filter {
+    color: $background-colour;
+  }
 }
 
 .item-btn.prev {
@@ -287,17 +306,17 @@
 }
 
 .item-line {
-  animation: 1.1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.1s 1 slideUpBody
+  animation: 1.1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 slideUpBody
     forwards;
-  background-color: $background-colour;
+  background-color: $heading-colour;
   height: 0.3em;
-  margin: 5vw 0;
+  margin: 3rem 0;
   opacity: 0;
   width: 7em;
 }
 
 .item-video {
-  animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.9s 1 slideUpContact
+  animation: 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s 1 slideUpContact
     forwards;
   opacity: 0;
   padding: 56.25% 0 0;
@@ -321,12 +340,12 @@
 
 //Work Bar CSS
 .work-bar {
+  @include viewport-unit(height, 10vh);
   align-items: center;
   bottom: 0;
   color: inherit;
   display: flex;
   font-weight: 700;
-  height: 10vh;
   justify-content: center;
   left: 0;
   margin: 0 auto;
@@ -342,11 +361,11 @@
 }
 
 .filter-list {
+  @include viewport-unit(height, 100vh);
   align-items: center;
   background: $heading-colour;
   color: #fff;
   display: flex;
-  height: 100vh;
   left: 0;
   margin: 0;
   opacity: 0;
@@ -378,6 +397,7 @@
 
     &::before {
       @extend %strikethrough;
+      background-color: $subheading-colour;
     }
 
     &:hover:before,
@@ -477,39 +497,15 @@
 
 @include large {
   .item-more-clicked {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
+    margin-bottom: 3rem;
   }
 
-  .item-heading {
-    width: 100%;
+  .item-description {
+    margin-right: 0;
   }
 
-  .item-details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 7.5vw;
-    width: 100%;
-  }
-
-  .detail {
-    align-items: unset;
-    flex: 1 1 22.5%;
-    flex-direction: column;
-    margin: 0 2.5% 0 0;
-  }
-
-  .detail-left {
-    margin-bottom: 0.5em;
-  }
-
-  .item-line {
-    width: 100%;
-  }
-}
-
-@include medium {
   .work-item {
     margin: 0 15.6vw;
   }
@@ -521,11 +517,50 @@
   .item-cover {
     height: 30vw;
   }
+
+  .item-heading {
+    width: 100%;
+  }
+
+  .item-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 3rem;
+    width: 100%;
+  }
+
+  .detail {
+    align-items: unset;
+    flex-direction: column;
+    margin: 0 3rem 0 0;
+  }
+
+  .detail-left {
+    margin-bottom: 0.5em;
+  }
+}
+
+@include medium {
+  .item-text-clicked {
+    width: 60%;
+  }
+
+  .work-item {
+    margin: 0 14.4vw;
+  }
+
+  .item-box {
+    width: 35vw;
+  }
+
+  .item-cover {
+    height: 35vw;
+  }
 }
 
 @include small {
   .work {
-    height: 80vh;
+    @include viewport-unit(height, 80vh);
   }
 
   .work-item {
@@ -554,21 +589,13 @@
     width: auto;
   }
 
-  .item-heading {
-    display: none;
-  }
-
-  .item-details {
-    margin-top: 5vw;
-  }
-
   .item-more,
   .item-more-landing {
     display: none;
   }
 
   .item-box {
-    max-width: 50vh;
+    @include viewport-unit(max-width, 50vh);
     width: 50vw;
   }
 
@@ -578,11 +605,12 @@
 
   .item-text-clicked {
     margin: 10vw auto 0;
+    width: 85vw;
   }
 
   .item-title-clicked {
     h1 {
-      font-size: $base-em * $step-six;
+      font-size: $base-em * $step-three;
     }
   }
 
@@ -592,8 +620,8 @@
   }
 
   .item-cover {
+    @include viewport-unit(max-height, 50vh);
     height: 50vw;
-    max-height: 50vh;
   }
 
   .work-bar {
@@ -612,14 +640,6 @@
 }
 
 @include extrasmall {
-  .detail {
-    flex-basis: 47.5%;
-
-    &:nth-of-type(1) {
-      margin-bottom: 1em;
-    }
-  }
-
   .item-title {
     font-size: $base-em * $step-two;
   }
@@ -628,12 +648,8 @@
     font-size: $base-em * $step-one;
   }
 
-  .item-title-clicked {
-    margin: 0;
-
-    h1 {
-      font-size: $base-em * $step-five;
-    }
+  .detail {
+    margin-right: 1.5rem;
   }
 
   .item-description {
@@ -650,7 +666,7 @@
     margin: 0;
 
     h1 {
-      font-size: $base-em * $step-four;
+      font-size: $base-em * $step-two;
     }
   }
 }

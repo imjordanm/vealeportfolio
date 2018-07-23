@@ -7,15 +7,15 @@ const ClickedItem = props => (
       <div className="item-text-clicked">
         <div className="item-title-clicked">
           <h1>{props.item.title}</h1>
+          <div className="item-line" />
         </div>
 
         <div className="item-more-clicked">
-          <div className="item-heading">{props.item.heading}</div>
+          <div className="item-description">
+            <div className="item-heading">{props.item.heading}</div>
+            {props.item.description}
+          </div>
           <div className="item-details">
-            <div className="detail">
-              <div className="detail-left">Client</div>
-              <div className="detail-right">{props.item.artist}</div>
-            </div>
             <div className="detail">
               <div className="detail-left">Year</div>
               <div className="detail-right">{props.item.year}</div>
@@ -31,8 +31,6 @@ const ClickedItem = props => (
           </div>
         </div>
 
-        <div className="item-line" />
-
         {props.item.video ? (
           <div className="item-video">
             <iframe
@@ -47,15 +45,28 @@ const ClickedItem = props => (
           </div>
         ) : null}
 
-        {props.item.music ? (
+        {props.item.soundcloud ? (
           <Playlist
+            key={props.item.title}
             clientId="358b0fa53153c2425022d97d00261118"
-            resolveUrl={props.item.music}
+            resolveUrl={props.item.soundcloud}
             preload="metadata"
           />
         ) : null}
 
-        <div className="item-description">{props.item.description}</div>
+        {props.item.spotify ? (
+          <div className="item-music">
+            <iframe
+              title="Spotify"
+              className="SpotifyPlayer"
+              src={`https://embed.spotify.com/?uri=${props.item.spotify}&amp;theme=${'black'}`}
+              width="100%"
+              height="311"
+              frameBorder="0"
+              allowTransparency="true"
+            />
+          </div>
+        ) : null}
       </div>
 
       <button className="item-btn close" onClick={props.itemClose}>

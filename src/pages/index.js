@@ -53,9 +53,26 @@ export default class IndexPage extends React.PureComponent {
         ) : (
           <Landing data={data} showPlayer={this.showPlayer} />
         )}
+        <div className="social-icons desktop">
+          <a href="https://twitter.com/Gordog47" target="_blank">
+            <i className="icon-twitter" />
+          </a>
+          <a href="https://www.twitch.tv/idomusic" target="_blank">
+            <i className="icon-twitch" />
+          </a>
+          <a href="https://www.facebook.com/NickVealeMusic" target="_blank">
+            <i className="icon-facebook" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCV6M_X_9bpi_eMMr9itX5SA?view_as=subscriber"
+            target="_blank"
+          >
+            <i className="icon-youtube-play" />
+          </a>
+        </div>
         <Playlist
           clientId="358b0fa53153c2425022d97d00261118"
-          resolveUrl="https://soundcloud.com/nick-veale/sets/lounge"
+          resolveUrl="https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX"
           preload="metadata"
           class={`fixed landing ${this.state.display}`}
         />
@@ -87,6 +104,29 @@ const Landing = props => (
           />
           <div className="picture-reveal" />
         </div>
+      </div>
+      <div className="item-more-landing mobile" onClick={props.showPlayer}>
+        <div className="more-icon">
+          <div className="play" />
+        </div>
+        <p className="more-text">Listen to my reel</p>
+      </div>
+      <div className="social-icons mobile">
+        <a href="https://twitter.com/Gordog47" target="_blank">
+          <i className="icon-twitter" />
+        </a>
+        <a href="https://www.twitch.tv/idomusic" target="_blank">
+          <i className="icon-twitch" />
+        </a>
+        <a href="https://www.facebook.com/NickVealeMusic" target="_blank">
+          <i className="icon-facebook" />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCV6M_X_9bpi_eMMr9itX5SA?view_as=subscriber"
+          target="_blank"
+        >
+          <i className="icon-youtube-play" />
+        </a>
       </div>
     </div>
   </div>

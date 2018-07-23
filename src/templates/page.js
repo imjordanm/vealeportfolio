@@ -60,22 +60,10 @@ export default function Template({ data }) {
               <div className="about-samples">
                 <Playlist
                   clientId="358b0fa53153c2425022d97d00261118"
-                  resolveUrl="https://soundcloud.com/nick-veale/sets/lounge"
+                  resolveUrl="https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX"
                   preload="metadata"
-                  class="fixed sample"
+                  class="sample"
                 />
-                {/* <div className="sample">
-                  <p>Advertising Reel</p>
-                  <div className="more-icon">
-                    <div className="play" />
-                  </div>
-                </div>
-                <div className="sample">
-                  <p>Film Reel</p>
-                  <div className="more-icon">
-                    <div className="play" />
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -162,9 +150,9 @@ export const pageQuery = graphql`
             description
             year
             genre
-            video
             heading
-            music
+            soundcloud
+            spotify
             colour
           }
         }
@@ -172,7 +160,7 @@ export const pageQuery = graphql`
       html
     }
 
-    about: imageSharp(id: { regex: "/nature/" }) {
+    about: imageSharp(id: { regex: "/aboutpicture/" }) {
       sizes(maxWidth: 1800) {
         ...GatsbyImageSharpSizes
       }

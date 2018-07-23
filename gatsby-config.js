@@ -5,7 +5,7 @@ const flexbugs = require('postcss-flexbugs-fixes');
 module.exports = {
   siteMetadata: {
     title: 'Nick Veale',
-    subtitle: 'Musician and Film Composer',
+    subtitle: 'Composer and Musician',
     siteUrl: 'https://heuristic-bhabha-2bbf33.netlify.com/',
   },
   plugins: [

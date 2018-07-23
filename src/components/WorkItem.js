@@ -25,7 +25,7 @@ class WorkItem extends React.PureComponent {
                           <div className="more-icon">
                             <div className="play" />
                           </div>
-                          <p className="more-text">Read or listen</p>
+                          <p className="more-text">Read more or listen</p>
                         </div>
                       </div>
                     </div>

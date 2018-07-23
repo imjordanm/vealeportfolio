@@ -56,6 +56,21 @@ class PlaylistSoundPlayer extends Component {
   renderTrackList() {
     const { playlist } = this.props;
 
+    if (!playlist && this.props.track) {
+      const track = this.props.track;
+      return (
+        <button
+          key={track.id}
+          className="flex flex-center full-width left-align button button-transparent player-track is-active"
+          onClick={this.playTrackAtIndex.bind(this, 0)}
+        >
+          <span className="track-number">{1}</span>
+          <span className="track-title">{track.title}</span>
+          <span className="track-duration">{Timer.prettyTime(track.duration / 1000)}</span>
+        </button>
+      );
+    }
+
     if (!playlist) {
       return <div className="p2 center">Loading...</div>;
     }
@@ -81,7 +96,9 @@ class PlaylistSoundPlayer extends Component {
   }
 
   render() {
-    const { playlist, currentTime, duration } = this.props;
+    const {
+      playlist, currentTime, duration, track,
+    } = this.props;
 
     return (
       <div className={this.props.class ? `music-player ${this.props.class}` : 'music-player'}>
@@ -113,8 +130,12 @@ class PlaylistSoundPlayer extends Component {
                 />
                 <span className="playing-title">
                   {playlist ? playlist.user.username : ''}
-                  {' - '}
-                  {playlist ? playlist.tracks[this.state.activeIndex].title : ''}
+                  {track ? ' ' : ' - '}
+                  {playlist
+                    ? playlist.tracks[this.state.activeIndex].title
+                    : track
+                      ? track.title
+                      : ''}
                 </span>
               </div>
             </div>

@@ -23,9 +23,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                   description
                   year
                   genre
-                  video
                   heading
-                  music
+                  soundcloud
+                  spotify
                   colour
                 }
               }

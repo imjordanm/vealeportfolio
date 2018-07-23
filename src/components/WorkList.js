@@ -12,7 +12,7 @@ const options = {
   wrapAround: false,
   prevNextButtons: false,
   pageDots: false,
-  autoPlay: 5000,
+  autoPlay: 3000,
   selectedAttraction: 0.015,
   friction: 0.3,
 };
@@ -165,11 +165,6 @@ export default class WorkList extends React.Component {
         ) : null}
         <div
           className={this.state.clickedItem !== null ? 'item-overlay clicked' : 'item-overlay'}
-          style={
-            this.state.clickedItem !== null && this.state.clickedItem.colour !== null
-              ? { background: this.state.clickedItem.colour }
-              : { background: 'rgb(36, 36, 36)' }
-          }
         />
         <div className={this.state.clickedItem !== null ? 'test clicked' : 'test'}>
           <div className="work-list">

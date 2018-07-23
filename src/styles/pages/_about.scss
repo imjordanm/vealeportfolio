@@ -94,10 +94,10 @@
 .about-section-heading {
   flex: 1;
   font-size: $base-em * $step-zero;
-  margin: 0.3em 10vw 0 0;
+  margin: 0.3em 5vw 0 0;
 
-  @include small {
-    font-size: $base-em * $step-zero;
+  @include extrasmall {
+    font-size: $base-em * $step-one;
   }
 
   @include extrasmall {
@@ -108,6 +108,10 @@
 .about-section-text {
   flex: 3;
   font-size: $base-em * $step-one;
+
+  @include small {
+    font-size: $base-em * $step-zero;
+  }
 
   p {
     margin: 0;

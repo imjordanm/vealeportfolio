@@ -58,17 +58,7 @@ class PlaylistSoundPlayer extends Component {
 
     if (!playlist && this.props.track) {
       const track = this.props.track;
-      return (
-        <button
-          key={track.id}
-          className="flex flex-center full-width left-align button button-transparent player-track is-active"
-          onClick={this.playTrackAtIndex.bind(this, 0)}
-        >
-          <span className="track-number">{1}</span>
-          <span className="track-title">{track.title}</span>
-          <span className="track-duration">{Timer.prettyTime(track.duration / 1000)}</span>
-        </button>
-      );
+      return null;
     }
 
     if (!playlist) {

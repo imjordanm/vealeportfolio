@@ -140,7 +140,7 @@ items:
       colour: rgb(147, 147, 147)
     - artist: Slymouse Supreme
       category: release
-      cover: /images/drenchtheworld.jpg
+      cover: /images/drenchworldinhoney.jpg
       heading: >
         My final release under the Alias ‘Slymouse Supreme’. This release was created to raise awareness for the dying bee population.
       description: >

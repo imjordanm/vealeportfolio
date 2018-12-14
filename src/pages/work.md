@@ -8,8 +8,11 @@ items:
       category: commercial
       cover: /images/knowyourmind.jpg
       heading: >
-        Music used in Victoria Universities flagship marketing campaign titled ‘Know Your Mind’.
-      description: The music was created to appeal to a younger demographic while maintaining the university’s rich sense of history.
+        Music used in Victoria Universities flagship marketing campaign titled
+        ‘Know Your Mind’.
+      description:
+        The music was created to appeal to a younger demographic while
+        maintaining the university’s rich sense of history.
       genre: Inspirational
       title: Know Your Mind 2018
       year: 2018
@@ -19,9 +22,13 @@ items:
       category: commercial
       cover: /images/vicinfoevening.jpg
       heading: >
-        Music used for Radio Promotion of an information evening at Victoria University.
+        Music used for Radio Promotion of an information evening at Victoria
+        University.
       description: >
-        This was an alternate idea to the main music that was used throughout the campaign. The marketing team loved the music but felt it didn’t fit the mood for the videos and decided to use it in promotion of the information evening instead.
+        This was an alternate idea to the main music that was used throughout
+        the campaign. The marketing team loved the music but felt it didn’t fit
+        the mood for the videos and decided to use it in promotion of the
+        information evening instead.
       genre: Inspirational
       title: Victoria Uni Information Evening
       year: 2018
@@ -30,22 +37,26 @@ items:
       category: commercial
       cover: /images/studentlevy.jpg
       heading: >
-        Music used in a Student Services Levy informative for Victoria University.
+        Music used in a Student Services Levy informative for Victoria
+        University.
       description: >
-        This music was designed to provide a light, joyful mood underneath a full monologue of the informative.
+        This music was designed to provide a light, joyful mood underneath a
+        full monologue of the informative.
       genre: Indie
       title: Student Services Levy
       year: 2018
-      video:
+      ? video
       soundcloud: https://soundcloud.com/nick-veale/cheer-up-nuge/s-5mpID
       colour: rgb(47, 138, 186)
     - artist: Nick Veale
       category: commercial
       cover: /images/mccshowreel.jpg
       heading: >
-        Music used in the showcase reel for the Miramar Creative Center in Wellington.
+        Music used in the showcase reel for the Miramar Creative Center in
+        Wellington.
       description: >
-        This music was designed to provide an epic / cinematic / Hollywood feel to the reel to make it more sleek, professional, and impressive. 
+        This music was designed to provide an epic / cinematic / Hollywood feel
+        to the reel to make it more sleek, professional, and impressive.
       genre: Orchestral Film
       title: MCC Showreel
       year: 2018
@@ -55,9 +66,14 @@ items:
       cover: /images/hangtime.jpg
       colour: rgb(43, 57, 115)
       heading: >
-        Song composed for the intro sequence to the feature length romantic comedy 'Hang Time'.
+        Song composed for the intro sequence to the feature length romantic
+        comedy 'Hang Time'.
       description: >
-        After the director was unable to get rights to their dream intro sequence song, I was tasked with creating a similar feeling song to fill its place. With this request came the opportunity to tailor it even more to the sequence and what results is a custom-made song perfect for the film.
+        After the director was unable to get rights to their dream intro
+        sequence song, I was tasked with creating a similar feeling song to fill
+        its place. With this request came the opportunity to tailor it even more
+        to the sequence and what results is a custom-made song perfect for the
+        film.
       genre: Comedy
       title: I’m Getting Married
       year: 2019
@@ -68,7 +84,9 @@ items:
       heading: >
         Cue composed for the feature length romantic comedy 'Hang Time'.
       description: >
-        This cue appears towards the end of the film during a scene where the main characters lie in a river to ease their hangovers. This point is also a key developmental motif in the characters’ evolution.
+        This cue appears towards the end of the film during a scene where the
+        main characters lie in a river to ease their hangovers. This point is
+        also a key developmental motif in the characters’ evolution.
       genre: Comedy
       title: Let’s Get Cleansed
       year: 2019
@@ -80,7 +98,9 @@ items:
       heading: >
         Cue composed for the gripping thriller short ‘Hark’.
       description: >
-        This cue appears at a time when the main character returns to a place where he has reason to believe a young child has been murdered. He finds no evidence and begins to panic before rushing home.
+        This cue appears at a time when the main character returns to a place
+        where he has reason to believe a young child has been murdered. He finds
+        no evidence and begins to panic before rushing home.
       genre: Thriller
       title: Return to the Forest
       year: 2017
@@ -92,7 +112,11 @@ items:
       heading: >
         Cue composed for the gripping thriller short ‘Hark’.
       description: >
-        This cue accompanies a montage of shots showing the main character’s depressive attempts to reintegrate back into his life. It was created using an existing cue in the film, which I reversed and pitch shifted to create something new. It also mirrors the events of the original cue and adds to the film’s circular narrative. 
+        This cue accompanies a montage of shots showing the main character’s
+        depressive attempts to reintegrate back into his life. It was created
+        using an existing cue in the film, which I reversed and pitch shifted to
+        create something new. It also mirrors the events of the original cue and
+        adds to the film’s circular narrative.
       genre: Thriller
       title: Reintegration
       year: 2017
@@ -104,9 +128,14 @@ items:
       heading: >
         Thematic Material composed for the short drama 'Red Envelopes'.
       description: >
-        This film follows a young second-generation Cantonese girl, her struggle to integrate into New Zealand culture, and her two conflicting lives. To represent this, I wanted to create a melody / theme that felt displaced (or without a home), and that shared instrumentation from both Western and Eastern music. 
-        
-        In this particular part of the film the Eastern instruments appear further away, showing her current disconnect from her roots.
+        This film follows a young second-generation Cantonese girl, her struggle
+        to integrate into New Zealand culture, and her two conflicting lives. To
+        represent this, I wanted to create a melody / theme that felt displaced
+        (or without a home), and that shared instrumentation from both Western
+        and Eastern music. 
+
+        In this particular part of the film the Eastern instruments appear
+        further away, showing her current disconnect from her roots.
       genre: Cultural Drama
       title: Xiaolings Theme
       year: 2018
@@ -118,7 +147,8 @@ items:
       heading: >
         Music composed for the intense action short 'Don't Pick Up'
       description: >
-        This music accompanies a man’s desperate attempt to stop his friend picking up a phone call that would trigger an explosion.
+        This music accompanies a man’s desperate attempt to stop his friend
+        picking up a phone call that would trigger an explosion.
       genre: Action
       title: Don’t Pick Up
       year: 2018
@@ -128,11 +158,14 @@ items:
       category: release
       cover: /images/discovery.jpg
       heading: >
-        My debut solo album release. Music was composed over a period of around a month as I was first getting into writing for film.
+        My debut solo album release. Music was composed as I was first starting
+        to write for film.
       description: >
-       I wanted to create something that would be a few simple ideas stretched over around and hour and would slowly descent into a sonic hypnotic psychosis and immerge on the other side. 
-      
-       The title “Discovery” is a reference to the discovery one goes through in their early twenties as they learn to live life independently from their parents.  
+        I wanted to create a few simple ideas to stretch over an hour, and that
+        would slowly descend into a sonic hypnotic psychosis before emerging
+        triumphantly on the other side. The title ‘Discovery’ refers to the
+        discovery one goes through in their early twenties as they learn to live
+        life independently from their parents.
       genre: Post Rock
       title: Discovery
       year: 2016
@@ -142,11 +175,12 @@ items:
       category: release
       cover: /images/drenchworldinhoney.jpg
       heading: >
-        My final release under the Alias ‘Slymouse Supreme’. This release was created to raise awareness for the dying bee population.
+        My final release under the alias ‘Slymouse Supreme’. This release was
+        created to raise awareness for the dying bee population.
       description: >
-        I wanted to create an album that would have a little something for everyone as well as educate people on how to do their part in increasing the bee population. 
-        
-        All proceeds are still being donated to various save the bee charities.
+        I wanted to create an album with strong sonic characteristics that would
+        educate people on doing their part to encourage bee re-population. All
+        proceeds are donated to various save the bee charities.
       genre: Post Rock
       title: Drench the World in Honey
       year: 2016

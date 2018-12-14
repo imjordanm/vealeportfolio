@@ -49,6 +49,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://www.nickveale.com"
+      }
+    },
+    {
       resolve: 'gatsby-plugin-sitemap',
     },
   ],

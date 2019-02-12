@@ -34,6 +34,7 @@ const Form = props => (
     method="POST"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
+    data-netlify-recaptcha="true"
     onSubmit={props.formValid}
   >
     <input type="hidden" name="form-name" value="contact" />

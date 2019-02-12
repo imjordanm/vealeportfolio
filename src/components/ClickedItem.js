@@ -79,10 +79,10 @@ const ClickedItem = props => (
       </div>
 
       <button className="item-btn close" onClick={props.itemClose}>
-        Close
+        Back
       </button>
       <button className="item-btn prev" onClick={props.itemSwitch}>
-        Previous
+        Prev
       </button>
       <button className="item-btn next" onClick={props.itemSwitch}>
         Next

@@ -92,11 +92,21 @@ exports.createPages = ({ actions, graphql }) => {
   });
 };
 
-exports.onCreateWebpackConfig = ({ config, stage }) => {
+/* exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === 'build-html') {
     config.loader('null', {
       test: /flickity/,
       loader: 'null-loader',
     });
   }
-};
+}; */
+
+/* exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
+  switch (stage) {
+    case `build-html`:
+    actions.setWebpackConfig({
+      test: /flickity/,
+      loader: 'null-loader',
+    })
+    }
+} */

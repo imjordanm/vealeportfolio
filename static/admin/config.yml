@@ -2,17 +2,224 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "static/images"
-public_folder: "images"
+media_folder: static/images
+public_folder: /images
+display_url: https://www.nickveale.com
 
 collections:
-  - name: "Pages"
+  - name: "pages"
     label: "Pages"
-    folder: "src/pages"
-    create: true
-    fields:
-      - {label: "Path", name: "path", widget: "string"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Order", name: "order", widget: "number"}
-      - {label: "Items", name: "items", widget: "object", fields: [{label: "Item", name: "item", widget: "list", fields: [{label: "Title", name: "title", widget: "string"}, {label: "Artist", name: "artist", widget: "string"}, {label: "Cover", name: "cover", widget: "image"}, {label: "Category", name: "category", widget: "string"}, {label: "Heading", name: "heading", widget: "string"}, {label: "Description", name: "description", widget: "string", required: false}, {label: "Year", name: "year", widget: "number"}, {label: "Genre", name: "genre", widget: "string"}, {label: "Video", name: "video", widget: "string", required: false}, {label: "Soundcloud", name: "soundcloud", widget: "string", required: false}, {label: "Spotify", name: "spotify", widget: "string", required: false}, {label: "Colour", name: "colour", widget: "string", required: false}]}], required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
+    files:
+      - file: "src/pages/page/home.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - {
+              label: "Relative Path",
+              name: "relpath",
+              widget: "hidden",
+              default: "../../..",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Meta Title",
+              name: "metaTitle",
+              widget: "string",
+              hint: "Title that appears on the browser tab.",
+            }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "text",
+              hint:
+                "SEO description that appears in search engines under the site
+                name.",
+            }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Playlist", name: "playlist", widget: "string" }
+          - {
+              label: "Social",
+              name: "social",
+              widget: "object",
+              fields:
+                [
+                  {
+                    label: "Item",
+                    name: "item",
+                    widget: "list",
+                    fields:
+                      [
+                        {
+                          label: "Icon",
+                          name: "icon",
+                          widget: "select",
+                          options: ["youtube", "twitch", "twitter", "facebook"],
+                        },
+                        { label: "Link", name: "link", widget: "string" },
+                      ],
+                    required: false,
+                  },
+                ],
+            }
+      - file: "src/pages/page/about.md"
+        label: "About"
+        name: "about"
+        fields:
+          - {
+              label: "Relative Path",
+              name: "relpath",
+              widget: "hidden",
+              default: "../../..",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Header Order", name: "order", widget: "number" }
+          - {
+              label: "Meta Title",
+              name: "metaTitle",
+              widget: "string",
+              hint: "Title that appears on the browser tab.",
+            }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "text",
+              hint:
+                "SEO description that appears in search engines under the site
+                name.",
+            }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Playlist", name: "playlist", widget: "string" }
+          - {
+              label: "Sections",
+              name: "sections",
+              widget: "object",
+              fields:
+                [
+                  {
+                    label: "Section",
+                    name: "section",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Heading", name: "heading", widget: "string" },
+                        {
+                          label: "Description",
+                          name: "description",
+                          widget: "text",
+                        },
+                      ],
+                  },
+                ],
+              required: false,
+            }
+      - file: "src/pages/page/work.md"
+        label: "Work"
+        name: "work"
+        fields:
+          - {
+              label: "Relative Path",
+              name: "relpath",
+              widget: "hidden",
+              default: "../../..",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Header Order", name: "order", widget: "number" }
+          - {
+              label: "Meta Title",
+              name: "metaTitle",
+              widget: "string",
+              hint: "Title that appears on the browser tab.",
+            }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "text",
+              hint:
+                "SEO description that appears in search engines under the site
+                name.",
+            }
+          - {
+              label: "Items",
+              name: "items",
+              widget: "object",
+              fields:
+                [
+                  {
+                    label: "Item",
+                    name: "item",
+                    widget: "list",
+                    fields:
+                      [
+                        { label: "Title", name: "title", widget: "string" },
+                        { label: "Artist", name: "artist", widget: "string" },
+                        {
+                          label: "Cover",
+                          name: "cover",
+                          widget: "image",
+                          required: false,
+                        },
+                        {
+                          label: "Category",
+                          name: "category",
+                          widget: "string",
+                        },
+                        { label: "Heading", name: "heading", widget: "string" },
+                        {
+                          label: "Description",
+                          name: "description",
+                          widget: "string",
+                          required: false,
+                        },
+                        { label: "Year", name: "year", widget: "number" },
+                        { label: "Genre", name: "genre", widget: "string" },
+                        {
+                          label: "Video",
+                          name: "video",
+                          widget: "string",
+                          required: false,
+                        },
+                        {
+                          label: "Soundcloud",
+                          name: "soundcloud",
+                          widget: "string",
+                          required: false,
+                        },
+                        {
+                          label: "Spotify",
+                          name: "spotify",
+                          widget: "string",
+                          required: false,
+                        },
+                        {
+                          label: "Colour",
+                          name: "colour",
+                          widget: "string",
+                          required: false,
+                        },
+                      ],
+                  },
+                ],
+              required: false,
+            }
+      - file: "src/pages/page/contact.md"
+        label: "Contact"
+        name: "contact"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Header Order", name: "order", widget: "number" }
+          - {
+              label: "Meta Title",
+              name: "metaTitle",
+              widget: "string",
+              hint: "Title that appears on the browser tab.",
+            }
+          - {
+              label: "Meta Description",
+              name: "metaDescription",
+              widget: "text",
+              hint:
+                "SEO description that appears in search engines under the site
+                name.",
+            }

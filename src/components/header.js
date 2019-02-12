@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Link from './Link';
 
 const menuToggle = () => {
   if (document.getElementsByClassName('header toggled')[0]) {
@@ -33,7 +33,7 @@ const Navigation = props => (
         <ul className="nav-list">
           {props.pages.map(({ node }) => (
             <li key={node.frontmatter.title}>
-              <Link activeClassName="active" to={node.frontmatter.path} onClick={hideMenu}>
+              <Link activeClassName="active" to={node.fields.slug} onClick={hideMenu}>
                 {node.frontmatter.title}
               </Link>
             </li>

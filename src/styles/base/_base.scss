@@ -31,6 +31,10 @@ body {
   height: 100%;
 }
 
+div[role='group'][tabindex] {
+  height: 100%;
+}
+
 h6,
 h5,
 h4,

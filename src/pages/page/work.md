@@ -1,5 +1,4 @@
 ---
-path: /work
 title: Work
 order: 2
 items:

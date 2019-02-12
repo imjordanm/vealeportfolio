@@ -1,4 +1,3 @@
-const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const flexbugs = require('postcss-flexbugs-fixes');
 
@@ -10,10 +9,21 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
+    'gatsby-plugin-lodash',
     'gatsby-transformer-remark',
-    'gatsby-plugin-netlify-cms',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
     'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-layout',
+      options: {
+        component: require.resolve('./src/layout/index.js'),
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -24,20 +34,16 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'img',
-        path: `${__dirname}/src/resources/images`,
+        name: 'static/images',
+        path: `${__dirname}/static/images`,
       },
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-plugin-postcss-sass',
+      resolve: 'gatsby-plugin-sass',
       options: {
-        postCssPlugins: [
-          autoprefixer({ browsers: ['last 2 versions', '> 1% in US', 'iOS >= 6'] }),
-          cssnano(),
-          flexbugs(),
-        ],
+        postCssPlugins: [cssnano(), flexbugs()],
       },
     },
     {
@@ -45,14 +51,14 @@ module.exports = {
       options: {
         host: 'https://www.nickveale.com',
         sitemap: 'https://www.nickveale.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }],
+        policy: [{ userAgent: '*', allow: '/', disallow: '/home' }],
       },
     },
     {
-      resolve: "gatsby-plugin-canonical-urls",
+      resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: "https://www.nickveale.com"
-      }
+        siteUrl: 'https://www.nickveale.com',
+      },
     },
     {
       resolve: 'gatsby-plugin-sitemap',

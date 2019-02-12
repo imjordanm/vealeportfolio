@@ -97,3 +97,24 @@
     }
   }
 }
+
+.captcha-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+
+  @include medium {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.captcha-text {
+  color: rgb(151, 39, 39);
+  font-weight: 600;
+  margin: 1.5rem 0 0;
+
+  @include medium {
+    margin: 0 0 0.5rem 1.5rem;
+  }
+}

@@ -1,10 +1,13 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Img from 'gatsby-image';
+import MarkdownIt from 'markdown-it';
 import Playlist from '../components/Playlist';
 
+const md = new MarkdownIt({ html: true, linkify: true });
+
 const AboutPageTemplate = ({
-  title, heading, image, placeholder, sections, content,
+  heading, image, placeholder, sections,
 }) => (
   <section className="about">
     <div className="about-text">
@@ -37,7 +40,13 @@ const AboutPageTemplate = ({
       <div className="about-section" key={section.heading}>
         <h2 className="about-section-heading">{section.heading}</h2>
         <div className="about-section-text">
-          <p>{section.description}</p>
+          {section.description ? (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: md.render(section.description.replace(/\n/g, '\n\n')),
+              }}
+            />
+          ) : null}
 
           {section.playlist ? (
             <div className="about-samples">
@@ -66,12 +75,10 @@ export default class AboutPage extends React.PureComponent {
           <meta name="description" content={page.frontmatter.metaDescription} />
         </Helmet>
         <AboutPageTemplate
-          title={page.frontmatter.title}
           heading={page.frontmatter.heading}
           image={page.fields.imageLink}
           placeholder={page.frontmatter.image}
           sections={page.frontmatter.sections}
-          content={page.html}
         />
       </React.Fragment>
     );
@@ -106,7 +113,6 @@ export const aboutPageQuery = graphql`
           }
         }
       }
-      html
     }
   }
 `;

@@ -112,10 +112,6 @@
   @include small {
     font-size: $base-em * $step-zero;
   }
-
-  p {
-    margin: 0;
-  }
 }
 
 .about-samples {

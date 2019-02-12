@@ -1,6 +1,10 @@
 ---
 title: Work
 order: 2
+metaTitle: Nick Veale - Work
+metaDescription: >-
+  Nick Veale is a professional composer based in Wellington, New Zealand. He
+  composes and produces music for film, advertisements and creative projects.
 items:
   item:
     - artist: Nick Veale
@@ -44,7 +48,7 @@ items:
       genre: Indie
       title: Student Services Levy
       year: 2018
-      ? video
+      video:
       soundcloud: https://soundcloud.com/nick-veale/cheer-up-nuge/s-5mpID
       colour: rgb(47, 138, 186)
     - artist: Nick Veale

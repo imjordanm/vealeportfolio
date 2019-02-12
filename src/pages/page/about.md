@@ -24,7 +24,7 @@ sections:
     - description: >-
         I have produced music for large scale advertisements and for various
         feature length and short films. You can play samples of my work below or
-        hear everything on the work page.
+        hear everything on the <a href="/work">work</a> page.
       heading: What have I done?
       playlist: https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX
 ---

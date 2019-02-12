@@ -1,26 +1,39 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import PropTypes from 'prop-types';
+import MarkdownIt from 'markdown-it';
 import ContactForm from '../components/ContactForm';
 
-const ContactPageTemplate = ({
-  title, heading, image, placeholder, sections, content,
-}) => (
+const md = new MarkdownIt({ html: true, linkify: true });
+
+const ContactPageTemplate = ({ heading, description }) => (
   <section className="contact">
     <div className="contact-box">
       <div className="page-heading">
-        <h1>Let's collaborate!</h1>
+        <h1>{heading}</h1>
       </div>
-      <div className="contact-subheading">
-        <p>
-          Find out more about what I can do for your next project by getting in touch via&nbsp;
-          <a href="mailto:novingle@gmail.com">email</a> or by filling out the form below. I am
-          always up for a coffee.
-        </p>
-      </div>
+
+      {description ? (
+        <div
+          className="contact-subheading"
+          dangerouslySetInnerHTML={{
+            __html: md.render(description.replace(/\n/g, '\n\n')),
+          }}
+        />
+      ) : null}
       <ContactForm />
     </div>
   </section>
 );
+
+ContactPageTemplate.propTypes = {
+  heading: PropTypes.string.isRequired,
+  description: PropTypes.string,
+};
+
+ContactPageTemplate.defaultProps = {
+  description: '',
+};
 
 export default class ContactPage extends React.PureComponent {
   render() {
@@ -31,17 +44,20 @@ export default class ContactPage extends React.PureComponent {
         <Helmet>
           <title>{page.frontmatter.metaTitle}</title>
           <meta name="description" content={page.frontmatter.metaDescription} />
+          <script src="https://www.google.com/recaptcha/api.js" async defer />
         </Helmet>
         <ContactPageTemplate
-          title={page.frontmatter.title}
           heading={page.frontmatter.heading}
-          sections={page.frontmatter.sections}
-          content={page.html}
+          description={page.frontmatter.description}
         />
       </React.Fragment>
     );
   }
 }
+
+ContactPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export const contactPageQuery = graphql`
   query contactPage {
@@ -54,8 +70,8 @@ export const contactPageQuery = graphql`
         heading
         metaTitle
         metaDescription
+        description
       }
-      html
     }
   }
 `;

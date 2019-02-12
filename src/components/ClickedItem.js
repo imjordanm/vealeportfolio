@@ -1,5 +1,8 @@
 import React from 'react';
+import MarkdownIt from 'markdown-it';
 import Playlist from './Playlist';
+
+const md = new MarkdownIt({ html: true, linkify: true });
 
 const ClickedItem = props => (
   <React.Fragment>
@@ -13,7 +16,13 @@ const ClickedItem = props => (
         <div className="item-more-clicked">
           <div className="item-description">
             <div className="item-heading">{props.item.heading}</div>
-            {props.item.description}
+            {props.item.description ? (
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: md.render(props.item.description.replace(/\n/g, '\n\n')),
+                }}
+              />
+            ) : null}
           </div>
           <div className="item-details">
             <div className="detail">

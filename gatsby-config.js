@@ -46,6 +46,7 @@ module.exports = {
         postCssPlugins: [cssnano(), flexbugs()],
       },
     },
+    'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {

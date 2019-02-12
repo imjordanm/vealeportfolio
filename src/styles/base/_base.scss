@@ -19,12 +19,10 @@ html {
 body {
   background: $background-colour;
   color: $body-colour;
-  //-webkit-text-stroke: 1px rgba($body-colour, 0.2);
   font-family: $primary-font, $system-fonts;
   font-size: $base-em * $step-zero;
   height: 100%;
-  letter-spacing: 0.02em;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 #___gatsby {
@@ -163,8 +161,12 @@ a:hover {
 
 p {
   color: $body-colour;
-  margin: 0;
-  margin-bottom: $vertical-rhythm;
+  display: inline-block;
+  margin: 0 0 $vertical-rhythm 0;
+
+  &:last-of-type {
+    margin: 0;
+  }
 }
 
 img {

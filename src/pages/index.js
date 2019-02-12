@@ -92,7 +92,7 @@ const Landing = props => (
         <div className="more-icon">
           <div className="play" />
         </div>
-        <p className="more-text">Listen to my reel</p>
+        <span className="more-text">Listen to my reel</span>
       </div>
     </div>
     <div className="landing-picture">
@@ -121,7 +121,7 @@ const Landing = props => (
         <div className="more-icon">
           <div className="play" />
         </div>
-        <p className="more-text">Listen to my reel</p>
+        <span className="more-text">Listen to my reel</span>
       </div>
       <div className="social-icons mobile">
         {props.social.map(item => (

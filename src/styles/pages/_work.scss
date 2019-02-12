@@ -73,7 +73,7 @@
 .item-title {
   font-size: 3vw;
   line-height: 1.125;
-  text-shadow: 0 0 1px #f6f6f6;
+  text-shadow: 0 0 1px #ffffff5e;
   width: 10em;
 }
 
@@ -275,24 +275,56 @@
   text-transform: uppercase;
   top: calc(10vh - 0.7em);
 
-  &.filter {
-    color: $background-colour;
+  &.prev,
+  &.next,
+  &.close {
+    background: rgb(218, 218, 218);
+    border-radius: 3px;
+    color: #fff;
+    padding: 0.75em 1.25em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    top: calc(10vh - 1.45em);
   }
 }
 
 .item-btn.prev {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   left: 7.5vw;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+
+  &:hover {
+    transform: translateX(-5px);
+  }
 }
 
 .item-btn.next {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   right: 7.5vw;
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+
+  &:hover {
+    transform: translateX(5px);
+  }
 }
 
 .item-btn.close {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   right: calc(50% - 1.7em);
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+
+  &:hover {
+    transform: translateY(3px);
+  }
 }
 
 .item-btn.filter {
+  color: $background-colour;
   display: none;
   font-size: 1.1em;
   font-weight: 400;

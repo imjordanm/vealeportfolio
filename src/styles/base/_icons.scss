@@ -41,7 +41,8 @@
 }
 
 .social-icons {
-  bottom: 1.5em;
+  bottom: 1em;
+  font-size: $base-em * $step-one;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
@@ -53,6 +54,7 @@
   }
 
   &.mobile {
+    color: #fff;
     display: none;
 
     @include small {
@@ -67,11 +69,11 @@
 
 .icon-twitter:before {
   content: '\f099';
-  margin-right: 1.5em;
+  margin-right: 2em;
 } /* '' */
 .icon-facebook:before {
   content: '\f09a';
-  margin-right: 1.5em;
+  margin-right: 2em;
 } /* '' */
 
 .icon-youtube:before {
@@ -79,5 +81,5 @@
 } /* '' */
 .icon-twitch:before {
   content: '\f1e8';
-  margin-right: 1.5em;
+  margin-right: 2em;
 } /* '' */

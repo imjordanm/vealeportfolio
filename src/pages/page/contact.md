@@ -3,8 +3,8 @@ title: Contact
 order: 3
 metaTitle: Nick Veale - Contact
 metaDescription: >-
-  Nick Veale is a professional composer based in Wellington, New Zealand. He
-  composes and produces music for film, advertisements and creative projects.
+  Get in touch to further discuss my capabilities and learn what I can do for
+  your next project. I am always up for a coffee.
 heading: Let's collaborate!
 description: >-
   Find out more about what I can do for your next project by getting in touch

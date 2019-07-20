@@ -213,7 +213,7 @@
     forwards;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 4.5rem;
+  margin-bottom: 6rem;
   opacity: 0;
 }
 
@@ -532,7 +532,6 @@
   .item-more-clicked {
     flex-direction: column-reverse;
     justify-content: space-between;
-    margin-bottom: 3rem;
   }
 
   .item-description {

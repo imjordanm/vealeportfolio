@@ -62,7 +62,7 @@ class PlaylistSoundPlayer extends Component {
     }
 
     if (!playlist) {
-      return <div className="p2 center">Loading...</div>;
+      return;
     }
 
     const tracks = playlist.tracks.map((track, i) => {
@@ -91,7 +91,11 @@ class PlaylistSoundPlayer extends Component {
     } = this.props;
 
     return (
-      <div className={this.props.class ? `music-player ${this.props.class}` : 'music-player'}>
+      <div
+        className={
+          this.props.class ? `music-player ${this.props.class}` : 'music-player fixed landing'
+        }
+      >
         <div className="player-top">
           <Progress value={(currentTime / duration) * 100 || 0} {...this.props} />
           <div className="player-controls">
@@ -124,8 +128,8 @@ class PlaylistSoundPlayer extends Component {
                   {playlist
                     ? playlist.tracks[this.state.activeIndex].title
                     : track
-                      ? track.title
-                      : ''}
+                    ? track.title
+                    : ''}
                 </span>
               </div>
             </div>

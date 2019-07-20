@@ -10,7 +10,7 @@ keywords:
   Nick Veale
 heading: I am Nick Veale, a musician and film composer.
 image: /images/portrait.jpg
-playlist: https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX
+playlist: https://soundcloud.com/nick-veale/film-showreel/s-UhOgu
 social:
   - icon: twitter
     link: https://twitter.com/Gordog47

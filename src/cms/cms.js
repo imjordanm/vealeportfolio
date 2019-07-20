@@ -1,7 +1,5 @@
-import React from "react";
-import CMS from "netlify-cms";
-import "netlify-cms/dist/cms.css";
+import CMS from 'netlify-cms-app';
+import { CustomPathImageControl, CustomPathImagePreview } from './customPathImage.js';
 
-import { CustomPathImageControl, CustomPathImagePreview } from "./customPathImage.js";
-
-CMS.registerWidget("custompathimage", CustomPathImageControl, CustomPathImagePreview);
+CMS.init();
+CMS.registerWidget('custompathimage', CustomPathImageControl, CustomPathImagePreview);

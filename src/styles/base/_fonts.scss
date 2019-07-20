@@ -1,4 +1,5 @@
 @font-face {
+  font-display: auto;
   font-family: 'Glacial IndifferenceSubset';
   font-style: normal;
   font-weight: 700;
@@ -7,6 +8,7 @@
   //unicode-range: U + 65-U + 90, U + 97-122;
 }
 @font-face {
+  font-display: auto;
   font-family: 'Glacial Indifference';
   src: url('../../src/resources/fonts/glacialindifference-regular.woff2')
     format('woff2'),
@@ -14,6 +16,7 @@
     format('woff');
 }
 @font-face {
+  font-display: auto;
   font-family: 'Glacial Indifference';
   font-weight: 700;
   src: url('../../src/resources/fonts/glacialindifference-bold.woff2')
@@ -23,6 +26,7 @@
 }
 
 @font-face {
+  font-display: auto;
   font-family: 'Trueno ExBold';
   font-style: normal;
   font-weight: 700;

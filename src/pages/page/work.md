@@ -7,19 +7,19 @@ metaDescription: >-
   composes and produces music for film, advertisements and creative projects.
 items:
   item:
-    - artist: Nick Veale CHANGED HERE!
-      category: commercial CHANGED HERE!
+    - artist: Nick Veale
+      category: commercial
       colour: 'rgb(38, 51, 102)'
-      cover: /images/portrait.jpg
+      cover: /images/knowyourmind.jpg
       description: >-
         The music was created to appeal to a younger demographic while
-        maintaining the university’s rich sense of history. **CHANGED HERE!**
-      genre: Inspirational CHANGED HERE!
+        maintaining the university’s rich sense of history.
+      genre: Inspirational
       heading: >-
         Music used in Victoria Universities flagship marketing campaign titled
-        ‘Know Your Mind’. CHANGED HERE!
-      soundcloud: 'https://soundcloud.com/nick-veale/idea-12-90-second/s-GPn2qCHANGED HERE!'
-      title: Know Your Mind 2018 CHANGED HERE!
+        ‘Know Your Mind’.
+      soundcloud: 'https://soundcloud.com/nick-veale/idea-12-90-second/s-GPn2q'
+      title: Know Your Mind 2018
       year: 2018
     - artist: Nick Veale
       category: commercial

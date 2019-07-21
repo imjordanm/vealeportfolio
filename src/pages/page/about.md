@@ -1,6 +1,6 @@
 ---
 relpath: ../../../static
-title: About CHANGED HERE!
+title: About
 order: 1
 metaTitle: Nick Veale - About CHANGED HERE!
 metaDescription: >-

@@ -26,5 +26,5 @@ sections:
         feature length and short films. You can play samples of my work below or
         hear everything on the [work](/work) page.
       heading: What have I done?
-      playlist: https://soundcloud.com/nick-veale/film-showreel/s-UhOgu
+      playlist: https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX
 ---

@@ -1,5 +1,5 @@
 ---
-title: Work CHANGED THIS!
+title: Work
 order: 1
 metaTitle: Nick Veale - Work
 metaDescription: >-
@@ -192,17 +192,5 @@ items:
       spotify: 'spotify:album:64zX0gvadSrRLyq3TGWGWY'
       title: Drench the World in Honey
       year: 2016
-    - artist: CHANGED THIS!
-      category: CHANGED THIS!
-      description: |-
-        CHANGED THIS!CHANGED THIS!
-
-        # CHANGED THIS!
-
-        ![CHANGED THIS!](/images/drenchworldinhoney.jpg "CHANGED THIS!")
-      genre: CHANGED THIS!
-      heading: CHANGED THIS!
-      title: CHANGED THIS!
-      year: 2009
 ---
 

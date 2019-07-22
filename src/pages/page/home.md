@@ -8,7 +8,7 @@ metaDescription: >-
 keywords: >-
   Film composer advertisement ad New Zealand music producer Wellington musician
   Nick Veale
-heading: 'I am Nick Veale, a musician and film composer.CHANGED THIS!'
+heading: 'I am Nick Veale, a musician and film composer.'
 image: /images/aboutpicture.jpg
 playlist: 'https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX'
 social:

@@ -66,7 +66,7 @@ const AboutPageTemplate = ({
 
 export default class AboutPage extends React.PureComponent {
   render() {
-    const { markdownRemark: page } = this.props.data;
+    const { childMarkdownRemark: page } = this.props.data.file;
 
     return (
       <React.Fragment>
@@ -87,29 +87,32 @@ export default class AboutPage extends React.PureComponent {
 
 export const aboutPageQuery = graphql`
   query aboutPage {
-    markdownRemark(fields: { slug: { eq: "/about" } }) {
-      fields {
-        slug
-        imageLink {
-          childImageSharp {
-            id
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
+    file(relativePath: { eq: "page/about.md" }) {
+      name
+      childMarkdownRemark {
+        fields {
+          slug
+          imageLink {
+            childImageSharp {
+              id
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
-      }
-      frontmatter {
-        title
-        heading
-        metaTitle
-        metaDescription
-        image
-        sections {
-          section {
-            heading
-            description
-            playlist
+        frontmatter {
+          title
+          heading
+          metaTitle
+          metaDescription
+          image
+          sections {
+            section {
+              heading
+              description
+              playlist
+            }
           }
         }
       }

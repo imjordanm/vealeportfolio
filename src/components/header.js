@@ -33,7 +33,7 @@ const Navigation = props => (
         <ul className="nav-list">
           {props.pages.map(({ node }) => (
             <li key={node.frontmatter.title}>
-              <Link activeClassName="active" to={node.fields.slug} onClick={hideMenu}>
+              <Link activeClassName="active" to={node.parent.name} onClick={hideMenu}>
                 {node.frontmatter.title}
               </Link>
             </li>

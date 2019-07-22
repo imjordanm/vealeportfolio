@@ -4,7 +4,7 @@ import WorkList from '../components/WorkList';
 
 export default class WorkPage extends React.PureComponent {
   render() {
-    const { markdownRemark: page } = this.props.data;
+    const { childMarkdownRemark: page } = this.props.data.file;
 
     return (
       <React.Fragment>
@@ -20,32 +20,31 @@ export default class WorkPage extends React.PureComponent {
 
 export const workPageQuery = graphql`
   query workPage {
-    markdownRemark(fields: { slug: { eq: "/work" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        heading
-        metaTitle
-        metaDescription
-        items {
-          item {
-            title
-            artist
-            cover
-            category
-            description
-            year
-            genre
-            heading
-            soundcloud
-            spotify
-            colour
+    file(relativePath: { eq: "page/work.md" }) {
+      name
+      childMarkdownRemark {
+        frontmatter {
+          title
+          heading
+          metaTitle
+          metaDescription
+          items {
+            item {
+              title
+              artist
+              cover
+              category
+              description
+              year
+              genre
+              heading
+              soundcloud
+              spotify
+              colour
+            }
           }
         }
       }
-      html
     }
   }
 `;

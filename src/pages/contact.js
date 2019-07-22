@@ -37,7 +37,7 @@ ContactPageTemplate.defaultProps = {
 
 export default class ContactPage extends React.PureComponent {
   render() {
-    const { markdownRemark: page } = this.props.data;
+    const { childMarkdownRemark: page } = this.props.data.file;
 
     return (
       <React.Fragment>
@@ -61,16 +61,16 @@ ContactPage.propTypes = {
 
 export const contactPageQuery = graphql`
   query contactPage {
-    markdownRemark(fields: { slug: { eq: "/contact" } }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-        heading
-        metaTitle
-        metaDescription
-        description
+    file(relativePath: { eq: "page/contact.md" }) {
+      name
+      childMarkdownRemark {
+        frontmatter {
+          title
+          heading
+          metaTitle
+          metaDescription
+          description
+        }
       }
     }
   }

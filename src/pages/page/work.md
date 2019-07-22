@@ -9,7 +9,7 @@ items:
   item:
     - artist: Nick Veale
       category: commercial
-      colour: 'rgb(38, 51, 102)'
+      colour: "rgb(38, 51, 102)"
       cover: /images/knowyourmind.jpg
       description: >-
         The music was created to appeal to a younger demographic while
@@ -18,7 +18,7 @@ items:
       heading: >-
         Music used in Victoria Universities flagship marketing campaign titled
         ‘Know Your Mind’.
-      soundcloud: 'https://soundcloud.com/nick-veale/idea-12-90-second/s-GPn2q'
+      soundcloud: "https://soundcloud.com/nick-veale/idea-12-90-second/s-GPn2q"
       title: Know Your Mind 2018
       year: 2018
     - artist: Nick Veale
@@ -39,7 +39,7 @@ items:
       year: 2018
     - artist: Nick Veale
       category: commercial
-      colour: 'rgb(47, 138, 186)'
+      colour: "rgb(47, 138, 186)"
       cover: /images/studentlevy.jpg
       description: >
         This music was designed to provide a light, joyful mood underneath a
@@ -48,7 +48,7 @@ items:
       heading: >
         Music used in a Student Services Levy informative for Victoria
         University.
-      soundcloud: 'https://soundcloud.com/nick-veale/cheer-up-nuge/s-5mpID'
+      soundcloud: "https://soundcloud.com/nick-veale/cheer-up-nuge/s-5mpID"
       title: Student Services Levy
       year: 2018
     - artist: Nick Veale
@@ -61,12 +61,12 @@ items:
       heading: >
         Music used in the showcase reel for the Miramar Creative Center in
         Wellington.
-      soundcloud: 'https://soundcloud.com/nick-veale/mfa-showreel-12/s-nbysk'
+      soundcloud: "https://soundcloud.com/nick-veale/mfa-showreel-12/s-nbysk"
       title: MCC Showreel
       year: 2018
     - artist: Nick Veale
       category: film
-      colour: 'rgb(43, 57, 115)'
+      colour: "rgb(43, 57, 115)"
       cover: /images/hangtime.jpg
       description: >
         After the director was unable to get rights to their dream intro
@@ -78,12 +78,12 @@ items:
       heading: >
         Song composed for the intro sequence to the feature length romantic
         comedy 'Hang Time'.
-      soundcloud: 'https://soundcloud.com/nick-veale/im-getting-married-hang-time/s-ZFBHN'
+      soundcloud: "https://soundcloud.com/nick-veale/im-getting-married-hang-time/s-ZFBHN"
       title: I’m Getting Married
       year: 2019
     - artist: Nick Veale
       category: film
-      colour: 'rgb(165, 91, 211)'
+      colour: "rgb(165, 91, 211)"
       cover: /images/hangtime.jpg
       description: >
         This cue appears towards the end of the film during a scene where the
@@ -92,12 +92,12 @@ items:
       genre: Comedy
       heading: |
         Cue composed for the feature length romantic comedy 'Hang Time'.
-      soundcloud: 'https://soundcloud.com/nick-veale/lets-get-cleansed-hangtime/s-c02r3'
+      soundcloud: "https://soundcloud.com/nick-veale/lets-get-cleansed-hangtime/s-c02r3"
       title: Let’s Get Cleansed
       year: 2019
     - artist: Nick Veale
       category: film
-      colour: 'rgb(147, 147, 147)'
+      colour: "rgb(147, 147, 147)"
       cover: /images/hark.jpg
       description: >
         This cue appears at a time when the main character returns to a place
@@ -112,7 +112,7 @@ items:
       year: 2017
     - artist: Nick Veale
       category: film
-      colour: 'rgb(147, 147, 147)'
+      colour: "rgb(147, 147, 147)"
       cover: /images/hark.jpg
       description: >
         This cue accompanies a montage of shots showing the main character’s
@@ -129,7 +129,7 @@ items:
       year: 2017
     - artist: Nick Veale
       category: film
-      colour: 'rgb(147, 147, 147)'
+      colour: "rgb(147, 147, 147)"
       cover: /images/redenvelopes.jpg
       description: >
         This film follows a young second-generation Cantonese girl, her struggle
@@ -149,7 +149,7 @@ items:
       year: 2018
     - artist: Nick Veale
       category: film
-      colour: 'rgb(147, 147, 147)'
+      colour: "rgb(147, 147, 147)"
       cover: /images/dontpickup.jpg
       description: >
         This music accompanies a man’s desperate attempt to stop his friend
@@ -157,12 +157,12 @@ items:
       genre: Action
       heading: |
         Music composed for the intense action short 'Don't Pick Up'
-      soundcloud: 'https://soundcloud.com/nick-veale/dont-pick-up-dont-pick-up/s-8B6jN'
+      soundcloud: "https://soundcloud.com/nick-veale/dont-pick-up-dont-pick-up/s-8B6jN"
       title: Don’t Pick Up
       year: 2018
     - artist: Nick Veale
       category: release
-      colour: 'rgb(147, 147, 147)'
+      colour: "rgb(147, 147, 147)"
       cover: /images/discovery.jpg
       description: >
         I wanted to create a few simple ideas to stretch over an hour, and that
@@ -174,12 +174,12 @@ items:
       heading: >
         My debut solo album release. Music was composed as I was first starting
         to write for film.
-      spotify: 'spotify:album:1fKPZL8wPk34b6mF97oiUA'
+      spotify: "spotify:album:1fKPZL8wPk34b6mF97oiUA"
       title: Discovery
       year: 2016
     - artist: Slymouse Supreme
       category: release
-      colour: 'rgb(147, 147, 147)'
+      colour: "rgb(147, 147, 147)"
       cover: /images/drenchworldinhoney.jpg
       description: >
         I wanted to create an album with strong sonic characteristics that would
@@ -189,8 +189,7 @@ items:
       heading: >
         My final release under the alias ‘Slymouse Supreme’. This release was
         created to raise awareness for the dying bee population.
-      spotify: 'spotify:album:64zX0gvadSrRLyq3TGWGWY'
+      spotify: "spotify:album:64zX0gvadSrRLyq3TGWGWY"
       title: Drench the World in Honey
       year: 2016
 ---
-

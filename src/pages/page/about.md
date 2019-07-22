@@ -6,7 +6,8 @@ metaTitle: Nick Veale - About
 metaDescription: >-
   Nick Veale is a professional composer based in Wellington, New Zealand. He
   composes and produces music for film, advertisements and creative projects.
-heading: I compose music for advertising and film that perfectly fits your goals.
+heading:
+  I compose music for advertising and film that perfectly fits your goals.
 image: /images/aboutpicture.jpg
 sections:
   section:
@@ -25,6 +26,5 @@ sections:
         feature length and short films. You can play samples of my work below or
         hear everything on the [work](/work) page.
       heading: What have I done?
-      playlist: 'https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX'
+      playlist: "https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX"
 ---
-

@@ -33,7 +33,7 @@ export default class IndexPage extends React.PureComponent {
   }
 
   render() {
-    const { markdownRemark: page } = this.props.data;
+    const { childMarkdownRemark: page } = this.props.data.file;
     const frontmatter = page.frontmatter;
     const social = frontmatter.social;
 
@@ -136,26 +136,28 @@ const Landing = props => (
 
 export const indexQuery = graphql`
   query indexPage {
-    markdownRemark(fields: { slug: { eq: "/home" } }) {
-      fields {
-        slug
-        imageLink {
-          childImageSharp {
-            id
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
+    file(relativePath: { eq: "page/home.md" }) {
+      name
+      childMarkdownRemark {
+        fields {
+          imageLink {
+            childImageSharp {
+              id
+              fluid(maxWidth: 1920) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
-      }
-      frontmatter {
-        title
-        heading
-        image
-        playlist
-        social {
-          icon
-          link
+        frontmatter {
+          title
+          heading
+          image
+          playlist
+          social {
+            icon
+            link
+          }
         }
       }
     }

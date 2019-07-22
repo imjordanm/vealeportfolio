@@ -40,12 +40,14 @@ export default ({ children }) => (
         ) {
           edges {
             node {
-              fields {
-                slug
-              }
               frontmatter {
                 title
                 order
+              }
+              parent {
+                ... on File {
+                  name
+                }
               }
             }
           }

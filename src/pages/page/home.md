@@ -6,8 +6,8 @@ metaDescription: >-
   Nick Veale is a professional composer based in Wellington, New Zealand. He
   composes and produces music for film, advertisements and creative projects.
 keywords: >-
-  Film composer advertisement ad New Zealand music producer Wellington musician
-  Nick Veale
+  Film composer advertisement ad New Zealand music producer artist Wellington
+  musician Nick Veale
 heading: 'I am Nick Veale, a musician and film composer.'
 image: /images/portrait.jpg
 playlist: 'https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX'

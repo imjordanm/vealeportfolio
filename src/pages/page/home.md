@@ -1,6 +1,6 @@
 ---
 relpath: ../../../static
-title: Home CHANGED THIS!
+title: Home
 metaTitle: Nick Veale - Composer and Musician
 metaDescription: >-
   Nick Veale is a professional composer based in Wellington, New Zealand. He

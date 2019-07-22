@@ -41,8 +41,8 @@
 }
 
 .social-icons {
-  bottom: 1em;
-  font-size: $base-em * $step-one;
+  bottom: 1.5em;
+  font-size: $base-em * $step-zero;
   left: 50%;
   position: absolute;
   transform: translateX(-50%);
@@ -59,6 +59,7 @@
 
     @include small {
       display: flex;
+      font-size: $base-em * $step-one;
     }
   }
 

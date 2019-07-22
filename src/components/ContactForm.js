@@ -77,14 +77,14 @@ const Form = props => (
         style={{ marginBottom: '1.5rem' }}
         id="recaptcha"
         className="g-recaptcha"
-        data-sitekey="6Lcs7JAUAAAAAEcRJ7fH2a2n07T2dqzOLHYXF3zc"
+        data-sitekey="6Lei05AUAAAAANAbpu59UA0iWDZT69FYj7cjBOpS"
       />
     ) : (
       <div className="captcha-form">
         <div
           id="recaptcha"
           className="g-recaptcha"
-          data-sitekey="6Lcs7JAUAAAAAEcRJ7fH2a2n07T2dqzOLHYXF3zc"
+          data-sitekey="6Lei05AUAAAAANAbpu59UA0iWDZT69FYj7cjBOpS"
         />
         <div className="captcha-text">
           <span>Please tick the reCAPTCHA before resubmitting the form.</span>

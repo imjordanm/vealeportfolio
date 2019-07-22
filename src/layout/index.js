@@ -52,11 +52,14 @@ export default ({ children }) => (
             }
           }
         }
-        markdownRemark(fields: { slug: { eq: "/home" } }) {
-          frontmatter {
-            metaTitle
-            metaDescription
-            keywords
+        file(relativePath: { eq: "page/home.md" }) {
+          name
+          childMarkdownRemark {
+            frontmatter {
+              metaTitle
+              metaDescription
+              keywords
+            }
           }
         }
       }
@@ -64,9 +67,12 @@ export default ({ children }) => (
     render={data => (
       <React.Fragment>
         <Helmet>
-          <title>{data.markdownRemark.frontmatter.metaTitle}</title>
-          <meta name="description" content={data.markdownRemark.frontmatter.metaDescription} />
-          <meta name="keywords" content={data.markdownRemark.frontmatter.keywords} />
+          <title>{data.file.childMarkdownRemark.frontmatter.metaTitle}</title>
+          <meta
+            name="description"
+            content={data.file.childMarkdownRemark.frontmatter.metaDescription}
+          />
+          <meta name="keywords" content={data.file.childMarkdownRemark.frontmatter.keywords} />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         </Helmet>

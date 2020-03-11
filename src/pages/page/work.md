@@ -8,6 +8,24 @@ metaDescription: >-
 items:
   item:
     - artist: Nick Veale
+      category: Sound Design
+      colour: 'rgb(128, 0, 128)'
+      cover: /images/cuba-dupa.jpg
+      description: >-
+        CubaSonic is a street long work composed by New Zealand composer John
+        Psathas for 50 channel speaker array and around 300 performers. During
+        the piece, sound is shifted from one end of a street to the other via 50
+        speakers, creating a 'woosh' effect that moves past you as the listener.
+        I was commissioned for this piece to create these travelling sounds, and
+        employed my extensive knowledge of synthesis and sound design to create
+        some incredibly interesting effects. In this snippet, you can hear a
+        stereo mixdown of the intended 50 channels.
+      genre: Post Genre
+      heading: A great example of my experience with sound design
+      soundcloud: 'https://soundcloud.com/nick-veale/cubasonic-sound-design/s-gEIWZ'
+      title: CubaSonic 2020
+      year: 2020
+    - artist: Nick Veale
       category: commercial
       colour: 'rgb(38, 51, 102)'
       cover: /images/knowyourmind.jpg

@@ -8,7 +8,7 @@ metaDescription: >-
 items:
   item:
     - artist: Nick Veale
-      category: Release
+      category: Sound Design
       colour: 'rgb(128, 0, 128)'
       cover: /images/cuba-dupa.jpg
       description: >-

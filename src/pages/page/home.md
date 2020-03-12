@@ -1,10 +1,11 @@
 ---
 relpath: ../../../static
 title: Home
-metaTitle: Nick Veale - Composer and Musician
+metaTitle: Nick Veale - Composer and Sound Designer
 metaDescription: >-
   Nick Veale is a professional composer based in Wellington, New Zealand. He
-  composes and produces music for film, advertisements and creative projects.
+  composes music and audio for film, advertisements, games, and creative
+  projects.
 keywords: >-
   Film composer advertisement ad New Zealand music producer Wellington musician
   Nick Veale

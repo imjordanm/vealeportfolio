@@ -10,7 +10,7 @@ keywords: >-
   Film composer advertisement ad New Zealand music producer Wellington musician
   Nick Veale
 heading: 'I am Nick Veale, composer and sound designer.'
-image: /images/portrait.jpg
+image: /images/i-m-standing-in-a-field-with-sunflowers-small.jpg
 playlist: 'https://soundcloud.com/nick-veale/sets/showreels/s-0dbVX'
 social:
   - icon: twitter

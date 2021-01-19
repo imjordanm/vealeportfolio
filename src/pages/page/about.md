@@ -7,7 +7,7 @@ metaDescription: >-
   Nick Veale is a professional composer based in Wellington, New Zealand. He
   composes and produces music for film, advertisements, games, and creative
   projects.
-heading: I compose music and audio that perfectly fits your goals.
+heading: I compose music and audio that perfectly meets your needs.
 image: /images/aboutpicture.jpg
 sections:
   section:
